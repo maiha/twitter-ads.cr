@@ -1,8 +1,24 @@
 # twitter-ads.cr
 
-twitter-ads for [Crystal](http://crystal-lang.org/).
+Twitter Ads API SDK for [Crystal](http://crystal-lang.org/).
 
 - crystal: 0.29.0
+
+## Usage
+
+```crystal
+require "twitter-ads"
+
+# client = TwitterAds::Client.from_twurlrc("~/.twurlrc")
+client = TwitterAds::Client.new(
+  CONSUMER_KEY,
+  CONSUMER_SECRET,
+  ACCESS_TOKEN,
+  ACCESS_TOKEN_SECRET
+)
+
+accounts = client.accounts
+```
 
 ## Installation
 
@@ -13,21 +29,6 @@ dependencies:
   twitter-ads:
     github: maiha/twitter-ads.cr
     version: 0.1.0
-```
-
-## Usage
-
-```crystal
-require "twitter-ads"
-
-client = TwitterAds::Client.new(
-  CONSUMER_KEY,
-  CONSUMER_SECRET,
-  ACCESS_TOKEN,
-  ACCESS_TOKEN_SECRET
-)
-
-accounts = client.accounts
 ```
 
 ## Development
