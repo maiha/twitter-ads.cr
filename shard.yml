@@ -1,0 +1,11 @@
+name: twitter-ads
+version: 0.1.0
+
+authors:
+  - maiha <maiha@wota.jp>
+
+dependencies:
+  var:
+    github: maiha/var.cr
+
+license: MIT
