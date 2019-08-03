@@ -10,6 +10,10 @@ module TwitterAds
 
     delegate headers, body, success?, to: http
 
+    def self.new(res : Response)
+      new(res.http, res.req?)
+    end
+
     def initialize(@http, @req = nil)
       @code = http.status_code
       if headers["x-rate-limit-reset"]?

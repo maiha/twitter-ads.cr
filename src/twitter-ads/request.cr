@@ -64,6 +64,10 @@ module TwitterAds
       u.to_s
     end
 
+    def to_s(io : IO)
+      io << full_url
+    end
+
     private def host_header
       String.build do |io|
         if host = uri.host

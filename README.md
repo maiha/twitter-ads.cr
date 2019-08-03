@@ -1,4 +1,4 @@
-# twitter-ads.cr
+# twitter-ads.cr [![Build Status](https://travis-ci.org/maiha/twitter-ads.cr.svg?branch=master)](https://travis-ci.org/maiha/twitter-ads.cr)
 
 Twitter Ads API SDK for [Crystal](http://crystal-lang.org/).
 
@@ -17,7 +17,16 @@ client = TwitterAds::Client.new(
   ACCESS_TOKEN_SECRET
 )
 
-accounts = client.accounts
+accounts = client.accounts(count: 200)
+accounts.req.to_s             # => "https://ads-api.twitter.com/5/accounts.json?count=200"
+accounts.rate_limit           # => "2000"
+accounts.rate_limit_remaining # => "1997"
+accounts.rate_limit_reset     # => 1564851820
+accounts.size                 # => 16
+accounts.next_cursor?         # => nil
+accounts.next?                # => nil (TwitterAds::Api::Accounts?)
+accounts.each do |a|
+  a.name
 ```
 
 ## Installation
