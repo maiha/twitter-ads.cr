@@ -1,9 +1,14 @@
 class Mock::Client < TwitterAds::Client
-  def get(path : String, params = {} of String => String)
-    File.read(File.dirname(__FILE__) + path)
-  end
-
-  def post(path : String, form = {} of String => String)
-    File.read(File.dirname(__FILE__) + path)
+  def execute(req : TwitterAds::Request) : TwitterAds::Response
+    mock = File.dirname(__FILE__) + req.http.path
+    if File.exists?(mock)
+      res = HTTP::Client::Response.new(200, File.read(mock))
+    else
+      res = HTTP::Client::Response.new(400, mock)
+    end
+    TwitterAds::Response.new(res)
+  rescue err
+    res = HTTP::Client::Response.new(500, err.to_s)
+    TwitterAds::Response.new(res)
   end
 end

@@ -20,7 +20,6 @@ module TwitterAds
     var dryrun : Bool = false
 
     include Api::Executable
-    include Api::Accounts
 
     def initialize(@consumer_key, @consumer_secret, @access_token, @access_token_secret, url : String? = nil, @logger : Logger? = nil)
       self.url = url.not_nil! if url
@@ -30,21 +29,12 @@ module TwitterAds
       @uri = URI.parse(s)
     end
     
-    def get(path : String, params = {} of String => String) : String
-      path += "?#{to_query_string(params)}" unless params.empty?
-      req = HTTP::Request.new("GET", path, build_headers)
-      execute!(new_http, req)
+    def get(path : String, params = {} of String => String) : Response
+      execute(Request.new(self, :GET, path, params))
     end
 
-    def post(path : String, body) : String
-      req = HTTP::Request.new("POST", path, build_headers, body)
-      execute!(new_http, req)
-    end
-
-    def post(path : String, form = {} of String => String) : String
-      req = HTTP::Request.new("POST", path, build_headers, form)
-      req.headers["Content-Type"] = "application/x-www-form-urlencoded"
-      execute!(new_http, req)
+    def post(path : String, form = {} of String => String) : Response
+      execute(Request.new(self, :POST, path, params))
     end
   end
 
