@@ -13,6 +13,11 @@ test: check_version_mismatch spec
 spec:
 	crystal spec -v --fail-fast
 
+.PHONY : proto
+proto:
+	mkdir -p src/twitter-ads/proto
+	PROTOBUF_NS=TwitterAds::Proto protoc --crystal_out src/twitter-ads/proto proto/*.proto
+
 .PHONY : check_version_mismatch
 check_version_mismatch: shard.yml README.md
 	diff -w -c <(grep version: README.md) <(grep ^version: shard.yml)

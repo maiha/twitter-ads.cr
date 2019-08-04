@@ -24,9 +24,31 @@ accounts.rate_limit_remaining # => "1997"
 accounts.rate_limit_reset     # => 1564851820
 accounts.size                 # => 16
 accounts.next_cursor?         # => nil
-accounts.next?                # => nil (TwitterAds::Api::Accounts?)
+
 accounts.each do |a|
-  a.name
+  a.id                        # => "18ce54d4x5t"
+  a.name                      # => "API McTestface"
+
+  campaigns = client.campaigns(a.id)
+  campaigns.size              # => 2
+  campaigns.each do |c|
+    c.name                    # => "batch campaigns"
+```
+
+## Protobuf
+
+schema (version 2)
+- [./proto/](./proto/)
+
+generated crystal codes
+- [./src/twitter-ads/proto/](./src/twitter-ads/proto/)
+
+Protobuf-related files are not read by default.
+To use it, you need to install [protobuf.cr](https://github.com/jeromegn/protobuf.cr) and require above codes.
+
+```crystal
+require "protobuf"
+require "twitter-ads/proto"
 ```
 
 ## Installation

@@ -10,12 +10,12 @@ message Campaign {
   optional bool   servable           = 7 ; // true
 
   optional string funding_instrument_id           = 8 ; // "lygyi"
-  optional int64  daily_budget_amount_local_micro = 9 : // 140000000
-  optional int64  total_budget_amount_local_micro = 10: // null
-  repeated string reasons_not_servable            = 11: // # ["PAUSED_BY_ADVERTISER"]
+  optional int64  daily_budget_amount_local_micro = 9 ; // 140000000
+  optional int64  total_budget_amount_local_micro = 10; // null
+  repeated string reasons_not_servable            = 11; // # ["PAUSED_BY_ADVERTISER"]
 
-  optional int64  frequency_cap:     = 12; // null
-  optional string currency:          = 13; // "USD"
+  optional int64  frequency_cap      = 12; // null
+  optional string currency           = 13; // "USD"
   optional string created_at         = 14; // "2016-07-21T22:42:09Z"
   optional string updated_at         = 15; // "2017-08-01T06:47:21Z"
   optional string entity_status      = 16; // "PAUSED"

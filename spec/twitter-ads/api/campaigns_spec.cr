@@ -9,6 +9,7 @@ describe TwitterAds::Api::Campaigns do
       campaigns.size.should eq 1
 
       campaign = campaigns.first
+      campaign.id.should eq "8wku2"
       campaign.name.should eq "batch campaigns"
     end
   end
