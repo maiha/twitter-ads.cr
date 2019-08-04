@@ -1,6 +1,6 @@
 class TwitterAds::LineItem
   JSON.mapping({
-    id:                              String?       , # "8v7jo"
+    id:                              String        , # "8v7jo"
     name:                            String?       , # "Untitled"
     bid_type:                        String?       , # "MAX"
     product_type:                    String?       , # "PROMOTED_TWEETS"

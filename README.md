@@ -68,6 +68,9 @@ dependencies:
 $ crystal spec
 ```
 
+## NOTE
+- targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
+
 ## Contributing
 
 1. Fork it (<https://github.com/maiha/twitter-ads.cr/fork>)

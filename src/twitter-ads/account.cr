@@ -1,6 +1,6 @@
 class TwitterAds::Account
   JSON.mapping({
-    id:                 String? , # "18ce544yq30"
+    id:                 String  , # "18ce544yq30"
     name:               String? , # "API McTestface"
     business_id:        String? , # "bi"
     business_name:      String? , # nil

@@ -1,6 +1,6 @@
 class TwitterAds::CardsWebsite
   JSON.mapping({
-    id:                    String? , # "59wh0"
+    id:                    String  , # "59wh0"
     name:                  String? , # "website card"
     card_type:             String? , # "WEBSITE"
     card_uri:              String? , # "card://957044309437526017"

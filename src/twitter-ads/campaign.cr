@@ -1,6 +1,6 @@
 class TwitterAds::Campaign
   JSON.mapping({
-    id:                              String?       , # "8wku2"
+    id:                              String        , # "8wku2"
     name:                            String?       , # "batch campaigns"
     start_time:                      String?       , # "2017-06-30T00:00:00Z"
     end_time:                        String?       , # null
