@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message Campaign {
+  optional string id                 = 1 ; // "8wku2"
+  optional string name               = 2 ; // "batch campaigns"
+  optional string start_time         = 3 ; // "2017-06-30T00:00:00Z"
+  optional string end_time           = 4 ; // null
+  optional int64  duration_in_days   = 5 ; // 
+  optional bool   standard_delivery  = 6 ; // true
+  optional bool   servable           = 7 ; // true
+
+  optional string funding_instrument_id           = 8 ; // "lygyi"
+  optional int64  daily_budget_amount_local_micro = 9 : // 140000000
+  optional int64  total_budget_amount_local_micro = 10: // null
+  repeated string reasons_not_servable            = 11: // # ["PAUSED_BY_ADVERTISER"]
+
+  optional int64  frequency_cap:     = 12; // null
+  optional string currency:          = 13; // "USD"
+  optional string created_at         = 14; // "2016-07-21T22:42:09Z"
+  optional string updated_at         = 15; // "2017-08-01T06:47:21Z"
+  optional string entity_status      = 16; // "PAUSED"
+  optional bool   deleted            = 17; // false
+}
+
+message CampaignArray {
+  repeated Campaign array = 1;
+}
