@@ -1,4 +1,4 @@
-require "../spec_helper"
+require "../../spec_helper"
 
 describe TwitterAds::Api::Accounts do
   client = Mock::Client.new("CK", "CS", "AT", "AS")
