@@ -1,0 +1,26 @@
+{
+  "request": {
+    "params": {
+      "account_id": "18ce54d4x5t",
+      "line_item_ids": [
+        "8u94t"
+      ]
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "line_item_id": "8u94t",
+      "name": "Custom audience targeting",
+      "id": "dpl3a6",
+      "tailored_audience_expansion": false,
+      "operator_type": "EQ",
+      "created_at": "2017-05-26T03:29:35Z",
+      "targeting_value": "249yj",
+      "updated_at": "2017-05-26T03:29:35Z",
+      "tailored_audience_type": "CRM",
+      "deleted": false,
+      "targeting_type": "TAILORED_AUDIENCE"
+    }
+  ]
+}
