@@ -10,15 +10,11 @@ module TwitterAds::Api
         next_cursor: String?,
         data: Array(Account),
       })
-
-      def accounts : Array(Account)
-        data
-      end
     end
 
     var parser : Parser = Parser.from_json(body!)
 
-    delegate each, to: parser.accounts
+    delegate each, to: parser.data
 
     def next_cursor? : String?
       parser.next_cursor
