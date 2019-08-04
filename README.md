@@ -30,7 +30,6 @@ accounts.each do |a|
   a.name                      # => "API McTestface"
 
   campaigns = client.campaigns(a.id)
-  campaigns.size              # => 2
   campaigns.each do |c|
     c.name                    # => "batch campaigns"
 ```

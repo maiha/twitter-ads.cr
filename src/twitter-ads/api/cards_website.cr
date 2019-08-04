@@ -20,10 +20,3 @@ module TwitterAds::Api
     end
   end
 end
-
-class TwitterAds::Client
-  def cards_website(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsWebsite
-    res = get("/5/accounts/#{account_id}/cards/website.json", {"count" => count.to_s, "cursor" => cursor})
-    Api::CardsWebsite.new(res)
-  end
-end

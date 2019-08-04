@@ -25,9 +25,36 @@ module TwitterAds
       self.url = url.not_nil! if url
     end
 
-    def url=(s : String)
-      @uri = URI.parse(s)
+    ######################################################################
+    ### API methods
+    
+    def accounts(count : Int32 = 200, cursor : String = "") : Api::Accounts
+      res = get("/5/accounts.json", {"count" => count.to_s, "cursor" => cursor})
+      Api::Accounts.new(res)
     end
+
+    def campaigns(account_id : String, count : Int32 = 200, cursor : String = "") : Api::Campaigns
+      res = get("/5/accounts/#{account_id}/campaigns.json", {"count" => count.to_s, "cursor" => cursor})
+      Api::Campaigns.new(res)
+    end
+
+    def cards_website(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsWebsite
+      res = get("/5/accounts/#{account_id}/cards/website.json", {"count" => count.to_s, "cursor" => cursor})
+      Api::CardsWebsite.new(res)
+    end
+
+    def line_items(account_id : String, count : Int32 = 200, cursor : String = "") : Api::LineItems
+      res = get("/5/accounts/#{account_id}/line_items.json", {"count" => count.to_s, "cursor" => cursor})
+      Api::LineItems.new(res)
+    end
+
+    def targeting_criteria(account_id : String, line_item_ids : Array(String), count : Int32 = 200, cursor : String = "") : Api::TargetingCriteria
+      res = get("/5/accounts/#{account_id}/targeting_criteria.json", {"line_item_ids" => line_item_ids.join(","), "count" => count.to_s, "cursor" => cursor})
+      Api::TargetingCriteria.new(res)
+    end
+    
+    ######################################################################
+    ### HTTP methods
     
     def get(path : String, params = {} of String => String) : Response
       execute(Request.new(self, :GET, path, params))
@@ -37,12 +64,19 @@ module TwitterAds
       execute(Request.new(self, :POST, path, params))
     end
 
+    ######################################################################
+    ### Accessor methods
+    
     def authorized?
       return false if consumer_key.empty?
       return false if consumer_secret.empty?
       return false if access_token.empty?
       return false if access_token_secret.empty?
       return true
+    end
+
+    def url=(s : String)
+      @uri = URI.parse(s)
     end
   end
 

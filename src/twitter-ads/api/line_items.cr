@@ -20,10 +20,3 @@ module TwitterAds::Api
     end
   end
 end
-
-class TwitterAds::Client
-  def line_items(account_id : String, count : Int32 = 200, cursor : String = "") : Api::LineItems
-    res = get("/5/accounts/#{account_id}/line_items.json", {"count" => count.to_s, "cursor" => cursor})
-    Api::LineItems.new(res)
-  end
-end
