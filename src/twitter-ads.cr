@@ -9,6 +9,7 @@ require "var"
 require "./twitter-ads/account"
 require "./twitter-ads/campaign"
 require "./twitter-ads/cards_website"
+require "./twitter-ads/line_item"
 
 # data
 require "./twitter-ads/twurlrc"

@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+message TargetingCriteria {
+  optional string id                          =  1; // "dpl3a6"
+  optional string name                        =  2; // "Custom audience targeting"
+  optional string line_item_id                =  3; // "8u94t"
+  optional string operator_type               =  4; // "EQ"
+  optional string tailored_audience_type      =  5; // "CRM"
+  optional bool   tailored_audience_expansion =  6; // false
+  optional string targeting_value             =  7; // "249yj"
+  optional string targeting_type              =  8; // "TAILORED_AUDIENCE"
+  optional string created_at                  =  9; // "2017-05-26T03:29:35Z"
+  optional string updated_at                  = 10; // "2017-05-26T03:29:35Z"
+  optional bool   deleted                     = 11; // false
+}
+
+message TargetingCriteriaArray {
+  repeated TargetingCriteria array =  1; 
+}
+
