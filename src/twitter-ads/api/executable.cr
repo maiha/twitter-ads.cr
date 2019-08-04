@@ -19,13 +19,23 @@ module TwitterAds::Api
       before_execute << callback
     end
 
+    def after_execute
+      @after_execute ||= [] of ((Request, HTTP::Client::Response?) ->)
+    end
+
+    def after_execute(&callback : (Request, HTTP::Client::Response?) ->)
+      after_execute << callback
+    end
+
     def execute(req : Request) : Response
+      response : HTTP::Client::Response? = nil
+
       # remove 'cursor' which contains empty string
       params = req.http.query_params
       params.delete("cursor") if params["cursor"]? == ""
       # TODO: move to 'before_execute'?
 
-      @before_execute.try &.each &.call(req)
+      before_execute.each &.call(req)
     
       logger.debug "HTTP request: #{req.full_url}"
       logger.debug "HTTP headers: #{req.http.headers.to_h}"
@@ -40,15 +50,16 @@ module TwitterAds::Api
         raise err
       end
 
+      req.requested_at = Pretty.now
       response = http.exec(req.http)
       return Response.new(response, req)
     ensure
-      responsed_at = Time.now
-
       if res = response
         logger.debug "HTTP response (status %s)" % res.status_code
         logger.debug "HTTP response: %s" % res.headers.to_h
       end
+
+      after_execute.each(&.call(req, response))
     end
   end
 end

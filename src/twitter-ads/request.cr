@@ -11,7 +11,8 @@ module TwitterAds
     var resource : String
     var params = Hash(String, String).new
     var http : HTTP::Request
-
+    var requested_at : Time
+    
     def initialize(@client, method : Method, @resource, @params)
       case method
       when .get?
@@ -29,11 +30,11 @@ module TwitterAds
     end
 
     def perform
-      client.execute(req)
+      client.execute(http)
     end
 
     def perform!
-      client.execute!(req)
+      client.execute!(http)
     end
 
     private def to_query_string(hash : Hash)
