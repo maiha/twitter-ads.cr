@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+message CardsWebsite {
+  optional string id                    =  1;// "59wh0"
+  optional string name                  =  2;// "website card"
+  optional string card_type             =  3;// "WEBSITE"
+  optional string card_uri              =  4;// "card://957044309437526017"
+  optional string image                 =  5;// "https://pbs.twimg.com/media/DUKjmp8V4AAhrrB.jpg"
+  optional string image_display_width   =  6;// "800"
+  optional string image_display_height  =  7;// "418"
+  optional string website_dest_url      =  8;// "https://developer.twitter.com"
+  optional string website_display_url   =  9;// "developer.twitter.com"
+  optional string website_shortened_url = 10;// "https://t.co/zadeUSVD18"
+  optional string website_title         = 11;// "Twitter Developers"
+  optional string website_url           = 12;// "https://developer.twitter.com"
+  optional string created_at            = 13;// "2018-01-27T00:15:19Z"
+  optional string updated_at            = 14;// "2018-01-27T00:15:19Z"
+  optional bool   deleted               = 15;// false
+}
+
+message CardsWebsiteArray {
+  repeated CardsWebsite array =  1;
+}

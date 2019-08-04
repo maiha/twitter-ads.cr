@@ -1,0 +1,31 @@
+{
+  "request": {
+    "params": {
+      "card_type": "website",
+      "card_ids": [
+        "59wh0"
+      ],
+      "account_id": "18ce54d4x5t"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "name": "website card",
+      "website_shortened_url": "https://t.co/zadeUSVD18",
+      "image_display_height": "418",
+      "image": "https://pbs.twimg.com/media/DUKjmp8V4AAhrrB.jpg",
+      "website_display_url": "developer.twitter.com",
+      "id": "59wh0",
+      "website_dest_url": "https://developer.twitter.com",
+      "created_at": "2018-01-27T00:15:19Z",
+      "image_display_width": "800",
+      "website_title": "Twitter Developers",
+      "card_uri": "card://957044309437526017",
+      "website_url": "https://developer.twitter.com",
+      "updated_at": "2018-01-27T00:15:19Z",
+      "deleted": false,
+      "card_type": "WEBSITE"
+    }
+  ]
+}

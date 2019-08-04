@@ -8,6 +8,7 @@ require "var"
 # model
 require "./twitter-ads/account"
 require "./twitter-ads/campaign"
+require "./twitter-ads/cards_website"
 
 # data
 require "./twitter-ads/twurlrc"
