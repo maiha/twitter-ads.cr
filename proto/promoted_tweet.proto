@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message PromotedTweet {
+  optional string id              =  1; // "1efwlo"
+  optional string line_item_id    =  2; // "96uzp"
+  optional string tweet_id        =  3; // "880290790664060928"
+  optional string approval_status =  4; // "ACCEPTED"
+  optional string entity_status   =  5; // "ACTIVE"
+  optional string created_at      =  6; // "2017-06-29T05:06:57Z"
+  optional string updated_at      =  7; // "2017-06-29T05:08:46Z"
+  optional bool   deleted         =  8; // false
+}
+
+message PromotedTweetArray {
+  repeated PromotedTweet array =  1; 
+}
+

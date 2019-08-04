@@ -10,6 +10,7 @@ require "./twitter-ads/account"
 require "./twitter-ads/campaign"
 require "./twitter-ads/cards_website"
 require "./twitter-ads/line_item"
+require "./twitter-ads/promoted_tweet"
 require "./twitter-ads/targeting_criteria"
 
 # data
