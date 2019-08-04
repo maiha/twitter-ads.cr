@@ -36,6 +36,14 @@ module TwitterAds
     def post(path : String, form = {} of String => String) : Response
       execute(Request.new(self, :POST, path, params))
     end
+
+    def authorized?
+      return false if consumer_key.empty?
+      return false if consumer_secret.empty?
+      return false if access_token.empty?
+      return false if access_token_secret.empty?
+      return true
+    end
   end
 
   def Client.from_twurlrc(path = "~/.twurlrc") : Client
