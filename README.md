@@ -2,7 +2,7 @@
 
 Twitter Ads API SDK for [Crystal](http://crystal-lang.org/).
 
-- crystal: 0.29.0
+- crystal: 0.30.0
 
 ## Usage
 
@@ -34,6 +34,19 @@ accounts.each do |a|
     c.name                    # => "batch campaigns"
 ```
 
+## API
+
+### `TwitterAds::Client`
+
+- `accounts(count : Int32 = 200, cursor : String = "") : Api::Accounts`
+- `campaigns(account_id : String, count : Int32 = 200, cursor : String = "") : Api::Campaigns`
+- `cards_website(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsWebsite`
+- `line_items(account_id : String, count : Int32 = 200, cursor : String = "") : Api::LineItems`
+- `promoted_tweets(account_id : String, count : Int32 = 200, cursor : String = "") : Api::PromotedTweets`
+- `targeting_criteria(account_id : String, line_item_ids : Array(String), count : Int32 = 200, cursor : String = "") : Api::TargetingCriteria`
+
+See [src/twitter-ads/client.cr](./src/twitter-ads/client.cr) for more info
+
 ## Protobuf
 
 schema (version 2)
@@ -58,7 +71,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   twitter-ads:
     github: maiha/twitter-ads.cr
-    version: 0.2.0
+    version: 0.3.0
 ```
 
 ## Development
