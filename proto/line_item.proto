@@ -29,6 +29,8 @@ message LineItem {
   optional string created_at                      = 26; // "2017-05-27T08:04:00Z"
   optional string updated_at                      = 27; // "2017-05-27T08:06:25Z"
   optional bool   deleted                         = 28; // false
+
+  optional string account_id                      = 29; // "18ce544yq30"
 }
 
 message LineItemArray {

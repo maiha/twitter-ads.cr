@@ -12,6 +12,8 @@ message TargetingCriteria {
   optional string created_at                  =  9; // "2017-05-26T03:29:35Z"
   optional string updated_at                  = 10; // "2017-05-26T03:29:35Z"
   optional bool   deleted                     = 11; // false
+
+  optional string account_id                  = 12; // "18ce544yq30"
 }
 
 message TargetingCriteriaArray {

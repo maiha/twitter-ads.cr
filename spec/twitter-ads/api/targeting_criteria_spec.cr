@@ -11,6 +11,7 @@ describe TwitterAds::Api::TargetingCriteria do
       item = ary.first
       item.id.should eq "dpl3a6"
       item.name.should eq "Custom audience targeting"
+      item.account_id.should eq "18ce54d4x5t"
     end
   end
 end

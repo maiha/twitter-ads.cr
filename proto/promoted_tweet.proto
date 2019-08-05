@@ -9,6 +9,8 @@ message PromotedTweet {
   optional string created_at      =  6; // "2017-06-29T05:06:57Z"
   optional string updated_at      =  7; // "2017-06-29T05:08:46Z"
   optional bool   deleted         =  8; // false
+
+  optional string account_id      =  9; // "18ce544yq30"
 }
 
 message PromotedTweetArray {

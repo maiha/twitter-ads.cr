@@ -20,6 +20,8 @@ message Campaign {
   optional string updated_at         = 15; // "2017-08-01T06:47:21Z"
   optional string entity_status      = 16; // "PAUSED"
   optional bool   deleted            = 17; // false
+
+  optional string account_id         = 18; // "18ce544yq30"
 }
 
 message CampaignArray {

@@ -25,6 +25,7 @@ module TwitterAds
         optional :updated_at, :string, 15
         optional :entity_status, :string, 16
         optional :deleted, :bool, 17
+        optional :account_id, :string, 18
       end
     end
     

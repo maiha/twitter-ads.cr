@@ -11,6 +11,7 @@ describe TwitterAds::Api::Campaigns do
       campaign = campaigns.first
       campaign.id.should eq "8wku2"
       campaign.name.should eq "batch campaigns"
+      campaign.account_id.should eq "18ce54d4x5t"
     end
   end
 end

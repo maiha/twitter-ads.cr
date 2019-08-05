@@ -1,4 +1,6 @@
 class TwitterAds::Campaign
+  var account_id : String
+  
   JSON.mapping({
     id:                              String        , # "8wku2"
     name:                            String?       , # "batch campaigns"
@@ -38,6 +40,8 @@ class TwitterAds::Campaign
       updated_at: updated_at,
       entity_status: entity_status,
       deleted: deleted,
+
+      account_id: account_id,
     )
   end
 end

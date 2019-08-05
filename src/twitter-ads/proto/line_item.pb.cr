@@ -36,6 +36,7 @@ module TwitterAds
         optional :created_at, :string, 26
         optional :updated_at, :string, 27
         optional :deleted, :bool, 28
+        optional :account_id, :string, 29
       end
     end
     

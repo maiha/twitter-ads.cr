@@ -1,6 +1,8 @@
 # NOTE: 'targeting_value' sometimes returns 0 (Integer).
 
 class TwitterAds::TargetingCriteria
+  var account_id : String
+
   JSON.mapping({
     id:                          String  , # "dpl3a6"
     name:                        String? , # "Custom audience targeting"
@@ -28,6 +30,8 @@ class TwitterAds::TargetingCriteria
       created_at: created_at,
       updated_at: updated_at,
       deleted: deleted,
+
+      account_id: account_id,
     )
   end
 end

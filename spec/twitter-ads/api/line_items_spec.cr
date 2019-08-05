@@ -11,6 +11,7 @@ describe TwitterAds::Api::LineItems do
       item = items.first
       item.id.should eq "8v7jo"
       item.name.should eq "Untitled"
+      item.account_id.should eq "18ce54d4x5t"
     end
   end
 end

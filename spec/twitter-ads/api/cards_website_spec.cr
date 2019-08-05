@@ -11,6 +11,7 @@ describe TwitterAds::Api::CardsWebsite do
       website = websites.first
       website.id.should eq "59wh0"
       website.name.should eq "website card"
+      website.account_id.should eq "18ce54d4x5t"
     end
   end
 end

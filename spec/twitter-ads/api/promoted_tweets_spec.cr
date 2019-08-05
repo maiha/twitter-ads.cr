@@ -12,6 +12,7 @@ describe TwitterAds::Api::PromotedTweets do
       item.id.should eq "1efwlo"
       item.tweet_id.should eq "880290790664060928"
       item.line_item_id.should eq "96uzp"
+      item.account_id.should eq "18ce54d4x5t"
     end
   end
 end

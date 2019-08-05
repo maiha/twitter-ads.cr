@@ -16,6 +16,8 @@ message CardsWebsite {
   optional string created_at            = 13; // "2018-01-27T00:15:19Z"
   optional string updated_at            = 14; // "2018-01-27T00:15:19Z"
   optional bool   deleted               = 15; // false
+
+  optional string account_id            = 16; // "18ce544yq30"
 }
 
 message CardsWebsiteArray {
