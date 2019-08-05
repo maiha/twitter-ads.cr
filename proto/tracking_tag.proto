@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+message TrackingTag {
+  optional string tracking_partner = 1 ; // "DOUBLE_CLICK"
+  optional string tracking_tag     = 2 ; // "https://ad.doubleclick.net/..."
+}
+
+message TrackingTagArray {
+  repeated TrackingTag array = 1;
+}

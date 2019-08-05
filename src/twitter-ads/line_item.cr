@@ -1,3 +1,5 @@
+require "./tracking_tag"
+
 class TwitterAds::LineItem
   var account_id : String
 
@@ -23,7 +25,7 @@ class TwitterAds::LineItem
     primary_web_event_tag:           String?       , # nil
     target_cpa_local_micro:          String?       , # nil
     total_budget_amount_local_micro: Int64?        , # nil
-    tracking_tags:                   Array(String) , # []
+    tracking_tags:                   Array(TrackingTag) , # []
     charge_by:                       String?       , # "ENGAGEMENT"
     start_time:                      String?       , # nil
     end_time:                        String?       , # nil
@@ -55,7 +57,7 @@ class TwitterAds::LineItem
       primary_web_event_tag: primary_web_event_tag,
       target_cpa_local_micro: target_cpa_local_micro,
       total_budget_amount_local_micro: total_budget_amount_local_micro,
-      tracking_tags: tracking_tags,
+      tracking_tags: tracking_tags.map(&.tracking_tag),
       charge_by: charge_by,
       start_time: start_time,
       end_time: end_time,
