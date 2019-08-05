@@ -1,6 +1,3 @@
-require "../response"
-require "../campaign"
-
 module TwitterAds::Api
   class Campaigns < TwitterAds::Response
     resource_collection Campaign

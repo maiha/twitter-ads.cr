@@ -1,6 +1,3 @@
-require "../response"
-require "../targeting_criteria"
-
 module TwitterAds::Api
   class TargetingCriteria < TwitterAds::Response
     resource_collection TwitterAds::TargetingCriteria

@@ -1,6 +1,3 @@
-require "../response"
-require "../cards_website"
-
 module TwitterAds::Api
   class LineItems < TwitterAds::Response
     resource_collection TwitterAds::LineItem

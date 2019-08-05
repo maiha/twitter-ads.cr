@@ -1,5 +1,4 @@
 require "./dryrun"
-require "./twurlrc"
 
 module TwitterAds
   class Client

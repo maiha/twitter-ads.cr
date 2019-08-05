@@ -38,14 +38,20 @@ accounts.each do |a|
 
 ### `TwitterAds::Client`
 
-- `accounts(count : Int32 = 200, cursor : String = "") : Api::Accounts`
-- `campaigns(account_id : String, count : Int32 = 200, cursor : String = "") : Api::Campaigns`
-- `cards_website(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsWebsite`
-- `line_items(account_id : String, count : Int32 = 200, cursor : String = "") : Api::LineItems`
-- `promoted_tweets(account_id : String, count : Int32 = 200, cursor : String = "") : Api::PromotedTweets`
-- `targeting_criteria(account_id : String, line_item_ids : Array(String), count : Int32 = 200, cursor : String = "") : Api::TargetingCriteria`
+- `accounts() : Api::Accounts`
+- `campaigns(account_id : String) : Api::Campaigns`
+- `cards_website(account_id : String) : Api::CardsWebsite`
+- `line_items(account_id : String) : Api::LineItems`
+- `promoted_tweets(account_id : String) : Api::PromotedTweets`
+- `targeting_criteria(account_id : String, line_item_ids : Array(String), ) : Api::TargetingCriteria`
 
-See [src/twitter-ads/client.cr](./src/twitter-ads/client.cr) for more info
+`count` and `cursor` argments are also availble in all methods.
+
+See [src/twitter-ads/client.cr](./src/twitter-ads/client.cr) for more details.
+
+## Samples
+
+Actual usages are in [./samples/](./samples/)
 
 ## Protobuf
 
