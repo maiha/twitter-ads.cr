@@ -82,6 +82,15 @@ $ crystal spec
 
 ## NOTE
 - targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
+- line-items: `tracking_tags` returns object (document says `Type: String`)
+```json
+  "tracking_tags": [
+    {
+      "tracking_partner": "DOUBLE_CLICK",
+      "tracking_tag": "https://ad.doubleclick.net/..."
+    }
+  ]
+```
 
 ## Contributing
 

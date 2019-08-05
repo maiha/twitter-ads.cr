@@ -28,7 +28,7 @@ module TwitterAds
         repeated :placements, :string, 18
         optional :primary_web_event_tag, :string, 19
         optional :target_cpa_local_micro, :string, 20
-        optional :total_budget_amount_local_micro, :string, 21
+        optional :total_budget_amount_local_micro, :int64, 21
         repeated :tracking_tags, :string, 22
         optional :charge_by, :string, 23
         optional :start_time, :string, 24

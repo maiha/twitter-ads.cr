@@ -21,7 +21,7 @@ message LineItem {
   repeated string placements                      = 18; // ["ALL_ON_TWITTER"]
   optional string primary_web_event_tag           = 19; // nil
   optional string target_cpa_local_micro          = 20; // nil
-  optional string total_budget_amount_local_micro = 21; // nil
+  optional int64  total_budget_amount_local_micro = 21; // nil
   repeated string tracking_tags                   = 22; // []
   optional string charge_by                       = 23; // "ENGAGEMENT"
   optional string start_time                      = 24; // nil

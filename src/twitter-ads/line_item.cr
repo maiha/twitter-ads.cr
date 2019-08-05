@@ -22,7 +22,7 @@ class TwitterAds::LineItem
     placements:                      Array(String) , # ["ALL_ON_TWITTER"]
     primary_web_event_tag:           String?       , # nil
     target_cpa_local_micro:          String?       , # nil
-    total_budget_amount_local_micro: String?       , # nil
+    total_budget_amount_local_micro: Int64?        , # nil
     tracking_tags:                   Array(String) , # []
     charge_by:                       String?       , # "ENGAGEMENT"
     start_time:                      String?       , # nil
