@@ -44,6 +44,8 @@ accounts.each do |a|
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
 - `line_item_apps(account_id : String) : Api::LineItemApps`
 - `line_items(account_id : String) : Api::LineItems`
+- `media_creatives(account_id : String) : Api::MediaCreatives`
+- `promoted_accounts(account_id : String) : Api::PromotedAccounts`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
 - `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
 
