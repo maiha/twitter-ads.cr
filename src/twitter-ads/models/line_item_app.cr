@@ -1,4 +1,6 @@
 class TwitterAds::LineItemApp
+  var account_id : String
+  
   JSON.mapping({
     id:                   String  , # "1eegy"
     line_item_id:         String? , # "6syda"
@@ -19,6 +21,7 @@ class TwitterAds::LineItemApp
       created_at: created_at,
       updated_at: updated_at,
       deleted: deleted,
+
       account_id: account_id,
     )
   end

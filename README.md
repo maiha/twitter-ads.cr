@@ -41,13 +41,19 @@ accounts.each do |a|
 - `accounts() : Api::Accounts`
 - `campaigns(account_id : String) : Api::Campaigns`
 - `cards_website(account_id : String) : Api::CardsWebsite`
+- `funding_instruments(account_id : String) : Api::FundingInstruments`
+- `line_item_apps(account_id : String) : Api::LineItemApps`
 - `line_items(account_id : String) : Api::LineItems`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
-- `targeting_criteria(account_id : String, line_item_ids : Array(String), ) : Api::TargetingCriteria`
+- `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
 
 `count` and `cursor` argments are also availble in all methods.
 
 See [src/twitter-ads/client.cr](./src/twitter-ads/client.cr) for more details.
+
+## Models
+
+[./src/twitter-ads/models](./src/twitter-ads/models/)
 
 ## Samples
 

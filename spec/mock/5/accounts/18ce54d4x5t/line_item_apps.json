@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "line_item_id": "6syda",
+      "app_store_identifier": "com.twitter.android",
+      "id": "1eegy",
+      "created_at": "2016-11-18T18:20:18Z",
+      "updated_at": "2016-11-18T18:20:18Z",
+      "os_type": "Android",
+      "deleted": false
+    }
+  ],
+  "next_cursor": null,
+  "request": {
+    "params": {
+      "line_item_app_ids": [
+        "1eegy"
+      ],
+      "account_id": "18ce54d4x5t"
+    }
+  }
+}
