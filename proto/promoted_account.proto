@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+message PromotedAccount {
+  optional string id              =  1; // "19pl2"
+  optional string user_id         =  2; // "756201191646691328"
+  optional string line_item_id    =  3; // "9bpb2"
+  optional string approval_status =  4; // "ACCEPTED"
+  optional string entity_status   =  5; // "ACTIVE"
+  optional string created_at      =  6; // "2017-07-05T05:54:13Z"
+  optional string updated_at      =  7; // "2017-07-05T05:54:13Z"
+  optional bool   deleted         =  8; // false
+
+  optional string account_id      =  9; // "18ce544yq30"
+}
+
+message PromotedAccountArray {
+  repeated PromotedAccount array =  1; 
+}
+

@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+message FundingInstrument {
+  optional string id                           =  1; // "lygyi"
+  optional string account_id                   =  2; // "18ce54d4x5t"
+  optional string type                         =  3; // "CREDIT_CARD"
+  optional bool   able_to_fund                 =  4; // true
+  optional string credit_remaining_local_micro =  5; // nil
+  optional int64  credit_limit_local_micro     =  6; // 200000000
+  optional string currency                     =  7; // "USD"
+  optional string description                  =  8; // "Visa ending in 0650"
+  optional string entity_status                =  9; // "ACTIVE"
+  optional string io_header                    = 10; // nil
+  optional int64  funded_amount_local_micro    = 11; // 645940000
+  repeated string reasons_not_able_to_fund     = 12; // []
+  optional string start_time                   = 13; // "2016-07-22T04:24:04Z"
+  optional string end_time                     = 14; // nil
+  optional string created_at                   = 15; // "2016-07-22T04:24:04Z"
+  optional string updated_at                   = 16; // "2017-04-05T00:25:13Z"
+  optional bool   deleted                      = 17; // false
+}
+
+message FundingInstrumentArray {
+  repeated FundingInstrument array =  1; 
+}
+

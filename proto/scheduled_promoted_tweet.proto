@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+message ScheduledPromotedTweet {
+  optional string id                 =  1; // "1xboq"
+  optional string tweet_id           =  2; // "870369382207070208"
+  optional string scheduled_tweet_id =  3; // "870366669373194240"
+  optional string line_item_id       =  4; // "8xdpe"
+  optional string created_at         =  5; // "2017-06-01T19:53:32Z"
+  optional string updated_at         =  6; // "2017-06-01T20:00:06Z"
+  optional bool   deleted            =  7; // false
+
+  optional string account_id         =  8; // "18ce544yq30"
+}
+
+message ScheduledPromotedTweetArray {
+  repeated ScheduledPromotedTweet array =  1; 
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message LineItemPlacement {
+  optional string product_type = 1 ; // "PROMOTED_ACCOUNT"
+  repeated string placements   = 2 ; // [["ALL_ON_TWITTER"], ["TWITTER_TIMELINE"]]
+
+  optional string account_id   = 3 ; // "18ce544yq30"
+}
+
+message LineItemPlacementArray {
+  repeated LineItemPlacement array = 1;
+}

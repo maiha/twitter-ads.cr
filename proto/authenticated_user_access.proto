@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message AuthenticatedUserAccess {
+  optional int64  user_id     = 1 ; // 2417045708
+  repeated string permissions = 2 ; // ["ACCOUNT_ADMIN", "TWEET_COMPOSER"]
+
+  optional string account_id  = 3 ; // "18ce544yq30"
+}
+
+message AuthenticatedUserAccessArray {
+  repeated AuthenticatedUserAccess array = 1;
+}

@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+message MediaCreative {
+  optional string id               =  1; // "1bzq3"
+  optional string line_item_id     =  2; // "8v7jo"
+  optional string account_media_id =  3; // "10miy"
+  optional string approval_status  =  4; // "ACCEPTED"
+  optional string serving_status   =  5; // "ACTIVE"
+  optional string landing_url      =  6; // nil
+  optional string created_at       =  7; // "2017-07-05T06:00:42Z"
+  optional string updated_at       =  8; // "2017-07-05T06:00:43Z"
+  optional bool   deleted          =  9; // false
+
+  optional string account_id       = 10; // "18ce544yq30"
+}
+
+message MediaCreativeArray {
+  repeated MediaCreative array =  1; 
+}
+

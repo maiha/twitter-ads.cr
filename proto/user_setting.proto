@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+message UserSetting {
+  optional string notification_email      = 1 ; // "user@domain.com"
+  optional string contact_phone           = 2 ; // ""
+  optional string contact_phone_extension = 3 ; // ""
+  repeated string subscribed_email_types  = 4 ; // ["ACCOUNT_PERFORMANCE", "PERFORMANCE_IMPROVEMENT"]
+
+  optional string account_id              = 5 ; // "18ce544yq30"
+  optional int64  user_id                 = 6 ; // 756201191646691328
+}
+
+message UserSettingArray {
+  repeated UserSetting array = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message PromotableUser {
+  optional string id                   =  1; // "l310s"
+  optional string user_id              =  2; // "756201191646691328"
+  optional string promotable_user_type =  3; // "FULL"
+  optional string created_at           =  4; // "2016-07-21T22:42:09Z"
+  optional string updated_at           =  5; // "2016-07-21T22:42:09Z"
+  optional bool   deleted              =  6; // false
+
+  optional string account_id           =  7; // "18ce544yq30"
+}
+
+message PromotableUserArray {
+  repeated PromotableUser array =  1; 
+}
+

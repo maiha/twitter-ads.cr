@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+message ReachEstimate {
+  optional string impressions                       =  1; // {"min" => 264, "max" => 397}
+  optional string count                             =  2; // {"min" => 215, "max" => 322}
+  optional string infinite_bid_count                =  3; // {"min" => 1638, "max" => 2457}
+  optional string engagements                       =  4; // {"min" => 7, "max" => 11}
+  optional string estimated_daily_spend_local_micro =  5; // {"min" => 440000, "max" => 660000}
+
+  optional string account_id                        =  6; // "18ce544yq30"
+}
+
+message ReachEstimateArray {
+  repeated ReachEstimate array =  1; 
+}

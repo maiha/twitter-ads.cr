@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message ContentCategory {
+  optional string id             = 1 ; // "st"
+  optional string name           = 2 ; // "Alcohol"
+  repeated string iab_categories = 3 ; // ["IAB8-18", "IAB8-5"]
+}
+
+message ContentCategoryArray {
+  repeated ContentCategory array = 1;
+}
