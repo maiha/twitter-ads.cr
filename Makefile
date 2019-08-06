@@ -38,3 +38,5 @@ version:
 .PHONY : bump
 bump:
 	make version VERSION=$(GUESSED_VERSION) -s
+
+# for x in $(cat x); (/tmp/twitter pb schema2model proto/$x.proto TwitterAds:: >| src/twitter-ads/models/$x.cr)
