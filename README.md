@@ -39,6 +39,7 @@ accounts.each do |a|
 ### `TwitterAds::Client`
 
 - `accounts() : Api::Accounts`
+- `authenticated_user_access(account_id : String) : AuthenticatedUserAccess`
 - `campaigns(account_id : String) : Api::Campaigns`
 - `cards_website(account_id : String) : Api::CardsWebsite`
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
@@ -125,7 +126,7 @@ $ crystal spec
   - [ ] Tailored Audiences Users
 - Campaign Management
   - [x] Accounts
-  - [ ] Authenticated User Access
+  - [x] Authenticated User Access
   - [ ] Bidding Rules
   - [x] Campaigns
   - [ ] Content Categories
@@ -138,7 +139,7 @@ $ crystal spec
   - [x] Media Creatives
   - [x] Promoted Accounts
   - [x] Promoted Tweets
-  - [ ] Promotable Users
+  - [x] Promotable Users
   - [ ] Reach Estimate
   - [x] Scheduled Promoted Tweets
   - [x] Targeting Criteria

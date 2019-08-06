@@ -57,14 +57,17 @@ module TwitterAds
       end
 
       {% if RESOURCE[:type] == :collection %}
-        include Enumerable({{RESOURCE[:name]}})
+        include Enumerable(TwitterAds::{{RESOURCE[:name]}})
       {% end %}
 
       class Parser
         JSON.mapping({
           next_cursor: String?,
           {% if RESOURCE[:type] == :collection %}
-            data: Array({{RESOURCE[:name]}}),
+            data: Array(TwitterAds::{{RESOURCE[:name]}}),
+          {% end %}
+          {% if RESOURCE[:type] == :single %}
+            data: TwitterAds::{{RESOURCE[:name]}},
           {% end %}
         })
       end
@@ -84,6 +87,12 @@ module TwitterAds
           end
         end
       {% end %}
+    end
+
+    # resource_single ReachEstimate
+    macro resource_single(name)
+      {% RESOURCE[:type] = :single %}
+      {% RESOURCE[:name] = name %}
     end
 
     # resource_collection Campaign

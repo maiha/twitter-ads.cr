@@ -1,6 +1,6 @@
 module TwitterAds::Api
   class CardsWebsite < TwitterAds::Response
-    resource_collection TwitterAds::CardsWebsite
+    resource_collection CardsWebsite
 
     belongs_to account_id : String
   end

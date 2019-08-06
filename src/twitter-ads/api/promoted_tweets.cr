@@ -1,6 +1,6 @@
 module TwitterAds::Api
   class PromotedTweets < TwitterAds::Response
-    resource_collection TwitterAds::PromotedTweet
+    resource_collection PromotedTweet
 
     belongs_to account_id : String
   end
