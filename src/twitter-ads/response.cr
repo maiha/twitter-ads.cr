@@ -86,6 +86,14 @@ module TwitterAds
             yield(i)
           end
         end
+      {% else %}
+        def each
+          i = parser.data
+          {% for ast in BELONGS_TO %}
+            i.{{ast.var}} = {{ast.var}}
+          {% end %}
+          yield(i)
+        end
       {% end %}
     end
 
