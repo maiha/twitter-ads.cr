@@ -53,7 +53,7 @@ accounts.each do |a|
 
 `count` and `cursor` argments are also availble in all methods.
 
-See [src/twitter-ads/client.cr](./src/twitter-ads/client.cr) for more details.
+See [src/twitter-ads/api/](./src/twitter-ads/api/) for more details.
 
 ## Models
 

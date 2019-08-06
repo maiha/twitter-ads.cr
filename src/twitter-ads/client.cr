@@ -26,36 +26,8 @@ module TwitterAds
 
     ######################################################################
     ### API methods
-    
-    def accounts(count : Int32 = 200, cursor : String = "") : Api::Accounts
-      res = get("/5/accounts.json", {"count" => count.to_s, "cursor" => cursor})
-      Api::Accounts.new(res)
-    end
 
-    def campaigns(account_id : String, count : Int32 = 200, cursor : String = "") : Api::Campaigns
-      res = get("/5/accounts/#{account_id}/campaigns.json", {"count" => count.to_s, "cursor" => cursor})
-      Api::Campaigns.new(res, account_id: account_id)
-    end
-
-    def cards_website(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsWebsite
-      res = get("/5/accounts/#{account_id}/cards/website.json", {"count" => count.to_s, "cursor" => cursor})
-      Api::CardsWebsite.new(res, account_id: account_id)
-    end
-
-    def line_items(account_id : String, count : Int32 = 200, cursor : String = "") : Api::LineItems
-      res = get("/5/accounts/#{account_id}/line_items.json", {"count" => count.to_s, "cursor" => cursor})
-      Api::LineItems.new(res, account_id: account_id)
-    end
-
-    def promoted_tweets(account_id : String, count : Int32 = 200, cursor : String = "") : Api::PromotedTweets
-      res = get("/5/accounts/#{account_id}/promoted_tweets.json", {"count" => count.to_s, "cursor" => cursor})
-      Api::PromotedTweets.new(res, account_id: account_id)
-    end
-
-    def targeting_criteria(account_id : String, line_item_ids : Array(String), count : Int32 = 200, cursor : String = "") : Api::TargetingCriteria
-      res = get("/5/accounts/#{account_id}/targeting_criteria.json", {"line_item_ids" => line_item_ids.join(","), "count" => count.to_s, "cursor" => cursor})
-      Api::TargetingCriteria.new(res, account_id: account_id)
-    end
+    # See ./api/*.cr
     
     ######################################################################
     ### HTTP methods
