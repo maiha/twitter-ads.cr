@@ -47,6 +47,7 @@ accounts.each do |a|
 - `media_creatives(account_id : String) : Api::MediaCreatives`
 - `promoted_accounts(account_id : String) : Api::PromotedAccounts`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
+- `scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets`
 - `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
 
 `count` and `cursor` argments are also availble in all methods.
