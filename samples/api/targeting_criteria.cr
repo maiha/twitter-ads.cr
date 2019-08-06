@@ -1,4 +1,4 @@
-require "../src/twitter-ads"
+require "../../src/twitter-ads"
 
 client = TwitterAds::Client.from_twurlrc
 client.accounts(count: 2).each do |a|

@@ -1,4 +1,4 @@
-require "../src/twitter-ads"
+require "../../src/twitter-ads"
 
 client = TwitterAds::Client.from_twurlrc
 client.line_item_placements.each do |i|

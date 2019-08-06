@@ -44,6 +44,7 @@ accounts.each do |a|
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
 - `line_item_apps(account_id : String) : Api::LineItemApps`
 - `line_items(account_id : String) : Api::LineItems`
+- `line_item_placements() : Api::LineItemPlacements`
 - `media_creatives(account_id : String) : Api::MediaCreatives`
 - `promoted_accounts(account_id : String) : Api::PromotedAccounts`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
@@ -106,6 +107,70 @@ $ crystal spec
     }
   ]
 ```
+
+## Roadmap
+
+- Analytics
+  - [ ] Asynchronous Analytics
+  - [ ] Reach and Average Frequency
+  - [ ] Synchronous Analytics
+  - [ ] Auction Insights
+  - [ ] Active Entities
+- Audiences
+  - [ ] Insights
+  - [ ] Keyword Insights
+  - [ ] Tailored Audience Permissions
+  - [ ] Tailored Audiences
+  - [ ] Audience Intelligence
+  - [ ] Tailored Audiences Users
+- Campaign Management
+  - [x] Accounts
+  - [ ] Authenticated User Access
+  - [ ] Bidding Rules
+  - [x] Campaigns
+  - [ ] Content Categories
+  - [ ] Features
+  - [x] Funding Instruments
+  - [ ] IAB Categories
+  - [x] Line Items
+  - [x] Line Item Apps
+  - [x] Line Item Placements
+  - [x] Media Creatives
+  - [x] Promoted Accounts
+  - [x] Promoted Tweets
+  - [ ] Promotable Users
+  - [ ] Reach Estimate
+  - [x] Scheduled Promoted Tweets
+  - [x] Targeting Criteria
+  - [ ] Targeting Options
+  - [ ] Targeting Suggestions
+  - [ ] Tax Settings
+  - [ ] User Settings
+- Creatives
+  - [ ] Account Media
+  - [ ] Image App Download Cards
+  - [ ] Image Conversation Cards
+  - [ ] Scheduled Tweets
+  - [ ] Video App Download Cards
+  - [ ] Video Conversation Cards
+  - [ ] Video Website Cards
+  - [x] Website Cards
+  - [ ] Preroll Call To Actions
+  - [ ] Tweets
+  - [ ] Image Direct Message Cards
+  - [ ] Video Direct Message Cards
+  - [ ] Media Library
+  - [ ] Cards Fetch
+  - [ ] Poll Cards
+  - [ ] Draft Tweets
+  - [ ] Tweet Previews
+- Measurement
+  - [ ] App Event Provider Configurations
+  - [ ] App Event Tags
+  - [ ] Web Event Tags
+  - [ ] App Lists
+  - [ ] Conversion Attribution
+  - [ ] Conversion Event
 
 ## Contributing
 
