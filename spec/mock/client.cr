@@ -4,7 +4,7 @@ class Mock::Client < TwitterAds::Client
     if File.exists?(mock)
       res = HTTP::Client::Response.new(200, File.read(mock))
     else
-      res = HTTP::Client::Response.new(400, mock)
+      res = HTTP::Client::Response.new(400, "Mock file not found: #{mock}")
     end
     TwitterAds::Response.new(res)
   rescue err
