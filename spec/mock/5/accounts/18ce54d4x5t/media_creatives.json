@@ -1,0 +1,24 @@
+{
+  "request": {
+    "params": {
+      "media_creative_ids": [
+        "1bzq3"
+      ],
+      "account_id": "18ce54d4x5t"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "line_item_id": "8v7jo",
+      "landing_url": null,
+      "serving_status": "ACTIVE",
+      "id": "1bzq3",
+      "created_at": "2017-07-05T06:00:42Z",
+      "account_media_id": "10miy",
+      "updated_at": "2017-07-05T06:00:43Z",
+      "approval_status": "ACCEPTED",
+      "deleted": false
+    }
+  ]
+}
