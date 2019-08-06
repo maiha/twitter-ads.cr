@@ -12,7 +12,7 @@ module TwitterAds
         optional :account_id, :string, 2
         optional :type, :string, 3
         optional :able_to_fund, :bool, 4
-        optional :credit_remaining_local_micro, :string, 5
+        optional :credit_remaining_local_micro, :int64, 5
         optional :credit_limit_local_micro, :int64, 6
         optional :currency, :string, 7
         optional :description, :string, 8

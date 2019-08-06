@@ -4,7 +4,7 @@ class TwitterAds::FundingInstrument
     account_id:                   String?       , # "18ce54d4x5t"
     type:                         String?       , # "CREDIT_CARD"
     able_to_fund:                 Bool?         , # true
-    credit_remaining_local_micro: String?       , # nil
+    credit_remaining_local_micro: Int64?        , # nil
     credit_limit_local_micro:     Int64?        , # 200000000
     currency:                     String?       , # "USD"
     description:                  String?       , # "Visa ending in 0650"
