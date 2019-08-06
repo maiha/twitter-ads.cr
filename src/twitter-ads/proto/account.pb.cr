@@ -1,4 +1,4 @@
-## Generated from proto/account.proto
+## Generated from account.proto
 require "protobuf"
 
 module TwitterAds

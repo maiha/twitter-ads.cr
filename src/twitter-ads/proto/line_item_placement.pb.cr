@@ -1,4 +1,4 @@
-## Generated from proto/line_item_placement.proto
+## Generated from line_item_placement.proto
 require "protobuf"
 
 module TwitterAds
@@ -9,8 +9,7 @@ module TwitterAds
       
       contract_of "proto2" do
         optional :product_type, :string, 1
-        repeated :placements, :string, 2
-        optional :account_id, :string, 3
+        repeated :placements, StringArray, 2
       end
     end
     

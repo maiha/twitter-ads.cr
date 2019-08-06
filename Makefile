@@ -16,7 +16,7 @@ spec:
 .PHONY : proto
 proto:
 	mkdir -p src/twitter-ads/proto
-	PROTOBUF_NS=TwitterAds::Proto protoc --crystal_out src/twitter-ads/proto proto/*.proto
+	PROTOBUF_NS=TwitterAds::Proto protoc -I proto --crystal_out src/twitter-ads/proto proto/*.proto
 
 .PHONY : check_version_mismatch
 check_version_mismatch: shard.yml README.md

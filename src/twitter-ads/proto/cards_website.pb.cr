@@ -1,4 +1,4 @@
-## Generated from proto/cards_website.proto
+## Generated from cards_website.proto
 require "protobuf"
 
 module TwitterAds

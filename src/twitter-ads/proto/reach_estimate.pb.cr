@@ -1,4 +1,4 @@
-## Generated from proto/reach_estimate.proto
+## Generated from reach_estimate.proto
 require "protobuf"
 
 module TwitterAds

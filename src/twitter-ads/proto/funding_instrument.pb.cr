@@ -1,4 +1,4 @@
-## Generated from proto/funding_instrument.proto
+## Generated from funding_instrument.proto
 require "protobuf"
 
 module TwitterAds

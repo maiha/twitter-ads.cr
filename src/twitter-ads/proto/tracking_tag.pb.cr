@@ -1,4 +1,4 @@
-## Generated from proto/tracking_tag.proto
+## Generated from tracking_tag.proto
 require "protobuf"
 
 module TwitterAds

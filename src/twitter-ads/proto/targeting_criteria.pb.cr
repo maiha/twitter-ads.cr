@@ -1,4 +1,4 @@
-## Generated from proto/targeting_criteria.proto
+## Generated from targeting_criteria.proto
 require "protobuf"
 
 module TwitterAds

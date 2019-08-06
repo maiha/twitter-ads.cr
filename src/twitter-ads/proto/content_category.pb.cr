@@ -1,4 +1,4 @@
-## Generated from proto/content_category.proto
+## Generated from content_category.proto
 require "protobuf"
 
 module TwitterAds

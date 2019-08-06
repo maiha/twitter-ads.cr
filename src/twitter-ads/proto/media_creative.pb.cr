@@ -1,4 +1,4 @@
-## Generated from proto/media_creative.proto
+## Generated from media_creative.proto
 require "protobuf"
 
 module TwitterAds

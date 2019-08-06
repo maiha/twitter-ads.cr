@@ -1,4 +1,4 @@
-## Generated from proto/line_item.proto
+## Generated from line_item.proto
 require "protobuf"
 
 module TwitterAds

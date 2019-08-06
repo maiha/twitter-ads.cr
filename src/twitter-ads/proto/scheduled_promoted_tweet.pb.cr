@@ -1,4 +1,4 @@
-## Generated from proto/scheduled_promoted_tweet.proto
+## Generated from scheduled_promoted_tweet.proto
 require "protobuf"
 
 module TwitterAds

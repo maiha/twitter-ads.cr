@@ -1,4 +1,4 @@
-## Generated from proto/authenticated_user_access.proto
+## Generated from authenticated_user_access.proto
 require "protobuf"
 
 module TwitterAds

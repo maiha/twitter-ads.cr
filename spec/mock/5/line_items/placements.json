@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "product_type": "PROMOTED_ACCOUNT",
+      "placements": [
+        [
+          "ALL_ON_TWITTER"
+        ],
+        [
+          "TWITTER_TIMELINE"
+        ]
+      ]
+    }
+  ],
+  "request": {
+    "params": {
+      "product_type": "PROMOTED_ACCOUNT"
+    }
+  }
+}
