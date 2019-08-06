@@ -30,9 +30,11 @@ module TwitterAds::Api
     def execute(req : Request) : Response
       response : HTTP::Client::Response? = nil
 
-      # remove 'cursor' which contains empty string
+      # remove entries which contain empty string
       params = req.http.query_params
-      params.delete("cursor") if params["cursor"]? == ""
+      params.each do |k,v|
+        params.delete(k) if v == ""
+      end
       # TODO: move to 'before_execute'?
 
       before_execute.each &.call(req)

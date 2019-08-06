@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "name": "Los Angeles, Los Angeles CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "3b77caf94bfc81fe",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "East Los Angeles, Los Angeles CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "67571a7baaa5906b",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Lake Los Angeles, Los Angeles CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "ea9bfbd43c93400f",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Los Gatos, San Francisco-Oakland-San Jose CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "a2de7c70b82b0ca0",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Los Altos, Monterey-Salinas CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "6a4364ea6f987c10",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Los Banos, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "b1b6fc646de75904",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Los Alamitos, Los Angeles CA, CA, USA",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "0799ff0a3c1006e9",
+      "targeting_type": "LOCATION"
+    },
+    {
+      "name": "Los Angeles, US",
+      "country_code": "US",
+      "location_type": "CITIES",
+      "targeting_value": "019940ae78c7b3bc",
+      "targeting_type": "LOCATION"
+    }
+  ],
+  "request": {
+    "params": {
+      "location_type": "CITIES",
+      "q": "los angeles"
+    }
+  },
+  "next_cursor": null
+}

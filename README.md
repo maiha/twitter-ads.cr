@@ -51,6 +51,7 @@ accounts.each do |a|
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
 - `scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets`
 - `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
+- `targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations`
 
 `count` and `cursor` argments are also availble in all methods.
 

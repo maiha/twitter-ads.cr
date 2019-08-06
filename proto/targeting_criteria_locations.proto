@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+message TargetingCriteriaLocation {
+  optional string name            = 1 ; // "Los Angeles, Los Angeles CA, CA, USA"
+  optional string country_code    = 2 ; // "US"
+  optional string location_type   = 3 ; // "CITIES"
+  optional string targeting_type  = 4 ; // "LOCATION"
+  optional string targeting_value = 5 ; // "3b77caf94bfc81fe"
+}
+
+message TargetingCriteriaLocationArray {
+  repeated TargetingCriteriaLocation array = 1;
+}
