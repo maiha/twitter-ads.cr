@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "created_at": "Sat Jul 01 00:46:58 +0000 2017",
+      "id": 880950824339419136,
+      "id_str": "880950824339419136",
+      "text": "hello, world",
+      "truncated": false,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": []
+      },
+      "source": "<a href='https://ads-api.twitter.com' rel='nofollow'>Ads API Internal Test App</a>",
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": null,
+      "in_reply_to_user_id_str": null,
+      "in_reply_to_screen_name": null,
+      "user": {
+        "id": 756201191646691328,
+        "id_str": "756201191646691328"
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": [
+        2417045708
+      ],
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "favorited": false,
+      "retweeted": false,
+      "scopes": {
+        "followers": false
+      },
+      "lang": "en"
+    }
+  ],
+  "next_cursor": "AAAAAFhLRpQLNF-sGBSgAA",
+  "request": {
+    "params": {
+      "trim_user": true,
+      "count": 1,
+      "scoped_to": "none",
+      "account_id": "18ce54d4x5t"
+    }
+  }
+}

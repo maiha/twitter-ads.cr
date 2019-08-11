@@ -61,6 +61,7 @@ accounts.each do |a|
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
 - `scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets`
 - `scheduled_tweets(account_id : String) : Api::ScheduledTweets`
+- `scoped_timeline(account_id : String) : Api::ScopedTimeline`
 - `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
 - `targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations`
 
@@ -169,7 +170,7 @@ $ crystal spec
   - [x] Video Website Cards
   - [x] Website Cards
   - [x] Preroll Call To Actions
-  - [ ] Tweets
+  - [x] Tweets
   - [x] Image Direct Message Cards
   - [x] Video Direct Message Cards
   - [ ] Media Library

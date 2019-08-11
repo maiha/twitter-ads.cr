@@ -1,4 +1,4 @@
-## Generated from preroll_call_to_actions.proto
+## Generated from preroll_call_to_action.proto
 require "protobuf"
 
 module TwitterAds
