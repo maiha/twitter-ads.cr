@@ -56,6 +56,7 @@ accounts.each do |a|
 - `line_items(account_id : String) : Api::LineItems`
 - `line_item_placements() : Api::LineItemPlacements`
 - `media_creatives(account_id : String) : Api::MediaCreatives`
+- `media_library(account_id : String) : Api::MediaLibrary`
 - `preroll_call_to_actions(account_id : String) : Api::PrerollCallToActions`
 - `promoted_accounts(account_id : String) : Api::PromotedAccounts`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
@@ -111,7 +112,7 @@ $ crystal spec
 ```
 
 ## NOTE
-- targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
+- media_library: `media_id` returns String (document says `Type: long`)
 - line-items: `tracking_tags` returns object (document says `Type: String`)
 ```json
   "tracking_tags": [
@@ -121,6 +122,7 @@ $ crystal spec
     }
   ]
 ```
+- targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
 
 ## Roadmap
 
@@ -173,7 +175,7 @@ $ crystal spec
   - [x] Tweets
   - [x] Image Direct Message Cards
   - [x] Video Direct Message Cards
-  - [ ] Media Library
+  - [x] Media Library
   - [ ] Cards Fetch
   - [x] Poll Cards
   - [ ] Draft Tweets

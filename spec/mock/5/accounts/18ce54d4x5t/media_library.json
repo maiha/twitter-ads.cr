@@ -1,0 +1,25 @@
+{
+  "request": {
+    "params": {
+      "account_id": "18ce54d4x5t",
+      "count": 1
+    }
+  },
+  "data": [
+    {
+      "tweeted": true,
+      "name": null,
+      "file_name": "coffee https://t.co/4tcPU9XUon",
+      "media_url": "https://pbs.twimg.com/media/DJvnJf_UEAAXnzC.jpg",
+      "media_category": "TWEET_IMAGE",
+      "media_key": "3_908573900237180928",
+      "created_at": "2017-09-15T06:11:12Z",
+      "media_status": "TRANSCODE_COMPLETED",
+      "media_id": "908573900237180928",
+      "media_type": "IMAGE",
+      "updated_at": "2017-11-16T06:00:01Z",
+      "deleted": false
+    }
+  ],
+  "next_cursor": "c-1"
+}
