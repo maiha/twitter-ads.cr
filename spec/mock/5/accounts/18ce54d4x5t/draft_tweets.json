@@ -1,0 +1,22 @@
+{
+  "request": {
+    "params": {
+      "count": 1
+    }
+  },
+  "data": [
+    {
+      "id_str": "994791681219231744",
+      "text": "hello, world",
+      "user_id": "756201191646691328",
+      "id": 994791681219231744,
+      "media_ids": [],
+      "nullcast": true,
+      "created_at": "2018-05-11T04:09:53Z",
+      "card_uri": null,
+      "updated_at": "2018-05-11T04:09:53Z",
+      "media_keys": []
+    }
+  ],
+  "next_cursor": "c-jh1g0ryb"
+}

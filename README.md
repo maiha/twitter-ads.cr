@@ -52,6 +52,7 @@ accounts.each do |a|
 - `cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage`
 - `cards_video_website(account_id : String) : Api::CardsVideoWebsite`
 - `cards_website(account_id : String) : Api::CardsWebsite`
+- `draft_tweets(account_id : String) : Api::DraftTweets`
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
 - `line_item_apps(account_id : String) : Api::LineItemApps`
 - `line_items(account_id : String) : Api::LineItems`
@@ -179,7 +180,7 @@ $ crystal spec
   - [x] Media Library
   - [x] Cards Fetch
   - [x] Poll Cards
-  - [ ] Draft Tweets
+  - [x] Draft Tweets
   - [ ] Tweet Previews
 - Measurement
   - [ ] App Event Provider Configurations
