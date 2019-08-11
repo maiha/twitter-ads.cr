@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+message CardsImageAppDownload {
+  optional string id                   =  1; // "59wiu"
+  optional string card_type            =  2; // "IMAGE_APP_DOWNLOAD"
+  optional string card_uri             =  3; // "card://957050688416112640"
+  optional string name                 =  4; // "image app download card"
+  optional string app_cta              =  5; // "INSTALL"
+  optional string country_code         =  6; // "US"
+  optional string googleplay_app_id    =  7; // "com.twitter.android"
+  optional string image_display_width  =  8; // "800"
+  optional string image_display_height =  9; // "418"
+  optional string wide_app_image       = 10; // "https://pbs.twimg.com/media/DOxqHTWV4AAL7Bk.jpg"
+  optional string created_at           = 11; // "2018-01-27T00:40:39Z"
+  optional string updated_at           = 12; // "2018-01-27T00:40:39Z"
+  optional bool   deleted              = 13; // false
+
+  optional string account_id           = 14; // "18ce544yq30"
+}
+
+message CardsImageAppDownloadArray {
+  repeated CardsImageAppDownload array =  1; 
+}
+
