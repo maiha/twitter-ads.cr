@@ -155,7 +155,7 @@ $ crystal spec
   - [ ] Scheduled Tweets
   - [ ] Video App Download Cards
   - [ ] Video Conversation Cards
-  - [ ] Video Website Cards
+  - [x] Video Website Cards
   - [x] Website Cards
   - [ ] Preroll Call To Actions
   - [ ] Tweets

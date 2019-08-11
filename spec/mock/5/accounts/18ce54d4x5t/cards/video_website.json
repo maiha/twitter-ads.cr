@@ -1,0 +1,38 @@
+{
+  "request": {
+    "params": {
+      "card_type": "video_website",
+      "card_ids": [
+        "5a4vf"
+      ],
+      "account_id": "18ce54d4x5t"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "video_poster_height": "9",
+      "name": "video website card",
+      "website_shortened_url": "https://t.co/zadeUSVD18",
+      "video_height": "9",
+      "video_url": "https://video.twimg.com/amplify_video/vmap/958224897255211013.vmap",
+      "content_duration_seconds": "8",
+      "video_owner_id": "756201191646691328",
+      "video_content_id": "958224897255211013",
+      "website_display_url": "developer.twitter.com",
+      "id": "5a4vf",
+      "video_width": "16",
+      "video_hls_url": "https://video.twimg.com/amplify_video/958224897255211013/pl/yngoBofLjm-k5hHe.m3u8",
+      "website_dest_url": "https://developer.twitter.com",
+      "created_at": "2018-01-30T06:30:01Z",
+      "card_uri": "card://958225772740714496",
+      "title": "Twitter Developers",
+      "website_url": "https://developer.twitter.com",
+      "updated_at": "2018-01-30T06:30:01Z",
+      "video_poster_url": "https://pbs.twimg.com/amplify_video_thumb/958224897255211013/img/EnyDab6vErGm4Avd.jpg",
+      "video_poster_width": "16",
+      "deleted": false,
+      "card_type": "VIDEO_WEBSITE"
+    }
+  ]
+}
