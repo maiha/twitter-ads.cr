@@ -4,9 +4,9 @@ class TwitterAds::CardsVideoWebsite
   JSON.mapping({
     id:                       String  , # "5a4vf"
     card_type:                String? , # "VIDEO_WEBSITE"
+    card_uri:                 String? , # "card://958225772740714496"
     name:                     String? , # "video website card"
     title:                    String? , # "Twitter Developers"
-    card_uri:                 String? , # "card://958225772740714496"
     content_duration_seconds: String? , # "8"
     video_owner_id:           String? , # "756201191646691328"
     video_content_id:         String? , # "958224897255211013"
@@ -30,9 +30,9 @@ class TwitterAds::CardsVideoWebsite
     TwitterAds::Proto::CardsVideoWebsite.new(
       id: id,
       card_type: card_type,
+      card_uri: card_uri,
       name: name,
       title: title,
-      card_uri: card_uri,
       content_duration_seconds: content_duration_seconds,
       video_owner_id: video_owner_id,
       video_content_id: video_content_id,

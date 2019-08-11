@@ -10,9 +10,9 @@ module TwitterAds
       contract_of "proto2" do
         optional :id, :string, 1
         optional :card_type, :string, 2
-        optional :name, :string, 3
-        optional :title, :string, 4
-        optional :card_uri, :string, 5
+        optional :card_uri, :string, 3
+        optional :name, :string, 4
+        optional :title, :string, 5
         optional :content_duration_seconds, :string, 6
         optional :video_owner_id, :string, 7
         optional :video_content_id, :string, 8

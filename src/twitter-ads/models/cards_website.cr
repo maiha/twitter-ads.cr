@@ -3,9 +3,9 @@ class TwitterAds::CardsWebsite
 
   JSON.mapping({
     id:                    String  , # "59wh0"
-    name:                  String? , # "website card"
     card_type:             String? , # "WEBSITE"
     card_uri:              String? , # "card://957044309437526017"
+    name:                  String? , # "website card"
     image:                 String? , # "https://pbs.twimg.com/media/DUKjmp8V4AAhrrB.jpg"
     image_display_width:   String? , # "800"
     image_display_height:  String? , # "418"
@@ -22,9 +22,9 @@ class TwitterAds::CardsWebsite
   def to_pb
     TwitterAds::Proto::CardsWebsite.new(
       id: id,
-      name: name,
       card_type: card_type,
       card_uri: card_uri,
+      name: name,
       image: image,
       image_display_width: image_display_width,
       image_display_height: image_display_height,

@@ -3,9 +3,9 @@ syntax = "proto2";
 message CardsVideoWebsite {
   optional string id                       =  1; // "5a4vf"
   optional string card_type                =  2; // "VIDEO_WEBSITE"
-  optional string name                     =  3; // "video website card"
-  optional string title                    =  4; // "Twitter Developers"
-  optional string card_uri                 =  5; // "card://958225772740714496"
+  optional string card_uri                 =  3; // "card://958225772740714496"
+  optional string name                     =  4; // "video website card"
+  optional string title                    =  5; // "Twitter Developers"
   optional string content_duration_seconds =  6; // "8"
   optional string video_owner_id           =  7; // "756201191646691328"
   optional string video_content_id         =  8; // "958224897255211013"
