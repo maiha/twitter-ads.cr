@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+message CardsAll {
+  optional string id                   =  1; // "692xn"
+  optional string card_type            =  2; // "IMAGE_APP_DOWNLOAD"
+  optional string card_uri             =  3; // "card://1044294149527166979"
+  optional string name                 =  4; // "Twitter App"
+  optional string app_cta              =  5; // "INSTALL"
+  optional string country_code         =  6; // "US"
+  optional string googleplay_app_id    =  7; // "com.twitter.android"
+  optional string image_display_width  =  8; // "1600"
+  optional string image_display_height =  9; // "836"
+  optional string wide_app_image       = 10; // "https://pbs.twimg.com/media/Dc263l9VwAAAeEH.jpg"
+  optional string created_at           = 11; // "2018-09-24T18:35:01Z"
+  optional string updated_at           = 12; // "2018-09-24T18:35:01Z"
+  optional bool   deleted              = 13; // false
+
+  optional string account_id           = 14; // "18ce544yq30"
+}
+
+message CardsAllArray {
+  repeated CardsAll array =  1; 
+}
