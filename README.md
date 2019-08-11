@@ -67,6 +67,7 @@ accounts.each do |a|
 - `scoped_timeline(account_id : String) : Api::ScopedTimeline`
 - `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
 - `targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations`
+- `tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews`
 
 `count` and `cursor` argments are also availble in all methods.
 
@@ -181,7 +182,7 @@ $ crystal spec
   - [x] Cards Fetch
   - [x] Poll Cards
   - [x] Draft Tweets
-  - [ ] Tweet Previews
+  - [x] Tweet Previews
 - Measurement
   - [ ] App Event Provider Configurations
   - [ ] App Event Tags

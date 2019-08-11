@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TweetPreview {
+  optional string tweet_id   = 1 ; // "1122911801354510336"
+  optional string preview    = 2 ; // "<iframe class='tweet-preview' src='https://ton.twimg.com/ads-manager/tweet-preview/index.html?...'>"
+
+  optional string account_id = 3 ; // "18ce544yq30"
+}
+
+message TweetPreviewArray {
+  repeated TweetPreview array = 1;
+}
