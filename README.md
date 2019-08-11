@@ -39,6 +39,7 @@ accounts.each do |a|
 ### `TwitterAds::Client`
 
 - `accounts() : Api::Accounts`
+- `account_media(account_id : String) : Api::AccountMedia`
 - `authenticated_user_access(account_id : String) : AuthenticatedUserAccess`
 - `campaigns(account_id : String) : Api::Campaigns`
 - `cards_image_app_download(account_id : String) : Api::CardsImageAppDownload`
@@ -157,7 +158,7 @@ $ crystal spec
   - [ ] Tax Settings
   - [ ] User Settings
 - Creatives
-  - [ ] Account Media
+  - [x] Account Media
   - [x] Image App Download Cards
   - [x] Image Conversation Cards
   - [ ] Scheduled Tweets

@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+message AccountMedia {
+  optional string id            =  1; // "3wpx"
+  optional string creative_type =  2; // "PREROLL"
+  optional string video_id      =  3; // "13_771791717175468032"
+  optional string media_url     =  4; // nil
+  optional string created_at    =  5; // "2016-09-02T19:27:52Z"
+  optional string updated_at    =  6; // "2016-09-02T19:27:52Z"
+  optional bool   deleted       =  7; // false
+
+  optional string account_id    =  8; // "18ce544yq30"
+}
+
+message AccountMediaArray {
+  repeated AccountMedia array =  1; 
+}
+
