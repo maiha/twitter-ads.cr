@@ -1,0 +1,31 @@
+{
+  "request": {
+    "params": {
+      "card_type": "video_app_download",
+      "card_ids": [
+        "5a4z3"
+      ],
+      "account_id": "18ce54d4x5t"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "name": "video app download",
+      "googleplay_app_id": "com.twitter.android",
+      "video_url": "https://video.twimg.com/amplify_video/vmap/958231855240589313.vmap",
+      "video_owner_id": "756201191646691328",
+      "video_content_id": "958231855240589313",
+      "id": "5a4z3",
+      "country_code": "US",
+      "video_hls_url": "https://video.twimg.com/amplify_video/958231855240589313/pl/vHKJ2aH1tZGKW3bh.m3u8",
+      "created_at": "2018-01-30T07:00:24Z",
+      "card_uri": "card://958233417929261056",
+      "updated_at": "2018-01-30T07:00:24Z",
+      "video_poster_url": "https://pbs.twimg.com/amplify_video_thumb/958231855240589313/img/rjhswYG084qYYgF6.jpg",
+      "app_cta": "INSTALL",
+      "deleted": false,
+      "card_type": "VIDEO_APP_DOWNLOAD"
+    }
+  ]
+}
