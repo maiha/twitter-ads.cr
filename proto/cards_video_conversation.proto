@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+message CardsVideoConversation {
+  optional string id               =  1; // "5a86h"
+  optional string card_type        =  2; // "VIDEO_CONVERSATION"
+  optional string card_uri         =  3; // "card://958397665015775232"
+  optional string name             =  4; // "video conversation card"
+  optional string title            =  5; // "Developers"
+  optional string first_cta        =  6; // "#APIs"
+  optional string first_cta_tweet  =  7; // "Ads API"
+  optional string video_url        =  8; // "https://video.twimg.com/amplify_video/vmap/958388276489895936.vmap"
+  optional string video_content_id =  9; // "958388276489895936"
+  optional string video_owner_id   = 10; // "756201191646691328"
+  optional string video_width      = 11; // "16"
+  optional string video_height     = 12; // "9"
+  optional string video_hls_url    = 13; // "https://video.twimg.com/amplify_video/958388276489895936/pl/q-gHLuId_71EFVdk.m3u8"
+  optional string video_poster_url = 14; // "https://pbs.twimg.com/amplify_video_thumb/958388276489895936/img/W-OL5rZ_MZ19A7Pa.jpg"
+  optional string thank_you_text   = 15; // "Build it"
+  optional string created_at       = 16; // "2018-01-30T17:53:04Z"
+  optional string updated_at       = 17; // "2018-01-30T17:53:04Z"
+  optional bool   deleted          = 18; // false
+
+  optional string account_id       = 19; // "18ce544yq30"
+}
+
+message CardsVideoConversationArray {
+  repeated CardsVideoConversation array =  1; 
+}
+

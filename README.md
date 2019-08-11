@@ -41,6 +41,11 @@ accounts.each do |a|
 - `accounts() : Api::Accounts`
 - `authenticated_user_access(account_id : String) : AuthenticatedUserAccess`
 - `campaigns(account_id : String) : Api::Campaigns`
+- `cards_image_app_download(account_id : String) : Api::CardsImageAppDownload`
+- `cards_image_conversation(account_id : String) : Api::CardsImageConversation`
+- `cards_video_app_download(account_id : String) : Api::CardsVideoAppDownload`
+- `cards_video_conversation(account_id : String) : Api::CardsVideoConversation`
+- `cards_video_website(account_id : String) : Api::CardsVideoWebsite`
 - `cards_website(account_id : String) : Api::CardsWebsite`
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
 - `line_item_apps(account_id : String) : Api::LineItemApps`
@@ -153,8 +158,8 @@ $ crystal spec
   - [x] Image App Download Cards
   - [x] Image Conversation Cards
   - [ ] Scheduled Tweets
-  - [ ] Video App Download Cards
-  - [ ] Video Conversation Cards
+  - [x] Video App Download Cards
+  - [x] Video Conversation Cards
   - [x] Video Website Cards
   - [x] Website Cards
   - [ ] Preroll Call To Actions
