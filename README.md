@@ -46,6 +46,7 @@ accounts.each do |a|
 - `cards_image_direct_message(account_id : String) : Api::CardsImageDirectMessage`
 - `cards_video_app_download(account_id : String) : Api::CardsVideoAppDownload`
 - `cards_video_conversation(account_id : String) : Api::CardsVideoConversation`
+- `cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage`
 - `cards_video_website(account_id : String) : Api::CardsVideoWebsite`
 - `cards_website(account_id : String) : Api::CardsWebsite`
 - `funding_instruments(account_id : String) : Api::FundingInstruments`
@@ -166,7 +167,7 @@ $ crystal spec
   - [ ] Preroll Call To Actions
   - [ ] Tweets
   - [x] Image Direct Message Cards
-  - [ ] Video Direct Message Cards
+  - [x] Video Direct Message Cards
   - [ ] Media Library
   - [ ] Cards Fetch
   - [ ] Poll Cards
