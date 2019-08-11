@@ -50,6 +50,7 @@ class TwitterAds::CardsVideoWebsite
       created_at: created_at,
       updated_at: updated_at,
       deleted: deleted,
+
       account_id: account_id,
     )
   end

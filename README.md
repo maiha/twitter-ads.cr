@@ -150,8 +150,8 @@ $ crystal spec
   - [ ] User Settings
 - Creatives
   - [ ] Account Media
-  - [ ] Image App Download Cards
-  - [ ] Image Conversation Cards
+  - [x] Image App Download Cards
+  - [x] Image Conversation Cards
   - [ ] Scheduled Tweets
   - [ ] Video App Download Cards
   - [ ] Video Conversation Cards
