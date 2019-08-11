@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+message ScheduledTweet {
+  optional int64  id               =  1; // 875828692081037300
+  optional string card_uri         =  2; // nil
+  optional string scheduled_status =  3; // "SUCCESS"
+  optional string scheduled_at     =  4; // "2017-06-18T22:00:00Z"
+  optional string completed_at     =  5; // "2017-06-18T22:00:05Z"
+  optional string text             =  6; // "where you want to be"
+  repeated string media_ids        =  7; // ["875828691770548224"]
+  repeated string media_keys       =  8; // []
+  optional bool   nullcast         =  9; // true
+  optional string id_str           = 10; // "875828692081037312"
+  optional string tweet_id         = 11; // "876560168963645440"
+  optional string user_id          = 12; // "756201191646691328"
+  optional string created_at       = 13; // "2017-06-16T21:33:27Z"
+  optional string updated_at       = 14; // "2017-06-19T18:02:20Z"
+
+  optional string account_id       = 15; // "18ce544yq30"
+}
+
+message ScheduledTweetArray {
+  repeated ScheduledTweet array =  1; 
+}
+
