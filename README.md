@@ -56,6 +56,7 @@ accounts.each do |a|
 - `line_items(account_id : String) : Api::LineItems`
 - `line_item_placements() : Api::LineItemPlacements`
 - `media_creatives(account_id : String) : Api::MediaCreatives`
+- `preroll_call_to_actions(account_id : String) : Api::PrerollCallToActions`
 - `promoted_accounts(account_id : String) : Api::PromotedAccounts`
 - `promoted_tweets(account_id : String) : Api::PromotedTweets`
 - `scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets`
@@ -167,7 +168,7 @@ $ crystal spec
   - [x] Video Conversation Cards
   - [x] Video Website Cards
   - [x] Website Cards
-  - [ ] Preroll Call To Actions
+  - [x] Preroll Call To Actions
   - [ ] Tweets
   - [x] Image Direct Message Cards
   - [x] Video Direct Message Cards

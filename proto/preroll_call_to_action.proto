@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+message PrerollCallToAction {
+  optional string id                 =  1; // "8f0"
+  optional string line_item_id       =  2; // "8v53k"
+  optional string call_to_action     =  3; // "VISIT_SITE"
+  optional string call_to_action_url =  4; // "https://www.twitter.com"
+  optional string created_at         =  5; // "2017-07-07T19:28:40Z"
+  optional string updated_at         =  6; // "2017-07-07T19:28:40Z"
+  optional bool   deleted            =  7; // false
+
+  optional string account_id         =  8; // "18ce544yq30"
+}
+
+message PrerollCallToActionArray {
+  repeated PrerollCallToAction array =  1; 
+}
+
