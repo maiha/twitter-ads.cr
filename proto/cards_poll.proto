@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+message CardsPoll {
+  optional string id                       =  1; // "57i77"
+  optional string card_type                =  2; // "VIDEO_POLLS"
+  optional string card_uri                 =  3; // "card://950590850777497601"
+  optional string name                     =  4; // "best coast poll"
+  optional string first_choice             =  5; // "East"
+  optional string second_choice            =  6; // "West"
+  optional string content_duration_seconds =  7; // "8"
+  optional string duration_in_minutes      =  8; // "10080"
+  optional string video_width              =  9; // "16"
+  optional string video_height             = 10; // "9"
+  optional string video_url                = 11; // "https://video.twimg.com/amplify_video/vmap/950589518557540353.vmap"
+  optional string video_hls_url            = 12; // "https://video.twimg.com/amplify_video/950589518557540353/vid/1280x720/BRkAhPxFoBREIaFA.mp4"
+  optional string video_poster_width       = 13; // "16"
+  optional string video_poster_height      = 14; // "9"
+  optional string video_poster_url         = 15; // "https://pbs.twimg.com/amplify_video_thumb/950589518557540353/img/nZ1vX_MXYqmvbsXP.jpg"
+  optional string start_time               = 16; // "2018-01-09T04:51:34Z"
+  optional string end_time                 = 17; // "2018-01-16T04:51:34Z"
+  optional string created_at               = 18; // "2018-01-09T04:51:34Z"
+  optional string updated_at               = 19; // "2018-01-09T04:51:34Z"
+  optional bool   deleted                  = 20; // false
+
+  optional string account_id               = 21; // "18ce544yq30"
+}
+
+message CardsPollArray {
+  repeated CardsPoll array =  1; 
+}
+

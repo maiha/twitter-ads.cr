@@ -44,6 +44,7 @@ accounts.each do |a|
 - `cards_image_app_download(account_id : String) : Api::CardsImageAppDownload`
 - `cards_image_conversation(account_id : String) : Api::CardsImageConversation`
 - `cards_image_direct_message(account_id : String) : Api::CardsImageDirectMessage`
+- `cards_poll(account_id : String) : Api::CardsPoll`
 - `cards_video_app_download(account_id : String) : Api::CardsVideoAppDownload`
 - `cards_video_conversation(account_id : String) : Api::CardsVideoConversation`
 - `cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage`
@@ -170,7 +171,7 @@ $ crystal spec
   - [x] Video Direct Message Cards
   - [ ] Media Library
   - [ ] Cards Fetch
-  - [ ] Poll Cards
+  - [x] Poll Cards
   - [ ] Draft Tweets
   - [ ] Tweet Previews
 - Measurement
