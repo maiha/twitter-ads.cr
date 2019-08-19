@@ -13,5 +13,10 @@ describe TwitterAds::Api::LineItems do
       item.name.should eq "Untitled"
       item.account_id.should eq "18ce54d4x5t"
     end
+
+    it "accepts with_deleted, with_draft options" do
+      # check only syntax
+      client.line_items("18ce54d4x5t", with_deleted: true, with_draft: true)
+    end
   end
 end

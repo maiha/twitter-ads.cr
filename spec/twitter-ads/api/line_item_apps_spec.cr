@@ -10,5 +10,10 @@ describe TwitterAds::Api::LineItemApps do
       i.os_type.should eq "Android"
       i.account_id.should eq "18ce54d4x5t"
     end
+
+    it "accepts with_deleted" do
+      # check only syntax
+      client.line_item_apps("18ce54d4x5t", with_deleted: true)
+    end
   end
 end

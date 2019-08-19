@@ -1,3 +1,5 @@
+# https://developer.twitter.com/en/docs/ads/campaign-management/api-reference/promoted-tweets.html
+
 module TwitterAds::Api
   class LineItemPlacements < TwitterAds::Response
     resource_collection LineItemPlacement

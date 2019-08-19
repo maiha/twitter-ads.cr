@@ -12,5 +12,10 @@ describe TwitterAds::Api::ScheduledPromotedTweets do
       i.scheduled_tweet_id.should eq "870366669373194240"
       i.account_id.should eq "18ce54d4x5t"
     end
+
+    it "accepts with_deleted" do
+      # check only syntax
+      client.scheduled_promoted_tweets("18ce54d4x5t", with_deleted: true)
+    end
   end
 end

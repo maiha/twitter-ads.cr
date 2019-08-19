@@ -1,3 +1,5 @@
+# https://developer.twitter.com/en/docs/ads/campaign-management/api-reference/authenticated-user-access
+
 module TwitterAds::Api
   class AuthenticatedUserAccess < TwitterAds::Response
     resource_single AuthenticatedUserAccess

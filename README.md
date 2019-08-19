@@ -69,7 +69,7 @@ accounts.each do |a|
 - `targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations`
 - `tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews`
 
-`count` and `cursor` argments are also availble in all methods.
+`with_deleted`, `with_draft`, `count`, `cursor` argments are also available in all methods if possible.
 
 See [src/twitter-ads/api/](./src/twitter-ads/api/) for more details.
 

@@ -13,5 +13,10 @@ describe TwitterAds::Api::Campaigns do
       campaign.name.should eq "batch campaigns"
       campaign.account_id.should eq "18ce54d4x5t"
     end
+
+    it "accepts with_deleted, with_draft options" do
+      # check only syntax
+      client.campaigns("18ce54d4x5t", with_deleted: true, with_draft: true)
+    end
   end
 end
