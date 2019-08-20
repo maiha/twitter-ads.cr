@@ -6,14 +6,14 @@ module TwitterAds
       POST
     end
 
-    var client : Client
     var method : Method
     var resource : String
     var params = Hash(String, String).new
     var http : HTTP::Request
+    var runtime_uri  : URI      # is dynamically set in Client#execute
     var requested_at : Time
     
-    def initialize(@client, method : Method, @resource, @params)
+    def initialize(method : Method, @resource, @params)
       case method
       when .get?
         path = resource
@@ -29,14 +29,6 @@ module TwitterAds
       @http = req
     end
 
-    def perform
-      client.execute(http)
-    end
-
-    def perform!
-      client.execute!(http)
-    end
-
     private def to_query_string(hash : Hash)
       HTTP::Params.build do |form_builder|
         hash.each do |key, value|
@@ -47,29 +39,21 @@ module TwitterAds
 
     private def build_headers : HTTP::Headers
       HTTP::Headers{
-        "Host"          => host_header,
         "Content-Type"  => "application/json",
         "Accept"        => "application/json",
-        "User-Agent"    => client.user_agent,
       }
     end
 
-    def uri
-      client.uri
-    end
-
     def full_url : String
+      uri = runtime_uri? || raise "runtime_uri is not determined yet"
       u = uri.dup
-      u.path = resource
+      u.path  = resource
       u.query = http.query_params.to_s
       u.to_s
     end
 
-    def to_s(io : IO)
-      io << full_url
-    end
-
     private def host_header
+      uri = runtime_uri? || raise "runtime_uri is not determined yet"
       String.build do |io|
         if host = uri.host
           io << host
@@ -79,6 +63,10 @@ module TwitterAds
           io << uri.port.to_s
         end
       end
+    end
+    
+    def to_s(io : IO)
+      io << http.to_s
     end
   end
 end

@@ -1,6 +1,6 @@
 class Mock::Client < TwitterAds::Client
   def execute(req : TwitterAds::Request) : TwitterAds::Response
-    mock = File.dirname(__FILE__) + req.http.path
+    mock = File.dirname(__FILE__) + req.resource
     if File.exists?(mock)
       res = HTTP::Client::Response.new(200, File.read(mock))
     else

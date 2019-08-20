@@ -2,6 +2,10 @@ require "./dryrun"
 
 module TwitterAds
   class Client
+    API_DEFAULT_DOMAIN = "https://api.twitter.com"
+    ADS_DEFAULT_DOMAIN = "https://ads-api.twitter.com"
+    ADS_SANDBOX_DOMAIN = "https://ads-api-sandbox.twitter.com"
+
     # OAuth
     var consumer_key        : String
     var consumer_secret     : String
@@ -9,12 +13,13 @@ module TwitterAds
     var access_token_secret : String
 
     # HTTP
-    var uri : URI = URI.parse("https://ads-api.twitter.com")
+    var uri : URI = URI.parse(ADS_DEFAULT_DOMAIN)
     var user_agent      : String = "twitter-ads.cr"
     var dns_timeout     : Float64 = 3.0
     var connect_timeout : Float64 = 5.0
     var read_timeout    : Float64 = 300.0
-
+    var switch_domain   : Bool = true # switch from "ads" to "api" when "/1.1"
+    
     var logger : Logger = Logger.new(nil)
     var dryrun : Bool = false
 
@@ -33,11 +38,11 @@ module TwitterAds
     ### HTTP methods
     
     def get(path : String, params = {} of String => String) : Response
-      execute(Request.new(self, :GET, path, params))
+      execute(Request.new(:GET, path, params))
     end
 
     def post(path : String, form = {} of String => String) : Response
-      execute(Request.new(self, :POST, path, params))
+      execute(Request.new(:POST, path, params))
     end
 
     ######################################################################

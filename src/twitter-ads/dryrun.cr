@@ -7,5 +7,9 @@ module TwitterAds
     def curl : String
       CurlCmd.new(uri, http, req).build
     end
+
+    def to_s(io : IO)
+      io << curl.to_s
+    end
   end
 end

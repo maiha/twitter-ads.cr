@@ -12,4 +12,61 @@ describe TwitterAds::Client do
       client.authorized?.should eq(false)
     end
   end
+
+  describe "#switch_domain" do
+    client = TwitterAds::Client.new("CK", "CS", "AT", "")
+    client.dryrun = true
+
+    it "should be true in default" do
+      client.switch_domain.should be_true
+    end
+
+    context "(true)" do
+      it "connects to api.twitter.com when statuses_lookup" do
+        expect_raises(TwitterAds::Dryrun, %r{https://api.twitter.com/}) do
+          client.statuses_lookup(id: "1")
+        end
+      end
+
+      it "connects to ads-api.twitter.com when accounts" do
+        expect_raises(TwitterAds::Dryrun, %r{https://ads-api.twitter.com/}) do
+          client.accounts(count: 1)
+        end
+      end
+    end
+
+    context "(false)" do
+      client.switch_domain = false
+    
+      it "connects to ads-api.twitter.com when statuses_lookup" do
+        expect_raises(TwitterAds::Dryrun, %r{https://ads-api.twitter.com/}) do
+          client.statuses_lookup(id: "1")
+        end
+      end
+
+      it "connects to ads-api.twitter.com when accounts" do
+        expect_raises(TwitterAds::Dryrun, %r{https://ads-api.twitter.com/}) do
+          client.accounts(count: 1)
+        end
+      end
+    end
+
+    context "(when custom url is set)" do
+      it "respects the domain in all cases" do
+        client.url = "http://localhost"
+        expect_raises(TwitterAds::Dryrun, %r{http://localhost/}) do
+          client.switch_domain = false
+          client.statuses_lookup(id: "1")
+        end
+        expect_raises(TwitterAds::Dryrun, %r{http://localhost/}) do
+          client.switch_domain = true
+          client.statuses_lookup(id: "1")
+        end
+        expect_raises(TwitterAds::Dryrun, %r{http://localhost/}) do
+          client.switch_domain = true
+          client.accounts(count: 1)
+        end
+      end
+    end
+  end
 end

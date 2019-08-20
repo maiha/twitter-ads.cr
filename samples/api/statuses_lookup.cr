@@ -8,8 +8,6 @@ if tweet_ids.empty?
 end
 
 client = TwitterAds::Client.from_twurlrc
-client.url = "https://api.twitter.com"
-
 client.statuses_lookup(tweet_ids).each do |c|
   puts "+ StatusesLookup(%s) # %s" % [c.id_str.inspect, c.text.inspect]
 end

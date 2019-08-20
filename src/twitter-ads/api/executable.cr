@@ -1,6 +1,6 @@
 module TwitterAds::Api
   module Executable
-    protected def new_http : HTTP::Client
+    protected def new_http(uri : URI) : HTTP::Client
       consumer = OAuth::Consumer.new(uri.host.to_s, consumer_key, consumer_secret)
       token = OAuth::AccessToken.new(access_token, access_token_secret)
       http = HTTP::Client.new(uri)
@@ -37,16 +37,22 @@ module TwitterAds::Api
       end
       # TODO: move to 'before_execute'?
 
+      # calculate runtime values before calling `before_execute`
+      
+      # resolve current uri by `switch_domain` and the `path`
+      uri = calculate_current_uri(uri(), req, switch_domain: switch_domain)
+      req.runtime_uri = uri
+      
       before_execute.each &.call(req)
-    
+
       logger.debug "HTTP request: #{req.full_url}"
       logger.debug "HTTP headers: #{req.http.headers.to_h}"
 
-      http = new_http
-      
+      http = new_http(req.runtime_uri)
+
       if dryrun
         err = Dryrun.new
-        err.uri  = req.uri
+        err.uri  = req.runtime_uri
         err.http = http
         err.req  = req.http
         raise err
@@ -62,6 +68,22 @@ module TwitterAds::Api
       end
 
       after_execute.each(&.call(req, response))
+    end
+
+    # Although this library is created for Twitter Ads API,
+    # this also supports some standard Twitter API about tweets.
+    # It would be nice if the both domains are automatically switched.
+    # `switch_domain` option enables it.
+    private def calculate_current_uri(uri : URI, req : Request, switch_domain : Bool)
+      if switch_domain && req.resource.starts_with?("/1.1/")
+        # Switch uri only if the current value is "ads-api.twitter.com",
+        # since we don't want to change uri under mocking environments.
+        if uri.to_s == Client::ADS_DEFAULT_DOMAIN
+          return URI.parse(Client::API_DEFAULT_DOMAIN)
+        end
+      end
+
+      return uri
     end
   end
 end
