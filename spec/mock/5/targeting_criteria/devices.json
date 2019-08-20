@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "iPhone 3GS",
+      "manufacturer": "Apple",
+      "platform": "iOS",
+      "targeting_value": "1q",
+      "targeting_type": "DEVICE"
+    },
+    {
+      "name": "iPhone 4",
+      "manufacturer": "Apple",
+      "platform": "iOS",
+      "targeting_value": "1r",
+      "targeting_type": "DEVICE"
+    }
+  ],
+  "request": {
+    "params": {
+      "q": "iphone",
+      "count": 2
+    }
+  }
+}

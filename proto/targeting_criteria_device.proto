@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+message TargetingCriteriaDevice {
+  optional string name            = 1 ; // "iPhone 3GS"
+  optional string manufacturer    = 2 ; // "Apple"
+  optional string platform        = 3 ; // "iOS"
+  optional string targeting_value = 4 ; // "1q"
+  optional string targeting_type  = 5 ; // "DEVICE"
+}
+
+message TargetingCriteriaDeviceArray {
+  repeated TargetingCriteriaDevice array = 1;
+}
