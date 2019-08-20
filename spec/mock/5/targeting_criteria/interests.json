@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "name": "Books and literature/Biographies and memoirs",
+      "targeting_type": "INTEREST",
+      "targeting_value": "1001"
+    }
+  ],
+  "request": {
+    "params": {
+      "q": "books",
+      "count": 1
+    }
+  },
+  "next_cursor": "6by4n4"
+}

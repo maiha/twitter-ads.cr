@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message TargetingCriteriaInterest {
+  optional string name            = 1 ; // "Books and literature/Biographies and memoirs"
+  optional string targeting_type  = 2 ; // "INTEREST"
+  optional string targeting_value = 3 ; // "1001"
+}
+
+message TargetingCriteriaInterestArray {
+  repeated TargetingCriteriaInterest array = 1;
+}
