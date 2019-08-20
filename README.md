@@ -36,38 +36,43 @@ accounts.each do |a|
 
 ## API
 
-### `TwitterAds::Client`
+```crystal
+TwitterAds::Client
+  def accounts() : Api::Accounts
+  def account_media(account_id : String) : Api::AccountMedia
+  def authenticated_user_access(account_id : String) : AuthenticatedUserAccess
+  def campaigns(account_id : String) : Api::Campaigns
+  def cards_all(account_id : String, card_uris : Array(String)) : Api::CardsAll
+  def cards_image_app_download(account_id : String) : Api::CardsImageAppDownload
+  def cards_image_conversation(account_id : String) : Api::CardsImageConversation
+  def cards_image_direct_message(account_id : String) : Api::CardsImageDirectMessage
+  def cards_poll(account_id : String) : Api::CardsPoll
+  def cards_video_app_download(account_id : String) : Api::CardsVideoAppDownload
+  def cards_video_conversation(account_id : String) : Api::CardsVideoConversation
+  def cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage
+  def cards_video_website(account_id : String) : Api::CardsVideoWebsite
+  def cards_website(account_id : String) : Api::CardsWebsite
+  def draft_tweets(account_id : String) : Api::DraftTweets
+  def funding_instruments(account_id : String) : Api::FundingInstruments
+  def line_item_apps(account_id : String) : Api::LineItemApps
+  def line_items(account_id : String) : Api::LineItems
+  def line_item_placements() : Api::LineItemPlacements
+  def media_creatives(account_id : String) : Api::MediaCreatives
+  def media_library(account_id : String) : Api::MediaLibrary
+  def preroll_call_to_actions(account_id : String) : Api::PrerollCallToActions
+  def promoted_accounts(account_id : String) : Api::PromotedAccounts
+  def promoted_tweets(account_id : String) : Api::PromotedTweets
+  def scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets
+  def scheduled_tweets(account_id : String) : Api::ScheduledTweets
+  def scoped_timeline(account_id : String) : Api::ScopedTimeline
+  def targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria
+  def targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations
+  def tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews
 
-- `accounts() : Api::Accounts`
-- `account_media(account_id : String) : Api::AccountMedia`
-- `authenticated_user_access(account_id : String) : AuthenticatedUserAccess`
-- `campaigns(account_id : String) : Api::Campaigns`
-- `cards_all(account_id : String, card_uris : Array(String)) : Api::CardsAll`
-- `cards_image_app_download(account_id : String) : Api::CardsImageAppDownload`
-- `cards_image_conversation(account_id : String) : Api::CardsImageConversation`
-- `cards_image_direct_message(account_id : String) : Api::CardsImageDirectMessage`
-- `cards_poll(account_id : String) : Api::CardsPoll`
-- `cards_video_app_download(account_id : String) : Api::CardsVideoAppDownload`
-- `cards_video_conversation(account_id : String) : Api::CardsVideoConversation`
-- `cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage`
-- `cards_video_website(account_id : String) : Api::CardsVideoWebsite`
-- `cards_website(account_id : String) : Api::CardsWebsite`
-- `draft_tweets(account_id : String) : Api::DraftTweets`
-- `funding_instruments(account_id : String) : Api::FundingInstruments`
-- `line_item_apps(account_id : String) : Api::LineItemApps`
-- `line_items(account_id : String) : Api::LineItems`
-- `line_item_placements() : Api::LineItemPlacements`
-- `media_creatives(account_id : String) : Api::MediaCreatives`
-- `media_library(account_id : String) : Api::MediaLibrary`
-- `preroll_call_to_actions(account_id : String) : Api::PrerollCallToActions`
-- `promoted_accounts(account_id : String) : Api::PromotedAccounts`
-- `promoted_tweets(account_id : String) : Api::PromotedTweets`
-- `scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets`
-- `scheduled_tweets(account_id : String) : Api::ScheduledTweets`
-- `scoped_timeline(account_id : String) : Api::ScopedTimeline`
-- `targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria`
-- `targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations`
-- `tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews`
+# Twitter API
+TwitterAds::Client
+  def statuses_lookup(id : String | Array(String)) : Api::StatusesLookup
+```
 
 `with_deleted`, `with_draft`, `count`, `cursor` argments are also available in all methods if possible.
 
@@ -190,6 +195,8 @@ $ crystal spec
   - [ ] App Lists
   - [ ] Conversion Attribution
   - [ ] Conversion Event
+- Twitter API
+  - [x] GET statuses/lookup
 
 ## Contributing
 

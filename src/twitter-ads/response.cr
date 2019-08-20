@@ -86,7 +86,7 @@ module TwitterAds
             yield(i)
           end
         end
-      {% else %}
+      {% elsif RESOURCE[:type] == :single %}
         def each
           i = parser.data
           {% for ast in BELONGS_TO %}
@@ -94,7 +94,14 @@ module TwitterAds
           {% end %}
           yield(i)
         end
+      {% else %}
+        # NOP for :none
       {% end %}
+    end
+
+    # do nothing to just include Response module
+    macro resource_none
+      {% RESOURCE[:type] = :none %}
     end
 
     # resource_single ReachEstimate

@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+message StatusesLookup {
+  optional string created_at                =  1; // "Tue Mar 21 20:50:14 +0000 2006"
+  optional int64  id                        =  2; // 20
+  optional string id_str                    =  3; // "20"
+  optional string text                      =  4; // "just setting up my twttr"
+  optional bool   truncated                 =  5; // false
+  optional string source                    =  6; // "..."
+  optional string in_reply_to_status_id     =  7; // nil
+  optional string in_reply_to_status_id_str =  8; // nil
+  optional string in_reply_to_user_id       =  9; // nil
+  optional string in_reply_to_user_id_str   = 10; // nil
+  optional string in_reply_to_screen_name   = 11; // nil
+  optional string geo                       = 12; // nil
+  optional string coordinates               = 13; // nil
+  optional string place                     = 14; // nil
+  optional string contributors              = 15; // nil
+  optional bool   is_quote_status           = 16; // false
+  optional int64  retweet_count             = 17; // 111160
+  optional int64  favorite_count            = 18; // 98090
+  optional bool   favorited                 = 19; // false
+  optional bool   retweeted                 = 20; // false
+  optional string lang                      = 21; // "en"
+}
+
+message StatusesLookupArray {
+  repeated StatusesLookup array =  1; 
+}
+
