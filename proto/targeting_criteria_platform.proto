@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TargetingCriteriaPlatform {
+  optional string name            = 1 ; // "iOS"
+  optional string targeting_type  = 2 ; // "PLATFORM"
+  optional string targeting_value = 3 ; // "0"
+  optional string lang            = 4 ; // "ja"
+}
+
+message TargetingCriteriaPlatformArray {
+  repeated TargetingCriteriaPlatform array = 1;
+}

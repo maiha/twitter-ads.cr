@@ -1,3 +1,5 @@
+# https://developer.twitter.com/en/docs/ads/campaign-management/api-reference/targeting-options
+
 module TwitterAds::Api
   class TargetingCriteriaLocations < TwitterAds::Response
     resource_collection TargetingCriteriaLocation

@@ -1,10 +1,10 @@
 require "../../spec_helper"
 
-describe TwitterAds::Api::Campaigns do
+describe TwitterAds::Api::TargetingCriteriaLocations do
   client = Mock::Client.new("CK", "CS", "AT", "AS")
 
-  describe "#campaigns" do
-    it "returns Array(TwitterAds::Campaign)" do
+  describe "#targeting_criteria_locations" do
+    it "returns Array(TwitterAds::TargetingCriteriaLocation)" do
       res = client.targeting_criteria_locations
       i = res.first
 

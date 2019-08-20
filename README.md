@@ -66,6 +66,7 @@ TwitterAds::Client
   def scoped_timeline(account_id : String) : Api::ScopedTimeline
   def targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria
   def targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations
+  def targeting_criteria_platforms(lang : String? = nil, q : String? = nil) : Api::TargetingCriteriaPlatforms
   def tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews
 
 # Twitter API
@@ -175,6 +176,20 @@ $ crystal spec
   - [x] Scheduled Promoted Tweets
   - [x] Targeting Criteria
   - [ ] Targeting Options
+    - [ ] App Store Categories
+    - [ ] Behavior Taxonomies
+    - [ ] Behaviors
+    - [ ] Conversation
+    - [ ] Devices
+    - [ ] Events
+    - [ ] Interests
+    - [ ] Languages
+    - [x] Locations
+    - [ ] Network Operators
+    - [ ] Platform Versions
+    - [x] Platforms
+    - [ ] TV Markets
+    - [ ] TV Shows
   - [ ] Targeting Suggestions
   - [ ] Tax Settings
   - [ ] User Settings

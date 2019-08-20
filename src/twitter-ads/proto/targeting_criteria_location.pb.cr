@@ -1,4 +1,4 @@
-## Generated from targeting_criteria_locations.proto
+## Generated from targeting_criteria_location.proto
 require "protobuf"
 
 module TwitterAds
