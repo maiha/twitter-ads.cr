@@ -18,20 +18,19 @@ client = TwitterAds::Client.new(
 )
 
 accounts = client.accounts(count: 200)
-accounts.req.to_s             # => "https://ads-api.twitter.com/5/accounts.json?count=200"
-accounts.rate_limit           # => "2000"
-accounts.rate_limit_remaining # => "1997"
-accounts.rate_limit_reset     # => 1564851820
-accounts.size                 # => 16
-accounts.next_cursor?         # => nil
+accounts.req.to_s              # => "GET /5/accounts.json?count=200"
+accounts.rate_limit            # => "1998/2000"
+accounts.rate_limit.available? # => true
+accounts.size                  # => 16
+accounts.next_cursor?          # => nil
 
 accounts.each do |a|
-  a.id                        # => "18ce54d4x5t"
-  a.name                      # => "API McTestface"
+  a.id                         # => "18ce54d4x5t"
+  a.name                       # => "API McTestface"
 
   campaigns = client.campaigns(a.id)
   campaigns.each do |c|
-    c.name                    # => "batch campaigns"
+    c.name                     # => "batch campaigns"
 ```
 
 ## API
@@ -72,6 +71,15 @@ TwitterAds::Client
 # Twitter API
 TwitterAds::Client
   def statuses_lookup(id : String | Array(String)) : Api::StatusesLookup
+
+TwitterAds::Response
+  def rate_limit : RateLimit
+
+TwitterAds::RateLimit
+  def available? : Bool
+  def limit : Int32
+  def remaining : Int32
+  def reset : Int32
 ```
 
 `with_deleted`, `with_draft`, `count`, `cursor` argments are also available in all methods if possible.

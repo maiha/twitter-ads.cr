@@ -13,7 +13,7 @@ module TwitterAds
     var runtime_uri  : URI      # is dynamically set in Client#execute
     var requested_at : Time
     
-    def initialize(method : Method, @resource, @params)
+    def initialize(@method : Method, @resource, @params)
       case method
       when .get?
         path = resource
@@ -66,7 +66,7 @@ module TwitterAds
     end
     
     def to_s(io : IO)
-      io << http.to_s
+      io << http.method << ' ' << http.resource
     end
   end
 end

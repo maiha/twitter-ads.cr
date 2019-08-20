@@ -12,6 +12,7 @@ require "./lib/**"
 require "./twitter-ads/models/**"
 
 # api
+require "./twitter-ads/rate_limit"
 require "./twitter-ads/request"
 require "./twitter-ads/response"
 require "./twitter-ads/api/**"
