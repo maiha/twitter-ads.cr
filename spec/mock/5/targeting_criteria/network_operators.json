@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "country_code": "US",
+      "targeting_type": "NETWORK_OPERATOR",
+      "name": "Advantage",
+      "targeting_value": "2l"
+    },
+    {
+      "country_code": "US",
+      "targeting_type": "NETWORK_OPERATOR",
+      "name": "Aeris",
+      "targeting_value": "1b"
+    },
+    {
+      "country_code": "US",
+      "targeting_type": "NETWORK_OPERATOR",
+      "name": "Airadigm",
+      "targeting_value": "2t"
+    },
+    {
+      "country_code": "US",
+      "targeting_type": "NETWORK_OPERATOR",
+      "name": "Airlink PCS",
+      "targeting_value": "14"
+    },
+    {
+      "country_code": "US",
+      "targeting_type": "NETWORK_OPERATOR",
+      "name": "Airpeak",
+      "targeting_value": "1i"
+    }
+  ],
+  "request": {
+    "params": {
+      "country_code": "US",
+      "count": 5
+    }
+  },
+  "next_cursor": "o7x9iet1a5u608olj4"
+}

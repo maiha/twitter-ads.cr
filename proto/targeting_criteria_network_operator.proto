@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TargetingCriteriaNetworkOperator {
+  optional string name            = 1 ; // "Advantage"
+  optional string targeting_type  = 2 ; // "NETWORK_OPERATOR"
+  optional string targeting_value = 3 ; // "2l"
+  optional string country_code    = 4 ; // "US"
+}
+
+message TargetingCriteriaNetworkOperatorArray {
+  repeated TargetingCriteriaNetworkOperator array = 1;
+}
