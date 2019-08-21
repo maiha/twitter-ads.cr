@@ -68,6 +68,7 @@ TwitterAds::Client
   def targeting_criteria_app_store_categories(q : String? = nil, store : String? = nil) : Api::TargetingCriteriaAppStoreCategories
   def targeting_criteria_conversations(conversation_type : String? = nil) : Api::TargetingCriteriaConversations
   def targeting_criteria_devices(q : String? = nil) : Api::TargetingCriteriaDevices
+  def targeting_criteria_events(event_types : String? = nil, country_codes : String? = nil, ids : String = nil, start_time : String? = nil, end_time = String? = nil) : Api::TargetingCriteriaEvents
   def targeting_criteria_interests(q : String? = nil) : Api::TargetingCriteriaInterests
   def targeting_criteria_languages(q : String? = nil) : Api::TargetingCriteriaLanguages
   def targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations
@@ -190,7 +191,7 @@ $ crystal spec
     - [ ] Behaviors
     - [x] Conversation
     - [x] Devices
-    - [ ] Events
+    - [x] Events
     - [x] Interests
     - [x] Languages
     - [x] Locations

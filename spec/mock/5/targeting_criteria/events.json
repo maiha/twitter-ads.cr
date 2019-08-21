@@ -1,0 +1,31 @@
+{
+  "request": {
+    "params": {
+      "ids": [
+        "1ex"
+      ]
+    }
+  },
+  "data_type": "events",
+  "data": [
+    {
+      "reach": {
+        "total_reach": null
+      },
+      "name": "New Year's",
+      "start_time": "2017-12-31T00:00:00Z",
+      "top_users": [],
+      "top_tweets": [],
+      "top_hashtags": [],
+      "gender_breakdown_percentage": {},
+      "end_time": "2018-01-02T00:00:00Z",
+      "country_code": null,
+      "device_breakdown_percentage": {},
+      "id": "1ex",
+      "is_global": true,
+      "event_type": "HOLIDAY",
+      "country_breakdown_percentage": {}
+    }
+  ],
+  "next_cursor": null
+}

@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+message TargetingCriteriaEvent {
+  optional string id                           =  1; // "1ex"
+  optional string name                         =  2; // "New Year's"
+  optional bool   is_global                    =  3; // true
+  optional string country_code                 =  4; // nil
+  optional string event_type                   =  5; // "HOLIDAY"
+  optional string start_time                   =  6; // "2017-12-31T00:00:00Z"
+  optional string end_time                     =  7; // "2018-01-02T00:00:00Z"
+
+//  repeated string top_users                    =  6; // []
+//  repeated string top_tweets                   =  7; // []
+//  repeated string top_hashtags                 =  8; // []
+//  optional string country_breakdown_percentage =  5; // {}
+//  optional string device_breakdown_percentage  =  6; // {}
+//  optional string gender_breakdown_percentage  =  8; // {}
+//  optional string reach                        =  1; // {"total_reach" => nil}
+}
+
+message TargetingCriteriaEventArray {
+  repeated TargetingCriteriaEvent array =  1; 
+}
+
+
+
