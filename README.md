@@ -69,6 +69,7 @@ TwitterAds::Client
   def targeting_criteria_interests(q : String? = nil) : Api::TargetingCriteriaInterests
   def targeting_criteria_languages(q : String? = nil) : Api::TargetingCriteriaLanguages
   def targeting_criteria_locations(country_code = nil, location_type = nil, q = nil) : Api::TargetingCriteriaLocations
+  def targeting_criteria_platform_versions(q : String? = nil) : Api::TargetingCriteriaPlatformVersions
   def targeting_criteria_platforms(lang : String? = nil, q : String? = nil) : Api::TargetingCriteriaPlatforms
   def targeting_criteria_network_operators(country_code : String? = nil, q : String? = nil) : Api::TargetingCriteriaNetworkOperators
   def tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews
@@ -190,7 +191,7 @@ $ crystal spec
     - [x] Languages
     - [x] Locations
     - [x] Network Operators
-    - [ ] Platform Versions
+    - [x] Platform Versions
     - [x] Platforms
     - [ ] TV Markets
     - [ ] TV Shows

@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+message TargetingCriteriaPlatformVersion {
+  optional string name            = 1 ; // "Ice Cream Sandwich"
+  optional string number          = 2 ; // "4.0"
+  optional string platform        = 3 ; // "Android"
+  optional string targeting_type  = 4 ; // "PLATFORM_VERSION"
+  optional string targeting_value = 5 ; // "17"
+}
+
+message TargetingCriteriaPlatformVersionArray {
+  repeated TargetingCriteriaPlatformVersion array = 1;
+}
