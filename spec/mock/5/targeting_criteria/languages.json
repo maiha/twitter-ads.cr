@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "name": "English",
+      "targeting_type": "LANGUAGE",
+      "targeting_value": "en"
+    }
+  ],
+  "request": {
+    "params": {
+      "q": "english"
+    }
+  },
+  "next_cursor": null
+}

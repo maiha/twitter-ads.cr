@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message TargetingCriteriaLanguage {
+  optional string name            = 1 ; // "English"
+  optional string targeting_type  = 2 ; // "LANGUAGE"
+  optional string targeting_value = 3 ; // "en"
+}
+
+message TargetingCriteriaLanguageArray {
+  repeated TargetingCriteriaLanguage array = 1;
+}
