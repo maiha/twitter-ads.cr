@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TargetingCriteriaConversation {
+  optional string name              = 1 ; // "NFL"
+  optional string targeting_type    = 2 ; // "CONVERSATION"
+  optional string targeting_value   = 3 ; // "a1"
+  optional string conversation_type = 4 ; // "SPORTS"
+}
+
+message TargetingCriteriaConversationArray {
+  repeated TargetingCriteriaConversation array = 1;
+}

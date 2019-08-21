@@ -1,0 +1,22 @@
+{
+  "request": {
+    "params": {
+      "count": 2
+    }
+  },
+  "next_cursor": "1f7m7",
+  "data": [
+    {
+      "targeting_type": "CONVERSATION",
+      "targeting_value": "a1",
+      "name": "NFL",
+      "conversation_type": "SPORTS"
+    },
+    {
+      "targeting_type": "CONVERSATION",
+      "targeting_value": "a2",
+      "name": "NBA",
+      "conversation_type": "SPORTS"
+    }
+  ]
+}
