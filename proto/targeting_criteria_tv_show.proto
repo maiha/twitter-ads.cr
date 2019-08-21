@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message TargetingCriteriaTvShow {
+  optional int64  id    = 1 ; // 10051997516
+  optional string name  = 2 ; // "Boston 25 News Special: Coming Home"
+  optional string genre = 3 ; // "SPECIAL"
+}
+
+message TargetingCriteriaTvShowArray {
+  repeated TargetingCriteriaTvShow array = 1;
+}

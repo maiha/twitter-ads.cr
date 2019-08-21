@@ -73,6 +73,7 @@ TwitterAds::Client
   def targeting_criteria_platform_versions(q : String? = nil) : Api::TargetingCriteriaPlatformVersions
   def targeting_criteria_platforms(lang : String? = nil, q : String? = nil) : Api::TargetingCriteriaPlatforms
   def targeting_criteria_tv_markets : Api::TargetingCriteriaTvMarkets
+  def targeting_criteria_tv_shows(tv_market_locale : String, q : String? = nil) : Api::TargetingCriteriaTvShows
   def tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews
 
 # Twitter API
@@ -195,7 +196,7 @@ $ crystal spec
     - [x] Platform Versions
     - [x] Platforms
     - [x] TV Markets
-    - [ ] TV Shows
+    - [x] TV Shows
   - [ ] Targeting Suggestions
   - [ ] Tax Settings
   - [ ] User Settings

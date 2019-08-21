@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "name": "Boston 25 News Special: Coming Home",
+      "id": 10051997516,
+      "genre": "SPECIAL"
+    }
+  ],
+  "next_cursor": "c-4191-sd-PhmKVTr6S5FlLz7FMGA",
+  "request": {
+    "params": {}
+  }
+}
