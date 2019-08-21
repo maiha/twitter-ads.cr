@@ -66,6 +66,7 @@ TwitterAds::Client
   def scoped_timeline(account_id : String) : Api::ScopedTimeline
   def targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria
   def targeting_criteria_app_store_categories(q : String? = nil, store : String? = nil) : Api::TargetingCriteriaAppStoreCategories
+  def targeting_criteria_behavior_taxonomies(behavior_taxonomy_ids : String? = nil, parent_behavior_taxonomy_ids : String? = nil) : Api::TargetingCriteriaBehaviorTaxonomies
   def targeting_criteria_behaviors(behavior_ids : String? = nil, country_code : String? = nil) : Api::TargetingCriteriaBehaviors
   def targeting_criteria_conversations(conversation_type : String? = nil) : Api::TargetingCriteriaConversations
   def targeting_criteria_devices(q : String? = nil) : Api::TargetingCriteriaDevices
@@ -188,7 +189,7 @@ $ crystal spec
   - [x] Targeting Criteria
   - [ ] Targeting Options
     - [x] App Store Categories
-    - [ ] Behavior Taxonomies
+    - [x] Behavior Taxonomies
     - [x] Behaviors
     - [x] Conversation
     - [x] Devices
