@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TargetingCriteriaTvMarket {
+  optional string id           = 1 ; // "6"
+  optional string name         = 2 ; // "France"
+  optional string country_code = 3 ; // "FR"
+  optional string locale       = 4 ; // "fr-FR"
+}
+
+message TargetingCriteriaTvMarketArray {
+  repeated TargetingCriteriaTvMarket array = 1;
+}

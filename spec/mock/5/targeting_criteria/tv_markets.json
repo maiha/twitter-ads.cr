@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": "6",
+      "name": "France",
+      "country_code": "FR",
+      "locale": "fr-FR"
+    },
+    {
+      "id": "i",
+      "name": "Chile",
+      "country_code": "CL",
+      "locale": "es-CL"
+    },
+    {
+      "id": "a",
+      "name": "Germany",
+      "country_code": "DE",
+      "locale": "de-DE"
+    },
+    {
+      "id": "p",
+      "name": "Netherlands",
+      "country_code": "NL",
+      "locale": "nl-NL"
+    },
+    {
+      "id": "1",
+      "name": "United States",
+      "country_code": "US",
+      "locale": "en-US"
+    },
+    {
+      "id": "k",
+      "name": "Venezuela",
+      "country_code": "VE",
+      "locale": "es-VE"
+    },
+    {
+      "id": "5",
+      "name": "Brazil",
+      "country_code": "BR",
+      "locale": "pt-BR"
+    },
+    {
+      "id": "d",
+      "name": "Mexico",
+      "country_code": "MX",
+      "locale": "es-MX"
+    },
+    {
+      "id": "g",
+      "name": "Colombia",
+      "country_code": "CO",
+      "locale": "es-CO"
+    },
+    {
+      "id": "2",
+      "name": "United Kingdom",
+      "country_code": "GB",
+      "locale": "en-GB"
+    },
+    {
+      "id": "c",
+      "name": "Argentina",
+      "country_code": "AR",
+      "locale": "es-AR"
+    },
+    {
+      "id": "9",
+      "name": "Japan",
+      "country_code": "JP",
+      "locale": "ja-JP"
+    },
+    {
+      "id": "3",
+      "name": "Canada",
+      "country_code": "CA",
+      "locale": "en-CA"
+    },
+    {
+      "id": "7",
+      "name": "Spain",
+      "country_code": "ES",
+      "locale": "es-ES"
+    },
+    {
+      "id": "b",
+      "name": "Italy",
+      "country_code": "IT",
+      "locale": "it-IT"
+    },
+    {
+      "id": "4",
+      "name": "United States - Hispanic",
+      "country_code": "US",
+      "locale": "es-US"
+    },
+    {
+      "id": "f",
+      "name": "Ireland",
+      "country_code": "IE",
+      "locale": "en-IE"
+    }
+  ],
+  "request": {
+    "params": {}
+  }
+}
