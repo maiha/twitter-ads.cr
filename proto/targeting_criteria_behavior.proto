@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+message TargetingCriteriaBehavior {
+  optional string id                   =  1; // "lfrt"
+  optional string name                 =  2; // "Auto service buyer"
+  repeated string targetable_types     =  3; // ["BEHAVIOR", "NEGATIVE_BEHAVIOR", "BEHAVIOR_LOOKALIKE_EXPANDED"]
+  optional string country_code         =  4; // "US"
+  optional string partner_source       =  5; // "Datalogix"
+  optional string behavior_taxonomy_id =  6; // "2"
+  optional int64  audience_size        =  7; // 9583030
+}
+
+message TargetingCriteriaBehaviorArray {
+  repeated TargetingCriteriaBehavior array =  1; 
+}
+

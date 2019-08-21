@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "name": "Auto service buyer",
+      "targetable_types": [
+        "BEHAVIOR",
+        "NEGATIVE_BEHAVIOR",
+        "BEHAVIOR_LOOKALIKE_EXPANDED"
+      ],
+      "country_code": "US",
+      "id": "lfrt",
+      "partner_source": "Datalogix",
+      "behavior_taxonomy_id": "2",
+      "audience_size": 9583030
+    }
+  ],
+  "next_cursor": null,
+  "request": {
+    "params": {
+      "behavior_ids": [
+        "lfrt"
+      ]
+    }
+  }
+}
