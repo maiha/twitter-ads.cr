@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Games: Music",
+      "targeting_type": "APP_STORE_CATEGORY",
+      "targeting_value": "qouq",
+      "os_type": "IOS"
+    },
+    {
+      "name": "Music",
+      "targeting_type": "APP_STORE_CATEGORY",
+      "targeting_value": "qov2",
+      "os_type": "IOS"
+    }
+  ],
+  "request": {
+    "params": {
+      "q": "music",
+      "store": "IOS_APP_STORE"
+    }
+  }
+}

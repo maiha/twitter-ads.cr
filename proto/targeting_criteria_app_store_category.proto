@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+message TargetingCriteriaAppStoreCategory {
+  optional string name            = 1 ; // "Games: Music"
+  optional string targeting_type  = 2 ; // "APP_STORE_CATEGORY"
+  optional string targeting_value = 3 ; // "qouq"
+  optional string os_type         = 4 ; // "IOS"
+}
+
+message TargetingCriteriaAppStoreCategoryArray {
+  repeated TargetingCriteriaAppStoreCategory array = 1;
+}

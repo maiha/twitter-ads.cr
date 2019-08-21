@@ -65,6 +65,7 @@ TwitterAds::Client
   def scheduled_tweets(account_id : String) : Api::ScheduledTweets
   def scoped_timeline(account_id : String) : Api::ScopedTimeline
   def targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria
+  def targeting_criteria_app_store_categories(q : String? = nil, store : String? = nil) : Api::TargetingCriteriaAppStoreCategories
   def targeting_criteria_devices(q : String? = nil) : Api::TargetingCriteriaDevices
   def targeting_criteria_interests(q : String? = nil) : Api::TargetingCriteriaInterests
   def targeting_criteria_languages(q : String? = nil) : Api::TargetingCriteriaLanguages
@@ -183,7 +184,7 @@ $ crystal spec
   - [x] Scheduled Promoted Tweets
   - [x] Targeting Criteria
   - [ ] Targeting Options
-    - [ ] App Store Categories
+    - [x] App Store Categories
     - [ ] Behavior Taxonomies
     - [ ] Behaviors
     - [ ] Conversation
