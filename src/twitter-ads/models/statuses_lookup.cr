@@ -6,9 +6,9 @@ class TwitterAds::StatusesLookup
     text:                      String? , # "just setting up my twttr"
     truncated:                 Bool?   , # false
     source:                    String? , # "..."
-    in_reply_to_status_id:     String? , # nil
+    in_reply_to_status_id:     Int64?  , # nil
     in_reply_to_status_id_str: String? , # nil
-    in_reply_to_user_id:       String? , # nil
+    in_reply_to_user_id:       Int64?  , # nil
     in_reply_to_user_id_str:   String? , # nil
     in_reply_to_screen_name:   String? , # nil
     geo:                       String? , # nil

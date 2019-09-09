@@ -14,9 +14,9 @@ module TwitterAds
         optional :text, :string, 4
         optional :truncated, :bool, 5
         optional :source, :string, 6
-        optional :in_reply_to_status_id, :string, 7
+        optional :in_reply_to_status_id, :int64, 7
         optional :in_reply_to_status_id_str, :string, 8
-        optional :in_reply_to_user_id, :string, 9
+        optional :in_reply_to_user_id, :int64, 9
         optional :in_reply_to_user_id_str, :string, 10
         optional :in_reply_to_screen_name, :string, 11
         optional :geo, :string, 12
