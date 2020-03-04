@@ -8,8 +8,8 @@ class TwitterAds::ScheduledTweet
     scheduled_at:     String?       , # "2017-06-18T22:00:00Z"
     completed_at:     String?       , # "2017-06-18T22:00:05Z"
     text:             String?       , # "where you want to be"
-    media_ids:        Array(String) , # ["875828691770548224"]
-    media_keys:       Array(String) , # []
+    media_ids:        Array(String)?, # ["875828691770548224"]
+    media_keys:       Array(String)?, # []
     nullcast:         Bool?         , # true
     id_str:           String?       , # "875828692081037312"
     tweet_id:         String?       , # "876560168963645440"

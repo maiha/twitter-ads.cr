@@ -6,8 +6,8 @@ class TwitterAds::DraftTweet
     user_id:    String?       , # "756201191646691328"
     card_uri:   String?       , # nil
     text:       String?       , # "hello, world"
-    media_ids:  Array(String) , # []
-    media_keys: Array(String) , # []
+    media_ids:  Array(String)?, # []
+    media_keys: Array(String)?, # []
     nullcast:   Bool?         , # true
     id_str:     String?       , # "994791681219231744"
     created_at: String?       , # "2018-05-11T04:09:53Z"
