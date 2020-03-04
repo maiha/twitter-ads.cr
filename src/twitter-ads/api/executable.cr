@@ -58,7 +58,7 @@ module TwitterAds::Api
         raise err
       end
 
-      req.requested_at = Time.now
+      req.requested_at = Pretty.now
       response = http.exec(req.http)
       return Response.new(response, req)
     ensure

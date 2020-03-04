@@ -4,6 +4,7 @@ require "json"
 require "yaml"
 
 require "var"
+require "pretty"
 
 # lib
 require "./lib/**"

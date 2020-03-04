@@ -7,5 +7,7 @@ authors:
 dependencies:
   var:
     github: maiha/var.cr
+  pretty:
+    github: maiha/pretty.cr
 
 license: MIT
