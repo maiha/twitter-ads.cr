@@ -16,6 +16,7 @@ client = TwitterAds::Client.new(
   ACCESS_TOKEN,
   ACCESS_TOKEN_SECRET
 )
+client.api_version = "7" # Set this when you need a specific version
 
 accounts = client.accounts(count: 200)
 accounts.req.to_s              # => "GET /7/accounts.json?count=200"
