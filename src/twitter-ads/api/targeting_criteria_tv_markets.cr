@@ -8,7 +8,7 @@ end
 
 class TwitterAds::Client
   def targeting_criteria_tv_markets : Api::TargetingCriteriaTvMarkets
-    res = get("/6/targeting_criteria/tv_markets.json")
+    res = get("/7/targeting_criteria/tv_markets.json")
     Api::TargetingCriteriaTvMarkets.new(res)
   end
 end

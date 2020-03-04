@@ -18,7 +18,7 @@ client = TwitterAds::Client.new(
 )
 
 accounts = client.accounts(count: 200)
-accounts.req.to_s              # => "GET /6/accounts.json?count=200"
+accounts.req.to_s              # => "GET /7/accounts.json?count=200"
 accounts.rate_limit            # => "1998/2000"
 accounts.rate_limit.available? # => true
 accounts.size                  # => 16

@@ -13,7 +13,7 @@ class TwitterAds::Client
     opts = {"count" => count.to_s, "cursor" => cursor}
     opts["with_deleted"] = "true" if with_deleted
     opts["with_draft"]   = "true" if with_draft
-    res = get("/6/accounts/#{account_id}/line_items.json", opts)
+    res = get("/7/accounts/#{account_id}/line_items.json", opts)
     Api::LineItems.new(res, account_id: account_id)
   end
 end

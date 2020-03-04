@@ -11,7 +11,7 @@ class TwitterAds::Client
     opts = {
       "q" => q.to_s,
     }
-    res = get("/6/targeting_criteria/platform_versions.json", opts)
+    res = get("/7/targeting_criteria/platform_versions.json", opts)
     Api::TargetingCriteriaPlatformVersions.new(res)
   end
 end

@@ -8,7 +8,7 @@ end
 
 class TwitterAds::Client
   def media_library(account_id : String, count : Int32 = 200, cursor : String = "") : Api::MediaLibrary
-    res = get("/6/accounts/#{account_id}/media_library.json", {"count" => count.to_s, "cursor" => cursor})
+    res = get("/7/accounts/#{account_id}/media_library.json", {"count" => count.to_s, "cursor" => cursor})
     Api::MediaLibrary.new(res, account_id: account_id)
   end
 end

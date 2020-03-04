@@ -8,7 +8,7 @@ end
 
 class TwitterAds::Client
   def line_item_placements : Api::LineItemPlacements
-    res = get("/6/line_items/placements.json")
+    res = get("/7/line_items/placements.json")
     Api::LineItemPlacements.new(res)
   end
 end

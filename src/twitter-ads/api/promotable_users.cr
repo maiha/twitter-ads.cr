@@ -12,7 +12,7 @@ class TwitterAds::Client
   def promotable_users(account_id : String, with_deleted : Bool = false, count : Int32 = 200, cursor : String = "") : Api::PromotableUsers
     opts = {"count" => count.to_s, "cursor" => cursor}
     opts["with_deleted"] = "true" if with_deleted
-    res = get("/6/accounts/#{account_id}/promotable_users.json", opts)
+    res = get("/7/accounts/#{account_id}/promotable_users.json", opts)
     Api::PromotableUsers.new(res, account_id: account_id)
   end
 end

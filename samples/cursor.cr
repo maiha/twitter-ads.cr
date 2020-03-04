@@ -6,7 +6,7 @@ accounts = client.accounts(count: 2)
 accounts.each do |a|
   puts "Account(%s) # %s" % [a.id.inspect, a.name.inspect]
 end
-puts "# rate_limit_remaining: #{accounts.rate_limit_remaining}"
+puts "# rate_limit_remaining: #{accounts.rate_limit.remaining}"
 
 cursor = accounts.next_cursor?
 puts "# next cursor: #{cursor.inspect}"
@@ -15,5 +15,5 @@ if cursor
   accounts.each do |a|
     puts "Account(%s) # %s" % [a.id.inspect, a.name.inspect]
   end
-  puts "# rate_limit_remaining: #{accounts.rate_limit_remaining}"
+  puts "# rate_limit_remaining: #{accounts.rate_limit.remaining}"
 end

@@ -12,7 +12,7 @@ end
 
 class TwitterAds::Client
   def authenticated_user_access(account_id : String) : Api::AuthenticatedUserAccess
-    res = get("/6/accounts/#{account_id}/authenticated_user_access.json")
+    res = get("/7/accounts/#{account_id}/authenticated_user_access.json")
     Api::AuthenticatedUserAccess.new(res, account_id: account_id)
   end
 end

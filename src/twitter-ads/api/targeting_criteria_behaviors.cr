@@ -17,7 +17,7 @@ class TwitterAds::Client
       "count"        => count.to_s,
       "cursor"       => cursor.to_s,
     }
-    res = get("/6/targeting_criteria/behaviors.json", opts)
+    res = get("/7/targeting_criteria/behaviors.json", opts)
     Api::TargetingCriteriaBehaviors.new(res)
   end
 end
