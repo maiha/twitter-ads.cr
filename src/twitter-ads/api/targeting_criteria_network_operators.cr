@@ -14,7 +14,7 @@ class TwitterAds::Client
       "count"        => count.to_s,
       "cursor"       => cursor.to_s,
     }
-    res = get("/5/targeting_criteria/network_operators.json", opts)
+    res = get("/6/targeting_criteria/network_operators.json", opts)
     Api::TargetingCriteriaNetworkOperators.new(res)
   end
 end

@@ -12,7 +12,7 @@ class TwitterAds::Client
       "q"     => q.to_s,
       "count" => count.to_s,
     }
-    res = get("/5/targeting_criteria/devices.json", opts)
+    res = get("/6/targeting_criteria/devices.json", opts)
     Api::TargetingCriteriaDevices.new(res)
   end
 end

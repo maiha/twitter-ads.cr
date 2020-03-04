@@ -13,7 +13,7 @@ class TwitterAds::Client
       "count" => count.to_s,
       "cursor" => cursor.to_s,
     }
-    res = get("/5/targeting_criteria/languages.json", opts)
+    res = get("/6/targeting_criteria/languages.json", opts)
     Api::TargetingCriteriaLanguages.new(res)
   end
 end

@@ -18,7 +18,7 @@ class TwitterAds::Client
       "count"                        => count.to_s,
       "cursor"                       => cursor.to_s,
     }
-    res = get("/5/targeting_criteria/behavior_taxonomies.json", opts)
+    res = get("/6/targeting_criteria/behavior_taxonomies.json", opts)
     Api::TargetingCriteriaBehaviorTaxonomies.new(res)
   end
 end

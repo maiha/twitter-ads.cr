@@ -27,7 +27,7 @@ class TwitterAds::Client
     end
     tweet_type = type.to_s
 
-    res = get("/5/accounts/#{account_id}/tweet_previews.json", {"tweet_type" => tweet_type, "tweet_ids" => tweet_ids.map(&.to_s).join(",")})
+    res = get("/6/accounts/#{account_id}/tweet_previews.json", {"tweet_type" => tweet_type, "tweet_ids" => tweet_ids.map(&.to_s).join(",")})
     Api::TweetPreviews.new(res, account_id: account_id)
   end
 end

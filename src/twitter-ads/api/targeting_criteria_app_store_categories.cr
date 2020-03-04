@@ -28,7 +28,7 @@ class TwitterAds::Client
       "q" => q.to_s,
     }
     opts["store"] = store.to_s if store
-    res = get("/5/targeting_criteria/app_store_categories.json", opts)
+    res = get("/6/targeting_criteria/app_store_categories.json", opts)
     Api::TargetingCriteriaAppStoreCategories.new(res)
   end
 end

@@ -66,7 +66,7 @@ class TwitterAds::Client
 
     opts["conversation_type"] = conversation_type if conversation_type
 
-    res = get("/5/targeting_criteria/conversations.json", opts)
+    res = get("/6/targeting_criteria/conversations.json", opts)
     Api::TargetingCriteriaConversations.new(res)
   end
 end
