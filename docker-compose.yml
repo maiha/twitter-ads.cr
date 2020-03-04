@@ -2,7 +2,7 @@ version: '2'
 
 services:
   crystal:
-    image: crystallang/crystal:0.30.0
+    image: crystallang/crystal:0.33.0
     command: shards build
     user: "${UID}:${GID}"
     volumes:

@@ -2,7 +2,7 @@
 
 Twitter Ads API SDK for [Crystal](http://crystal-lang.org/).
 
-- crystal: 0.30.0
+- crystal: 0.33.0
 
 ## Usage
 

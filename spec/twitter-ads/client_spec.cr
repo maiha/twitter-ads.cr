@@ -50,15 +50,15 @@ describe TwitterAds::Client do
     end
 
     context "(false)" do
-      client.switch_domain = false
-    
       it "connects to ads-api.twitter.com when statuses_lookup" do
+        client.switch_domain = false
         expect_raises(TwitterAds::Dryrun, %r{https://ads-api.twitter.com/}) do
           client.statuses_lookup(id: "1")
         end
       end
 
       it "connects to ads-api.twitter.com when accounts" do
+        client.switch_domain = false
         expect_raises(TwitterAds::Dryrun, %r{https://ads-api.twitter.com/}) do
           client.accounts(count: 1)
         end
