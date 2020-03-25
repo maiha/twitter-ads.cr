@@ -18,7 +18,7 @@ class Twurlrc
 
   def self.load_file(path : String) : Twurlrc
     rc = Twurlrc.new
-    parser = Parser.from_yaml(File.read(File.expand_path(path)))
+    parser = Parser.from_yaml(File.read(Pretty.expand_path(path)))
 
     if ps = parser.profiles
       ps.each do |username, profiles|

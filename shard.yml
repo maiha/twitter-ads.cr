@@ -9,5 +9,6 @@ dependencies:
     github: maiha/var.cr
   pretty:
     github: maiha/pretty.cr
+    version: '>= 0.9.4'
 
 license: MIT
