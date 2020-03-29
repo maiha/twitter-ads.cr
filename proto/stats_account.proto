@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+import "stats_account_id_data.proto";
+import "stats_account_request.proto";
+
+message StatsAccount {
+  required string              account_id         = 1;
+  required string              data_type          = 2;
+  required int64               time_series_length = 3;
+  repeated StatsAccountIdData  data               = 4;
+  required StatsAccountRequest request            = 5;
+}
+
+message StatsAccountArray {
+  repeated StatsAccount array =  1; 
+}
+
+
+

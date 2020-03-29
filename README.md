@@ -159,7 +159,7 @@ $ crystal spec
 - Analytics
   - [ ] Asynchronous Analytics
   - [ ] Reach and Average Frequency
-  - [ ] Synchronous Analytics
+  - [x] Synchronous Analytics
   - [ ] Auction Insights
   - [ ] Active Entities
 - Audiences

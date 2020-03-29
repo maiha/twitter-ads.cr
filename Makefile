@@ -32,10 +32,28 @@ check_version_mismatch: README.md shard.yml
 ######################################################################
 ### generating
 
+# pb json2schema  json/twitter_ads/stats/params.json > proto/stats/params.proto
+
 .PHONY : proto
 proto:
 	mkdir -p src/twitter-ads/proto
 	PROTOBUF_NS=TwitterAds::Proto protoc -I proto --crystal_out src/twitter-ads/proto proto/*.proto
+
+proto-stats:
+	mkdir -p src/twitter-ads/proto/stats
+	PROTOBUF_NS=TwitterAds::Proto::Stats protoc -I proto --crystal_out src/twitter-ads/proto/stats proto/stats/*.proto
+	@make proto-hotfix
+
+# pb schema2model proto/stats/metrics.proto TwitterAds:: >| src/twitter-ads/models/stats/metrics.cr
+# pb schema2model proto/stats/params.proto  TwitterAds:: >| src/twitter-ads/models/stats/params.cr
+# pb schema2model proto/stats/account.proto TwitterAds:: >| src/twitter-ads/models/stats/account.cr
+
+.PHONY: proto-hotfix
+proto-hotfix:
+	make -s proto-hotfix/stats_account_metrics
+
+proto-hotfix/%: src/twitter-ads/models/%.cr
+	sed -i 's/Array(Int64) /Array(Int64)? /' $<
 
 ######################################################################
 ### versioning

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+message Account {
+  required string  account_id = 1; // custom
+  required Params  params     = 2; // params.proto
+  required Metrics metrics    = 3; // metrics.proto
+}
+
+message AccountArray {
+  repeated Account array =  1; 
+}
+
+
+

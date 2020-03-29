@@ -25,7 +25,7 @@ module TwitterAds
     ### support `belongs_to` macro
 
     macro inherited
-      RESOURCE   = {:type => :single, :name => nil}
+      RESOURCE   = {:type => :single, :name => nil, :extra_mappings => nil}
       BELONGS_TO = [] of ASTNode
 
       macro finished
@@ -58,6 +58,9 @@ module TwitterAds
           {% end %}
           {% if RESOURCE[:type] == :single %}
             data: TwitterAds::{{RESOURCE[:name]}},
+          {% end %}
+          {% if RESOURCE[:extra_mappings] %}
+            {{RESOURCE[:extra_mappings].id}}
           {% end %}
         })
       end
@@ -104,6 +107,11 @@ module TwitterAds
     macro resource_collection(name)
       {% RESOURCE[:type] = :collection %}
       {% RESOURCE[:name] = name %}
+    end
+
+    # additional mappings for response parser
+    macro resource_extra_mappings(v)
+      {% RESOURCE[:extra_mappings] = v %}
     end
 
     # belongs_to account_id : String

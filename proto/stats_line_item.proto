@@ -1,0 +1,59 @@
+syntax = "proto2";
+
+message StatsLineItem {
+  //////////////////////////////////////////////////////////////////////
+  /// custom
+  required string date              =  1; // "2019-12-31"
+  required string account_id        =  2; 
+  required string campaign_id       =  3; 
+
+  //////////////////////////////////////////////////////////////////////
+  /// params.proto
+  required string placement         =  4; // "ALL_ON_TWITTER"
+
+  //////////////////////////////////////////////////////////////////////
+  /// metrics.proto
+  /// 1. change type from "repeated int64" to "optional int64"
+  /// 2. change name by removing trailing "s" if exists
+
+  // ENGAGEMENT
+  optional int64  engagement                =  5; 
+  optional int64  impression                =  6; 
+  optional int64  retweet                   =  7; 
+  optional int64  replie                    =  8; 
+  optional int64  like                      =  9; 
+  optional int64  follow                    = 10; 
+  optional int64  card_engagement           = 11; 
+  optional int64  click                     = 12; 
+  optional int64  app_click                 = 13; 
+  optional int64  url_click                 = 14; 
+  optional int64  qualified_impression      = 15; 
+
+  // BILLING
+  optional int64  billed_engagement         = 16; 
+  optional int64  billed_charge_local_micro = 17; 
+
+  // VIDEO
+  optional int64  video_total_view          = 18; 
+  optional int64  video_views_25            = 19; 
+  optional int64  video_views_50            = 20; 
+  optional int64  video_views_75            = 21; 
+  optional int64  video_views_100           = 22; 
+  optional int64  video_cta_click           = 23; 
+  optional int64  video_content_start       = 24; 
+  optional int64  video_mrc_view            = 25; 
+  optional int64  video_3s100pct_view       = 26; 
+
+  // MEDIA
+  optional int64  media_view                = 27; 
+  optional int64  media_engagement          = 28; 
+
+  // TODO: WEB_CONVERSION
+  // TODO: MOBILE_CONVERSION
+  // TODO: LIFE_TIME_VALUE_MOBILE_CONVERSION
+}
+
+message StatsLineItemArray {
+  repeated StatsLineItem array =  1; 
+}
+

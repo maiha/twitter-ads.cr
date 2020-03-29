@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+import "stats_account_metrics.proto";
+
+message StatsAccountIdData {
+  required string              id      = 1;
+  repeated StatsAccountMetrics metrics = 2;
+}
+
+message StatsAccountIdDataArray {
+  repeated StatsAccountIdData array =  1; 
+}
+
+
+

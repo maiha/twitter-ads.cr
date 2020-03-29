@@ -1,0 +1,114 @@
+{
+  "data_type": "stats",
+  "time_series_length": 2,
+  "data": [
+    {
+      "id": "aaaa1",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              71710,
+              56602
+            ],
+            "tweets_send": [
+              0,
+              1
+            ],
+            "qualified_impressions": null,
+            "follows": null,
+            "app_clicks": null,
+            "retweets": [
+              6,
+              5
+            ],
+            "unfollows": null,
+            "likes": [
+              25,
+              14
+            ],
+            "engagements": [
+              1098,
+              887
+            ],
+            "clicks": [
+              616,
+              504
+            ],
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": [
+              150,
+              159
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "aaaa2",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              3572,
+              4644
+            ],
+            "tweets_send": null,
+            "qualified_impressions": null,
+            "follows": [
+              0,
+              1
+            ],
+            "app_clicks": null,
+            "retweets": null,
+            "unfollows": null,
+            "likes": [
+              1,
+              0
+            ],
+            "engagements": [
+              50,
+              67
+            ],
+            "clicks": [
+              26,
+              35
+            ],
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": [
+              11,
+              14
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    }
+  ],
+  "request": {
+    "params": {
+      "start_time": "2020-03-29T15:00:00Z",
+      "segmentation_type": null,
+      "entity_ids": [
+        "aaaa1",
+        "aaaa2"
+      ],
+      "end_time": "2020-03-31T15:00:00Z",
+      "country": null,
+      "placement": "ALL_ON_TWITTER",
+      "granularity": "DAY",
+      "entity": "LINE_ITEM",
+      "platform": null,
+      "metric_groups": [
+        "ENGAGEMENT"
+      ]
+    }
+  }
+}

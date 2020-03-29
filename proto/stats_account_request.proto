@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+import "stats_account_params.proto";
+
+message StatsAccountRequest {
+  required StatsAccountParams params =  1;
+}
+
+message StatsAccountRequestArray {
+  repeated StatsAccountRequest array =  1; 
+}
+
+

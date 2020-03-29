@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+message Params {
+  // .request.params
+  required string entity            =  1; // "CAMPAIGN"
+  repeated string entity_ids        =  2; // ["8wku1", "8wku2"]
+  required string start_time        =  3; // "2020-03-26T15:00:00Z"
+  required string end_time          =  4; // "2020-03-28T15:00:00Z"
+  repeated string metric_groups     =  5; // ["ENGAGEMENT"]
+  required string granularity       =  6; // "DAY"
+  required string placement         =  7; // "ALL_ON_TWITTER"
+
+  optional string segmentation_type =  8; // nil
+  optional string country           =  9; // nil
+  optional string platform          = 10; // nil
+}
+
+message ParamsArray {
+  repeated Params array =  1; 
+}
+
+

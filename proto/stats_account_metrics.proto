@@ -1,0 +1,47 @@
+syntax = "proto2";
+
+message StatsAccountMetrics {
+  optional string segment                   =  1; // null
+
+  // ENGAGEMENT
+  repeated int64  engagements               =  2; // [0,65,8]
+  repeated int64  impressions               =  3; // [0,2995,753]
+  repeated int64  retweets                  =  4; // [0,3,1]
+  repeated int64  replies                   =  5; // [0,3,1]
+  repeated int64  likes                     =  6; // [0,3,1]
+  repeated int64  follows                   =  7; // [0,3,1]
+  repeated int64  card_engagements          =  8; // [0,3,1]
+  repeated int64  clicks                    =  9; // [0,3,1]
+  repeated int64  app_clicks                = 10; // [0,3,1]
+  repeated int64  url_clicks                = 11; // [0,3,1]
+  repeated int64  qualified_impressions     = 12; // [0,3,1]
+
+  // BILLING
+  repeated int64  billed_engagements        = 13; // [0,3,1]
+  repeated int64  billed_charge_local_micro = 14; // [0,3,1]
+
+  // VIDEO
+  repeated int64  video_total_views         = 15; // [0,3,1]
+  repeated int64  video_views_25            = 16; // [0,3,1]
+  repeated int64  video_views_50            = 17; // [0,3,1]
+  repeated int64  video_views_75            = 18; // [0,3,1]
+  repeated int64  video_views_100           = 19; // [0,3,1]
+  repeated int64  video_cta_clicks          = 20; // [0,3,1]
+  repeated int64  video_content_starts      = 21; // [0,3,1]
+  repeated int64  video_mrc_views           = 22; // [0,1449,351]
+  repeated int64  video_3s100pct_views      = 23; // [0,3,1]
+
+  // MEDIA
+  repeated int64  media_views               = 24; // [0,3,1]
+  repeated int64  media_engagements         = 25; // [0,3,1]
+
+  // TODO: WEB_CONVERSION
+  // TODO: MOBILE_CONVERSION
+  // TODO: LIFE_TIME_VALUE_MOBILE_CONVERSION
+}
+
+message StatsAccountMetricsArray {
+  repeated StatsAccountMetrics array =  1; 
+}
+
+
