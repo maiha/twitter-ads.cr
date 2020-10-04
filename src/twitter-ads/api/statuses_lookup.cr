@@ -17,12 +17,14 @@ module TwitterAds::Api
 end
 
 class TwitterAds::Client
+  # This is not "twitter-ads-api" but "twitter-api" that requires ".json" extension.
+  # So the setting of `TwitterAds::Client#api_suffix` should be ignored.
   def statuses_lookup(id : String | Array(String)) : Api::StatusesLookup
     ids = id.is_a?(String) ? [id] : id
     opts = {
       "id" => ids.join(","),
     }
-    res = get("/1.1/statuses/lookup#{api_suffix}", opts)
+    res = get("/1.1/statuses/lookup.json", opts)
     Api::StatusesLookup.new(res)
   end
 
