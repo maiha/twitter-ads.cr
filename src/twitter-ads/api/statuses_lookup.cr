@@ -22,7 +22,7 @@ class TwitterAds::Client
     opts = {
       "id" => ids.join(","),
     }
-    res = get("/1.1/statuses/lookup.json", opts)
+    res = get("/1.1/statuses/lookup#{api_suffix}", opts)
     Api::StatusesLookup.new(res)
   end
 

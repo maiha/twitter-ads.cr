@@ -1,7 +1,10 @@
 require "../../spec_helper"
 
 describe TwitterAds::Api::Accounts do
-  client = Mock::Client.new("CK", "CS", "AT", "AS")
+  client = Mock::Client.new("CK", "CS", "AT", "AS").tap{|c|
+    # Only in the case of "accounts", there is a directory of the same name, so use a mock file with a ".json" suffix
+    c.api_suffix = ".json"
+  }
 
   describe "#accounts" do
     it "returns Array(TwitterAds::Account)" do

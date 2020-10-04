@@ -8,7 +8,7 @@ end
 
 class TwitterAds::Client
   def cards_poll(account_id : String, count : Int32 = 200, cursor : String = "") : Api::CardsPoll
-    res = get("/#{api_version}/accounts/#{account_id}/cards/poll.json", {"count" => count.to_s, "cursor" => cursor})
+    res = get("/#{api_version}/accounts/#{account_id}/cards/poll#{api_suffix}", {"count" => count.to_s, "cursor" => cursor})
     Api::CardsPoll.new(res, account_id: account_id)
   end
 end

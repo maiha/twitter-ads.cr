@@ -33,7 +33,7 @@ class TwitterAds::Client
       "count"         => count.to_s,
       "cursor"        => cursor.to_s,
     }
-    res = get("/#{api_version}/targeting_criteria/events.json", opts)
+    res = get("/#{api_version}/targeting_criteria/events#{api_suffix}", opts)
     Api::TargetingCriteriaEvents.new(res)
   end
 end

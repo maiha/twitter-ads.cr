@@ -17,9 +17,10 @@ client = TwitterAds::Client.new(
   ACCESS_TOKEN_SECRET
 )
 client.api_version = "7" # Set this when you need a specific version
+# client.api_suffix = ".json" # Set this when you need a specific suffix
 
 accounts = client.accounts(count: 200)
-accounts.req.to_s              # => "GET /7/accounts.json?count=200"
+accounts.req.to_s              # => "GET /8/accounts?count=200"
 accounts.rate_limit            # => "1998/2000"
 accounts.rate_limit.available? # => true
 accounts.size                  # => 16

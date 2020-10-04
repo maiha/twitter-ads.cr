@@ -1,0 +1,123 @@
+{
+  "data_type": "stats",
+  "time_series_length": 2,
+  "data": [
+    {
+      "id": "8wku1",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              252142,
+              274016
+            ],
+            "tweets_send": [
+              2,
+              1
+            ],
+            "qualified_impressions": null,
+            "follows": [
+              0,
+              3
+            ],
+            "app_clicks": null,
+            "retweets": [
+              10,
+              8
+            ],
+            "unfollows": null,
+            "likes": [
+              25,
+              19
+            ],
+            "engagements": [
+              809,
+              825
+            ],
+            "clicks": [
+              799,
+              814
+            ],
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": [
+              217,
+              208
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "8wku2",
+      "id_data": [
+        {
+          "segment": null,
+          "metrics": {
+            "impressions": [
+              487,
+              717
+            ],
+            "tweets_send": [
+              0,
+              2
+            ],
+            "qualified_impressions": null,
+            "follows": [
+              0,
+              1
+            ],
+            "app_clicks": null,
+            "retweets": [
+              1,
+              0
+            ],
+            "unfollows": null,
+            "likes": [
+              1,
+              2
+            ],
+            "engagements": [
+              15,
+              35
+            ],
+            "clicks": [
+              14,
+              34
+            ],
+            "card_engagements": null,
+            "poll_card_vote": null,
+            "replies": null,
+            "url_clicks": [
+              10,
+              18
+            ],
+            "carousel_swipes": null
+          }
+        }
+      ]
+    }
+  ],
+  "request": {
+    "params": {
+      "start_time": "2020-03-26T15:00:00Z",
+      "segmentation_type": null,
+      "entity_ids": [
+        "8wku1",
+        "8wku2"
+      ],
+      "end_time": "2020-03-28T15:00:00Z",
+      "country": null,
+      "placement": "ALL_ON_TWITTER",
+      "granularity": "DAY",
+      "entity": "CAMPAIGN",
+      "platform": null,
+      "metric_groups": [
+        "ENGAGEMENT"
+      ]
+    }
+  }
+}
