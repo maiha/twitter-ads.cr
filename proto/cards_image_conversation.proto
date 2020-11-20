@@ -1,22 +1,36 @@
 syntax = "proto2";
 
 message CardsImageConversation {
-  optional string id                   =  1; // "59woh"
-  optional string card_type            =  2; // "IMAGE_CONVERSATION"
-  optional string card_uri             =  3; // "card://923498485702009837"
-  optional string name                 =  4; // "image conversation card"
-  optional string title                =  5; // "Full moon"
-  optional string first_cta            =  6; // "#moon"
-  optional string first_cta_tweet      =  7; // "stars"
-  optional string image                =  8; // "https://pbs.twimg.com/media/DUhZuzxUQAAWZqr.jpg"
-  optional string image_display_width  =  9; // "1280"
-  optional string image_display_height = 10; // "670"
-  optional string thank_you_text       = 11; // "thanks"
-  optional string created_at           = 12; // "2018-01-27T04:58:42Z"
-  optional string updated_at           = 13; // "2018-01-27T04:58:42Z"
-  optional bool   deleted              = 14; // false
+  optional string card_type                  = 1  ; // "IMAGE_CONVERSATION"
+  optional string card_uri                   = 2  ; // "card://923498485702009837"
+  optional string cover_image_url            = 3  ; // "https://pbs.twimg.com/..."
+  optional string cover_image_display_height = 4  ; // "96"
+  optional string cover_image_display_width  = 5  ; // "240"
+  optional string created_at                 = 6  ; // "2018-01-27T04:58:42Z"
+  optional bool   deleted                    = 7  ; // false
+  optional string id                         = 8  ; // "59woh"
+  optional string image_display_height       = 9  ; // "96"
+  optional string image_display_width        = 10 ; // "240"
+  optional string media_url                  = 11 ; // "https://pbs.twimg.com/media/DUhZuzxUQAAWZqr.jpg"
+  optional string updated_at                 = 12 ; // "2018-01-27T04:58:42Z"
+  optional string media_key                  = 13 ; // "3_957113581522141184"
+  optional string name                       = 14 ; // "image conversation card"
+  optional string first_cta                  = 15 ; // "#moon"
+  optional string first_cta_tweet            = 16 ; // "stars"
+  optional string second_cta                 = 17 ; // "#2nd"
+  optional string second_cta_tweet           = 18 ; // "2nd text"
+  optional string third_cta                  = 19 ; // "#3rd"
+  optional string third_cta_tweet            = 20 ; // "3rd text"
+  optional string fourth_cta                 = 21 ; // "#4th"
+  optional string fourth_cta_tweet           = 22 ; // "4th text"
+  optional string thank_you_dest_url         = 23 ; // "https://..."
+  optional string thank_you_display_url      = 24 ; // ""
+  optional string thank_you_shortened_url    = 25 ; // "https://t.co/..."
+  optional string thank_you_text             = 26 ; // "thanks"
+  optional string thank_you_url              = 27 ; // ""
+  optional string title                      = 28 ; // "Full moon"
 
-  optional string account_id           = 15; // "18ce544yq30"
+  optional string account_id                 = 29 ; // "18ce544yq30"
 }
 
 message CardsImageConversationArray {

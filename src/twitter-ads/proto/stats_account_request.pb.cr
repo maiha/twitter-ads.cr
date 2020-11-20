@@ -1,6 +1,8 @@
 ## Generated from stats_account_request.proto
 require "protobuf"
 
+require "./stats_account_params.pb.cr"
+
 module TwitterAds
   module Proto
     

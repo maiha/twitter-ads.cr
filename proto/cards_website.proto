@@ -1,23 +1,26 @@
 syntax = "proto2";
 
 message CardsWebsite {
-  optional string id                    =  1; // "59wh0"
-  optional string card_type             =  2; // "WEBSITE"
-  optional string card_uri              =  3; // "card://957044309437526017"
-  optional string name                  =  4; // "website card"
-  optional string image                 =  5; // "https://pbs.twimg.com/media/DUKjmp8V4AAhrrB.jpg"
-  optional string image_display_width   =  6; // "800"
-  optional string image_display_height  =  7; // "418"
-  optional string website_dest_url      =  8; // "https://developer.twitter.com"
-  optional string website_display_url   =  9; // "developer.twitter.com"
-  optional string website_shortened_url = 10; // "https://t.co/zadeUSVD18"
-  optional string website_title         = 11; // "Twitter Developers"
-  optional string website_url           = 12; // "https://developer.twitter.com"
-  optional string created_at            = 13; // "2018-01-27T00:15:19Z"
-  optional string updated_at            = 14; // "2018-01-27T00:15:19Z"
-  optional bool   deleted               = 15; // false
+  optional string card_type             = 1  ; // "WEBSITE"
+  optional string card_uri              = 2  ; // "card://957044309437526017"
+  optional string created_at            = 3  ; // "2018-01-27T00:15:19Z"
+  optional bool   deleted               = 4  ; // false
+  optional string id                    = 5  ; // "59wh0"
+  optional string image_display_height  = 6  ; // "418"
+  optional string image_display_width   = 7  ; // "800"
+  optional string media_key             = 8  ; // "3_955505955445268480"
+  optional string media_url             = 9  ; // "https://pbs.twimg.com/media/DUKjmp8V4AAhrrB.jpg"
+  optional string name                  = 10 ; // "website card"
+  optional string updated_at            = 11 ; // "2018-01-27T00:15:19Z"
+  optional string website_amp_url       = 12 ; // "https://..."
+  optional string website_cdn_amp_url   = 13 ; // "https://..."
+  optional string website_dest_url      = 14 ; // "https://developer.twitter.com"
+  optional string website_display_url   = 15 ; // "developer.twitter.com"
+  optional string website_shortened_url = 16 ; // "https://t.co/zadeUSVD18"
+  optional string website_title         = 17 ; // "Twitter Developers"
+  optional string website_url           = 18 ; // "https://developer.twitter.com"
 
-  optional string account_id            = 16; // "18ce544yq30"
+  optional string account_id            = 19 ; // "18ce544yq30"
 }
 
 message CardsWebsiteArray {

@@ -1,30 +1,29 @@
 syntax = "proto2";
 
 message CardsVideoWebsite {
-  optional string id                       =  1; // "5a4vf"
-  optional string card_type                =  2; // "VIDEO_WEBSITE"
-  optional string card_uri                 =  3; // "card://958225772740714496"
-  optional string name                     =  4; // "video website card"
-  optional string title                    =  5; // "Twitter Developers"
-  optional string content_duration_seconds =  6; // "8"
-  optional string video_owner_id           =  7; // "756201191646691328"
-  optional string video_content_id         =  8; // "958224897255211013"
-  optional string video_poster_url         =  9; // "https://pbs.twimg.com/amplify_video_thumb/958224897255211013/img/EnyDab6vErGm4Avd.jpg"
-  optional string video_poster_width       = 10; // "16"
-  optional string video_poster_height      = 11; // "9"
-  optional string video_url                = 12; // "https://video.twimg.com/amplify_video/vmap/958224897255211013.vmap"
-  optional string video_width              = 13; // "16"
-  optional string video_height             = 14; // "9"
-  optional string video_hls_url            = 15; // "https://video.twimg.com/amplify_video/958224897255211013/pl/yngoBofLjm-k5hHe.m3u8"
-  optional string website_dest_url         = 16; // "https://developer.twitter.com"
-  optional string website_display_url      = 17; // "developer.twitter.com"
-  optional string website_shortened_url    = 18; // "https://t.co/zadeUSVD18"
-  optional string website_url              = 19; // "https://developer.twitter.com"
-  optional string created_at               = 20; // "2018-01-30T06:30:01Z"
-  optional string updated_at               = 21; // "2018-01-30T06:30:01Z"
-  optional bool   deleted                  = 22; // false
+  optional string card_type                = 1  ; // "VIDEO_WEBSITE"
+  optional string card_uri                 = 2  ; // "card://958225772740714496"
+  optional string content_duration_seconds = 3  ; // "8"
+  optional string created_at               = 4  ; // "2018-01-30T06:30:01Z"
+  optional bool   deleted                  = 5  ; // false
+  optional string id                       = 6  ; // "5a4vf"
+  optional string media_key                = 7  ; // "13_958224897255211013"
+  optional string media_url                = 8  ; // "https://video.twimg.com/amplify_video/vmap/958224897255211013.vmap"
+  optional string name                     = 9  ; // "video website card"
+  optional string poster_media_url         = 10 ; // "https://pbs.twimg.com/amplify_video_thumb/958224897255211013/img/EnyDab6vErGm4Avd.jpg"
+  optional string title                    = 11 ; // "Twitter Developers"
+  optional string updated_at               = 12 ; // "2018-01-30T06:30:01Z"
+  optional string video_height             = 13 ; // "9"
+  optional string video_owner_id           = 14 ; // "756201191646691328"
+  optional string video_poster_height      = 15 ; // "9"
+  optional string video_poster_width       = 16 ; // "16"
+  optional string video_width              = 17 ; // "16"
+  optional string website_dest_url         = 18 ; // "https://developer.twitter.com"
+  optional string website_display_url      = 19 ; // "developer.twitter.com"
+  optional string website_shortened_url    = 20 ; // "https://t.co/zadeUSVD18"
+  optional string website_url              = 21 ; // "https://developer.twitter.com"
 
-  optional string account_id               = 23; // "18ce544yq30"
+  optional string account_id               = 22 ; // "18ce544yq30"
 }
 
 message CardsVideoWebsiteArray {

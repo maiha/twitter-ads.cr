@@ -1,23 +1,30 @@
 syntax = "proto2";
 
 message CardsImageAppDownload {
-  optional string id                   =  1; // "59wiu"
-  optional string card_type            =  2; // "IMAGE_APP_DOWNLOAD"
-  optional string card_uri             =  3; // "card://957050688416112640"
-  optional string name                 =  4; // "image app download card"
-  optional string app_cta              =  5; // "INSTALL"
-  optional string country_code         =  6; // "US"
-  optional string googleplay_app_id    =  7; // "com.twitter.android"
-  optional string image_display_width  =  8; // "800"
-  optional string image_display_height =  9; // "418"
-  optional string wide_app_image       = 10; // "https://pbs.twimg.com/media/DOxqHTWV4AAL7Bk.jpg"
-  optional string created_at           = 11; // "2018-01-27T00:40:39Z"
-  optional string updated_at           = 12; // "2018-01-27T00:40:39Z"
-  optional bool   deleted              = 13; // false
+  optional string app_cta              = 1  ; // "INSTALL"
+  optional string card_type            = 2  ; // "IMAGE_APP_DOWNLOAD"
+  optional string card_uri             = 3  ; // "card://957050688416112640"
+  optional string country_code         = 4  ; // "US"
+  optional string created_at           = 5  ; // "2018-01-27T00:40:39Z"
+  optional bool   deleted              = 6  ; // false
+  optional string googleplay_app_id    = 7  ; // "com.twitter.android"
+  optional string googleplay_deep_link = 8  ; // "com.twitter.android"
+  optional string id                   = 9  ; // "59wiu"
+  optional string image_display_height = 10 ; // "400"
+  optional string image_display_width  = 11 ; // "800"
+  optional string ipad_app_id          = 12 ; // "123456"
+  optional string ipad_deep_link       = 13 ; // "123456"
+  optional string iphone_app_id        = 14 ; // "123456"
+  optional string iphone_deep_link     = 15 ; // "com.twitter.android"
+  optional string media_key            = 16 ; // "3_917438348871983104"
+  optional string media_url            = 17 ; // "https://pbs.twimg.com/media/DOxqHTWV4AAL7Bk.jpg"
+  optional string name                 = 18 ; // "image app download card"
+  optional string updated_at           = 19 ; // "2018-01-27T00:40:39Z"
 
-  optional string account_id           = 14; // "18ce544yq30"
+  optional string account_id           = 20; // "18ce544yq30"
 }
 
 message CardsImageAppDownloadArray {
   repeated CardsImageAppDownload array =  1; 
 }
+

@@ -1,6 +1,8 @@
 ## Generated from line_item_placement.proto
 require "protobuf"
 
+require "./string_array.pb.cr"
+
 module TwitterAds
   module Proto
     

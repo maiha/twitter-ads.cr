@@ -1,21 +1,22 @@
 syntax = "proto2";
 
 message CardsImageDirectMessage {
-  optional string id                           =  1; // "59wpi"
-  optional string card_type                    =  2; // "IMAGE_DIRECT_MESSAGE"
-  optional string card_uri                     =  3; // "card://957127157993500678"
-  optional string name                         =  4; // "space card"
-  optional string first_cta                    =  5; // "DM me"
-  optional string first_cta_welcome_message_id =  6; // "865707372148174852"
-  optional string image                        =  7; // "https://pbs.twimg.com/media/DUfy_2JU8AAMAOk.jpg"
-  optional string image_display_width          =  8; // "800"
-  optional string image_display_height         =  9; // "418"
-  optional string recipient_user_id            = 10; // "756201191646691328"
-  optional string created_at                   = 11; // "2018-01-27T05:44:31Z"
-  optional string updated_at                   = 12; // "2018-01-30T01:33:49Z"
-  optional bool   deleted                      = 13; // false
+  optional string card_type                    = 1  ; // "IMAGE_DIRECT_MESSAGE"
+  optional string card_uri                     = 2  ; // "card://957127157993500678"
+  optional string created_at                   = 3  ; // "2018-01-27T05:44:31Z"
+  optional bool   deleted                      = 4  ; // false
+  optional string first_cta                    = 5  ; // "DM me"
+  optional string first_cta_welcome_message_id = 6  ; // "865707372148174852"
+  optional string id                           = 7  ; // "59wpi"
+  optional string image_display_height         = 8  ; // "418"
+  optional string image_display_width          = 9  ; // "800"
+  optional string media_key                    = 10 ; // "3_957000624519835648"
+  optional string media_url                    = 11 ; // "https://pbs.twimg.com/media/DUfy_2JU8AAMAOk.jpg"
+  optional string name                         = 12 ; // "space card"
+  optional string recipient_user_id            = 13 ; // "756201191646691328"
+  optional string updated_at                   = 14 ; // "2018-01-30T01:33:49Z"
 
-  optional string account_id                   = 14; // "18ce544yq30"
+  optional string account_id                   = 15; // "18ce544yq30"
 }
 
 message CardsImageDirectMessageArray {

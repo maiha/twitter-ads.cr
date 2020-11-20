@@ -1,0 +1,16 @@
+{
+  "card_type": "VIDEO_DIRECT_MESSAGE",
+  "card_uri": "card://958403939703054336",
+  "created_at": "2018-01-30T18:18:00Z",
+  "deleted": false,
+  "first_cta": "DM me",
+  "first_cta_welcome_message_id": "865707372148174852",
+  "id": "5a8av",
+  "media_key": "13_953023103654797312",
+  "media_url": "https://video.twimg.com/amplify_video/vmap/953023103654797312.vmap",
+  "name": "video direct message card",
+  "poster_media_url": "https://pbs.twimg.com/amplify_video_thumb/953023103654797312/img/56BNaul3VVrxf9Hw.jpg",
+  "recipient_user_id": "756201191646691328",
+  "updated_at": "2018-01-30T18:18:00Z",
+  "video_owner_id": "756201191646691328"
+}

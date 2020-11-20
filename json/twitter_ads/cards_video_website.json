@@ -1,0 +1,23 @@
+{
+  "card_type": "VIDEO_WEBSITE",
+  "card_uri": "card://958225772740714496",
+  "content_duration_seconds": "8",
+  "created_at": "2018-01-30T06:30:01Z",
+  "deleted": false,
+  "id": "5a4vf",
+  "media_key": "13_958224897255211013",
+  "media_url": "https://video.twimg.com/amplify_video/vmap/958224897255211013.vmap",
+  "name": "video website card",
+  "poster_media_url": "https://pbs.twimg.com/amplify_video_thumb/958224897255211013/img/EnyDab6vErGm4Avd.jpg",
+  "title": "Twitter Developers",
+  "updated_at": "2018-01-30T06:30:01Z",
+  "video_height": "9",
+  "video_owner_id": "756201191646691328",
+  "video_poster_height": "9",
+  "video_poster_width": "16",
+  "video_width": "16",
+  "website_dest_url": "https://developer.twitter.com",
+  "website_display_url": "developer.twitter.com",
+  "website_shortened_url": "https://t.co/zadeUSVD18",
+  "website_url": "https://developer.twitter.com"
+}

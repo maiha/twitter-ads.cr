@@ -1,0 +1,16 @@
+{
+  "card_type": "IMAGE_DIRECT_MESSAGE",
+  "card_uri": "card://957127157993500678",
+  "created_at": "2018-01-27T05:44:31Z",
+  "deleted": false,
+  "first_cta": "DM me",
+  "first_cta_welcome_message_id": "865707372148174852",
+  "id": "59wpi",
+  "image_display_height": "418",
+  "image_display_width": "800",
+  "media_key": "3_957000624519835648",
+  "media_url": "https://pbs.twimg.com/media/DUfy_2JU8AAMAOk.jpg",
+  "name": "space card",
+  "recipient_user_id": "756201191646691328",
+  "updated_at": "2018-01-30T01:33:49Z"
+}

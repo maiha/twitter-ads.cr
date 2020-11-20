@@ -1,21 +1,27 @@
 syntax = "proto2";
 
 message CardsVideoAppDownload {
-  optional string id                   =  1; // "59wiu"
-  optional string card_type            =  2; // "IMAGE_APP_DOWNLOAD"
-  optional string card_uri             =  3; // "card://957050688416112640"
-  optional string name                 =  4; // "image app download card"
-  optional string app_cta              =  5; // "INSTALL"
-  optional string country_code         =  6; // "US"
-  optional string googleplay_app_id    =  7; // "com.twitter.android"
-  optional string image_display_width  =  8; // "800"
-  optional string image_display_height =  9; // "418"
-  optional string wide_app_image       = 10; // "https://pbs.twimg.com/media/DOxqHTWV4AAL7Bk.jpg"
-  optional string created_at           = 11; // "2018-01-27T00:40:39Z"
-  optional string updated_at           = 12; // "2018-01-27T00:40:39Z"
-  optional bool   deleted              = 13; // false
+  optional string card_uri             = 1  ; // "card://958233417929261056"
+  optional string card_type            = 2  ; // "VIDEO_APP_DOWNLOAD"
+  optional string created_at           = 3  ; // "2018-01-30T07:00:24Z"
+  optional bool   deleted              = 4  ; // false
+  optional string id                   = 5  ; // "5a4z3"
+  optional string updated_at           = 6  ; // "2018-01-30T07:00:24Z"
+  optional string video_owner_id       = 7  ; // "756201191646691328"
+  optional string poster_media_url     = 8  ; // "https://pbs.twimg.com/amplify_video_thumb/958231855240589313/img/rjhswYG084qYYgF6.jpg"
+  optional string media_url            = 9  ; // "https://video.twimg.com/amplify_video/vmap/958231855240589313.vmap"
+  optional string country_code         = 10 ; // "US"
+  optional string app_cta              = 11 ; // "INSTALL"
+  optional string ipad_app_id          = 12 ; // "123456"
+  optional string ipad_deep_link       = 13 ; // "123456"
+  optional string iphone_app_id        = 14 ; // "123456"
+  optional string iphone_deep_link     = 15 ; // "com.twitter.android"
+  optional string googleplay_app_id    = 16 ; // "com.twitter.android"
+  optional string googleplay_deep_link = 17 ; // "com.twitter.android"
+  optional string name                 = 18 ; // "video app download"
+  optional string media_key            = 19 ; // "13_958231855240589313"
 
-  optional string account_id           = 14; // "18ce544yq30"
+  optional string account_id           = 20 ; // "18ce544yq30"
 }
 
 message CardsVideoAppDownloadArray {
