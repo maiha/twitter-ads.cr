@@ -8,27 +8,32 @@ module TwitterAds
       include Protobuf::Message
       
       contract_of "proto2" do
-        optional :id, :string, 1
-        optional :card_type, :string, 2
-        optional :card_uri, :string, 3
-        optional :name, :string, 4
-        optional :first_choice, :string, 5
-        optional :second_choice, :string, 6
-        optional :content_duration_seconds, :string, 7
-        optional :duration_in_minutes, :string, 8
-        optional :video_width, :string, 9
-        optional :video_height, :string, 10
-        optional :video_url, :string, 11
-        optional :video_hls_url, :string, 12
-        optional :video_poster_width, :string, 13
-        optional :video_poster_height, :string, 14
-        optional :video_poster_url, :string, 15
-        optional :start_time, :string, 16
-        optional :end_time, :string, 17
-        optional :created_at, :string, 18
-        optional :updated_at, :string, 19
-        optional :deleted, :bool, 20
-        optional :account_id, :string, 21
+        optional :card_type, :string, 1
+        optional :card_uri, :string, 2
+        optional :content_duration_seconds, :string, 3
+        optional :created_at, :string, 4
+        optional :deleted, :bool, 5
+        optional :duration_in_minutes, :string, 6
+        optional :end_time, :string, 7
+        optional :first_choice, :string, 8
+        optional :fourth_choice, :string, 9
+        optional :id, :string, 10
+        optional :image_display_height, :string, 11
+        optional :image_display_width, :string, 12
+        optional :media_key, :string, 13
+        optional :media_url, :string, 14
+        optional :name, :string, 15
+        optional :poster_media_url, :string, 16
+        optional :second_choice, :string, 17
+        optional :start_time, :string, 18
+        optional :third_choice, :string, 19
+        optional :updated_at, :string, 20
+        optional :video_height, :string, 21
+        optional :video_hls_url, :string, 22
+        optional :video_poster_height, :string, 23
+        optional :video_poster_width, :string, 24
+        optional :video_width, :string, 25
+        optional :account_id, :string, 26
       end
     end
     

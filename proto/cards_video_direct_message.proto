@@ -1,23 +1,22 @@
 syntax = "proto2";
 
 message CardsVideoDirectMessage {
-  optional string id                           =  1; // "5a8av"
-  optional string card_type                    =  2; // "VIDEO_DIRECT_MESSAGE"
-  optional string card_uri                     =  3; // "card://958403939703054336"
-  optional string name                         =  4; // "video direct message card"
-  optional string recipient_user_id            =  5; // "756201191646691328"
-  optional string first_cta                    =  6; // "DM me"
-  optional string first_cta_welcome_message_id =  7; // "865707372148174852"
-  optional string video_url                    =  8; // "https://video.twimg.com/amplify_video/vmap/953023103654797312.vmap"
-  optional string video_owner_id               =  9; // "756201191646691328"
-  optional string video_content_id             = 10; // "953023103654797312"
-  optional string video_hls_url                = 11; // "https://video.twimg.com/amplify_video/953023103654797312/pl/LaOEWcPzHpWoj_Iv.m3u8"
-  optional string video_poster_url             = 12; // "https://pbs.twimg.com/amplify_video_thumb/953023103654797312/img/56BNaul3VVrxf9Hw.jpg"
-  optional string created_at                   = 13; // "2018-01-30T18:18:00Z"
-  optional string updated_at                   = 14; // "2018-01-30T18:18:00Z"
-  optional bool   deleted                      = 15; // false
+  optional string card_type                    = 1  ; // "VIDEO_DIRECT_MESSAGE"
+  optional string card_uri                     = 2  ; // "card://958403939703054336"
+  optional string created_at                   = 3  ; // "2018-01-30T18:18:00Z"
+  optional bool   deleted                      = 4  ; // false
+  optional string first_cta                    = 5  ; // "DM me"
+  optional string first_cta_welcome_message_id = 6  ; // "865707372148174852"
+  optional string id                           = 7  ; // "5a8av"
+  optional string media_key                    = 8  ; // "13_953023103654797312"
+  optional string media_url                    = 9  ; // "https://video.twimg.com/amplify_video/vmap/953023103654797312.vmap"
+  optional string name                         = 10 ; // "video direct message card"
+  optional string poster_media_url             = 11 ; // "https://pbs.twimg.com/amplify_video_thumb/953023103654797312/img/56BNaul3VVrxf9Hw.jpg"
+  optional string recipient_user_id            = 12 ; // "756201191646691328"
+  optional string updated_at                   = 13 ; // "2018-01-30T18:18:00Z"
+  optional string video_owner_id               = 14 ; // "756201191646691328"
 
-  optional string account_id                   = 16; // "18ce544yq30"
+  optional string account_id                   = 15 ; // "18ce544yq30"
 }
 
 message CardsVideoDirectMessageArray {

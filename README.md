@@ -16,7 +16,7 @@ client = TwitterAds::Client.new(
   ACCESS_TOKEN,
   ACCESS_TOKEN_SECRET
 )
-client.api_version = "7" # Set this when you need a specific version
+client.api_version = "8" # Set this when you need a specific version
 # client.api_suffix = ".json" # Set this when you need a specific suffix
 
 accounts = client.accounts(count: 200)
@@ -209,20 +209,20 @@ $ crystal spec
   - [ ] User Settings
 - Creatives
   - [x] Account Media
-  - [x] Image App Download Cards
-  - [x] Image Conversation Cards
+  - [v8] Image App Download Cards
+  - [v8] Image Conversation Cards
   - [x] Scheduled Tweets
-  - [x] Video App Download Cards
-  - [x] Video Conversation Cards
-  - [x] Video Website Cards
-  - [x] Website Cards
+  - [v8] Video App Download Cards
+  - [v8] Video Conversation Cards
+  - [v8] Video Website Cards
+  - [v8] Website Cards
   - [x] Preroll Call To Actions
   - [x] Tweets
-  - [x] Image Direct Message Cards
-  - [x] Video Direct Message Cards
+  - [v8] Image Direct Message Cards
+  - [v8] Video Direct Message Cards
   - [x] Media Library
   - [x] Cards Fetch
-  - [x] Poll Cards
+  - [v8] Poll Cards
   - [x] Draft Tweets
   - [x] Tweet Previews
 - Measurement

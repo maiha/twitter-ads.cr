@@ -1,0 +1,21 @@
+{
+  "app_cta": "INSTALL",
+  "card_type": "IMAGE_APP_DOWNLOAD",
+  "card_uri": "card://957050688416112640",
+  "country_code": "US",
+  "created_at": "2018-01-27T00:40:39Z",
+  "deleted": false,
+  "googleplay_app_id": "com.twitter.android",
+  "googleplay_deep_link": "com.twitter.android",
+  "id": "59wiu",
+  "image_display_height": "400",
+  "image_display_width": "800",
+  "ipad_app_id": "123456",
+  "ipad_deep_link": "123456",
+  "iphone_app_id": "123456",
+  "iphone_deep_link": "com.twitter.android",
+  "media_key": "3_917438348871983104",
+  "media_url": "https://pbs.twimg.com/media/DOxqHTWV4AAL7Bk.jpg",
+  "name": "image app download card",
+  "updated_at": "2018-01-27T00:40:39Z"
+}
