@@ -6,7 +6,7 @@ class TwitterAds::ScopedTimeline
       id:                        Int64         , # 880950824339419100
     })
   end
-
+  
   JSON.mapping({
     id:                        Int64         , # 880950824339419100
     lang:                      String?       , # "en"

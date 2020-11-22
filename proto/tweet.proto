@@ -1,0 +1,39 @@
+syntax = "proto2";
+
+message Tweet {
+  optional bool   retweeted                 = 1  ; // false
+  optional string source                    = 2  ; // "<a href=\"https://ads-api.twitter.com\" rel=\"nofollow\">Twitter for Advertisers (legacy)</a>"
+  optional int64  favorite_count            = 3  ; // 0
+  optional string in_reply_to_status_id_str = 4  ; // nil
+  optional string id_str                    = 5  ; // "1166476031668015104"
+  optional int64  in_reply_to_user_id       = 6  ; // 123456
+  optional bool   truncated                 = 7  ; // false
+  optional int64  retweet_count             = 8  ; // 0
+  optional string scheduled_status          = 9  ; // "SCHEDULED"
+  optional int64  id                        = 10 ; // 1166476031668015000
+  optional int64  in_reply_to_status_id     = 11 ; // 123456
+  optional bool   nullcast                  = 12 ; // true
+  optional string created_at                = 13 ; // "Tue Aug 27 22:22:12 +0000 2019"
+  optional string place                     = 14 ; // nil
+  optional string scheduled_at              = 15 ; // nil
+  optional string tweet_type                = 16 ; // "PUBLISHED"
+  optional bool   favorited                 = 17 ; // false
+  optional string card_uri                  = 18 ; // "card://957050688416112640"
+  optional string full_text                 = 19 ; // "hello, v6"
+  optional string lang                      = 20 ; // "es"
+  optional string in_reply_to_screen_name   = 21 ; // nil
+  optional string in_reply_to_user_id_str   = 22 ; // nil
+  optional string tweet_id                  = 23 ; // "1166476031668015104"
+
+  // "coordinates": {"type": "Point", "coordinates": [139.70305791, 35.66530605]},
+  // "geo": {"type": "Point", "coordinates": [139.70305791, 35.66530605]},
+
+  // [manual] {"id" => 880950824339419136, "id_str" => "880950824339419136"}
+  optional int64  user_id                   = 25; // 880950824339419136
+
+  optional string account_id                = 26 ; // "18ce544yq30"
+}
+
+message TweetArray {
+  repeated Tweet array = 1;
+}

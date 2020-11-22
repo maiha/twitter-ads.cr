@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+message User {
+  optional string name                               = 1  ; // "Twitter API"
+  optional int64  friends_count                      = 2  ; // 79
+  optional string screen_name                        = 3  ; // "TwitterAPI"
+  optional string location                           = 4  ; // "San Francisco, CA"
+  optional string url                                = 5  ; // "https://t.co/8IkCzCDr19"
+  optional string profile_image_url                  = 6  ; // "http://pbs.twimg.com/profile_images/942858479592554497/BbazLO9L_normal.jpg"
+  optional string profile_background_color           = 7  ; // "FFFFFF"
+  optional bool   profile_use_background_image       = 8  ; // false
+  optional bool   is_translator                      = 9  ; // false
+  optional bool   geo_enabled                        = 10 ; // false
+  optional string description                        = 11 ; // "The Real Twitter API. Tweets about API changes, service issues and our Developer Platform. Don't get an answer? It's on my website."
+  optional string profile_link_color                 = 12 ; // "F5560C"
+  optional string id_str                             = 13 ; // "6253282"
+  optional int64  listed_count                       = 14 ; // 2973
+  optional bool   default_profile_image              = 15 ; // false
+  optional int64  followers_count                    = 16 ; // 399568
+  optional string profile_image_url_https            = 17 ; // "https://..."
+  optional string profile_sidebar_border_color       = 18 ; // "FFFFFF"
+  optional string profile_background_image_url       = 19 ; // "http://..."
+  optional int64  favourites_count                   = 20 ; // 1001
+  optional bool   default_profile                    = 21 ; // false
+  optional int64  id                                 = 22 ; // 6253282
+  optional bool   profile_background_tile            = 23 ; // false
+  optional bool   contributors_enabled               = 24 ; // false
+  optional string created_at                         = 25 ; // "Mon Sep 27 15:08:52 +0000 2010"
+  optional string profile_sidebar_fill_color         = 26 ; // "DDEEF6"
+  optional string translator_type                    = 27 ; // "none"
+  optional string profile_text_color                 = 28 ; // "333333"
+  optional bool   verified                           = 29 ; // true
+  optional string profile_banner_url                 = 30 ; // "https://..."
+  optional int64  statuses_count                     = 31 ; // 157377
+  optional string profile_background_image_url_https = 32 ; // "https://..."
+  optional bool   is_translation_enabled             = 33 ; // false
+}
+
+message UserArray {
+  repeated User array = 1;
+}

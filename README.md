@@ -82,6 +82,7 @@ TwitterAds::Client
   def targeting_criteria_tv_markets : Api::TargetingCriteriaTvMarkets
   def targeting_criteria_tv_shows(tv_market_locale : String, q : String? = nil) : Api::TargetingCriteriaTvShows
   def tweet_previews(account_id : String, tweet_type : String, tweet_ids : Array(Int64)) : Api::TweetPreviews
+  def tweets(account_id : String, tweet_type : String, trim_user : Bool = false) : Api::Tweets
 
 # Twitter API
 TwitterAds::Client
@@ -225,6 +226,7 @@ $ crystal spec
   - [v8] Poll Cards
   - [x] Draft Tweets
   - [x] Tweet Previews
+  - [v8] Tweets
 - Measurement
   - [ ] App Event Provider Configurations
   - [ ] App Event Tags
