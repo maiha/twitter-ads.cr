@@ -31,7 +31,15 @@ class TwitterAds::Tweet
   def user_id : Int64?
     user.try(&.id)
   end
-  
+
+  def user_name : String?
+    user.try(&.name)
+  end
+
+  def user_screen_name : String?
+    user.try(&.screen_name)
+  end
+
   def to_pb
     TwitterAds::Proto::Tweet.new(
       retweeted: retweeted,
@@ -59,6 +67,8 @@ class TwitterAds::Tweet
       tweet_id: tweet_id,
       user_id: user_id,
       account_id: account_id?,
+      user_name: user_name,
+      user_screen_name: user_screen_name,
     )
   end
 end

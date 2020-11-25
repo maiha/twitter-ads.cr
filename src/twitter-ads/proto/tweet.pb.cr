@@ -33,6 +33,8 @@ module TwitterAds
         optional :tweet_id, :string, 23
         optional :user_id, :int64, 25
         optional :account_id, :string, 26
+        optional :user_name, :string, 27
+        optional :user_screen_name, :string, 28
       end
     end
     

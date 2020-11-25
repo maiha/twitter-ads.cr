@@ -32,6 +32,10 @@ message Tweet {
   optional int64  user_id                   = 25; // 880950824339419136
 
   optional string account_id                = 26 ; // "18ce544yq30"
+
+  // user
+  optional string user_name                 = 27  ; // "Twitter API"
+  optional string user_screen_name          = 28  ; // "TwitterAPI"
 }
 
 message TweetArray {
