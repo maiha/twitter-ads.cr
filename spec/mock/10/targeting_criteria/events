@@ -21,7 +21,6 @@
       "end_time": "2018-01-02T00:00:00Z",
       "country_code": null,
       "device_breakdown_percentage": {},
-      "id": "1ex",
       "is_global": true,
       "event_type": "HOLIDAY",
       "country_breakdown_percentage": {}

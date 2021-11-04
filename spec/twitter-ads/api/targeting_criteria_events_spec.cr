@@ -9,7 +9,6 @@ describe TwitterAds::Api::TargetingCriteriaEvents do
       i = res.first
 
       i.name.should eq "New Year's"
-      i.id.should eq "1ex"
       i.is_global.should eq true
     end
   end

@@ -229,6 +229,9 @@ $ crystal spec
 #### v9
 * [DEPRECATED] `line_item_apps` (use `line_item` instead)
 
+#### v7
+* [DEPRECATED] `id` parameter on `targeting_criteria/events`
+
 #### v6
 * [REMOVED] `scoped_timeline`
 * [REMOVED] `targeting_criteria/behaviors`

@@ -1,6 +1,5 @@
 class TwitterAds::TargetingCriteriaEvent
   JSON.mapping({
-    id:           String  , # "1ex"
     name:         String? , # "New Year's"
     is_global:    Bool?   , # true
     country_code: String? , # nil
@@ -11,7 +10,6 @@ class TwitterAds::TargetingCriteriaEvent
 
   def to_pb
     TwitterAds::Proto::TargetingCriteriaEvent.new(
-      id: id,
       name: name,
       is_global: is_global,
       country_code: country_code,
