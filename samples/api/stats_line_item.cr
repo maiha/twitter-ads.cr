@@ -25,4 +25,4 @@ stats = client.stats(
   placement: "ALL_ON_TWITTER",
 )
 
-puts stats.body
+puts stats.api.body

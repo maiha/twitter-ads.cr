@@ -36,9 +36,9 @@ def run(client, account : String | TwitterAds::Account, line_item_id = nil)
     placement: "ALL_ON_TWITTER",
   )
 
-  STDERR.puts stats.rate_limit?.inspect
+  STDERR.puts stats.api.rate_limit?.inspect
   
-  puts stats.body
+  puts stats.api.body
 end
 
 account_id   = ARGV.shift?
