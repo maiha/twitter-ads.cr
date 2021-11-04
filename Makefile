@@ -30,6 +30,34 @@ spec:
 check_version_mismatch: README.md shard.yml
 	diff -w -c <(grep version: $<) <(grep ^version: shard.yml)
 
+SAMPLES := $(sort $(basename $(notdir $(wildcard samples/api/*.cr))))
+SAMPLES_DIRS := $(patsubst %,samples/ci/%,$(SAMPLES))
+.PHONY: samples/ci
+samples/ci: $(SAMPLES_DIRS)
+	make samples/ci-result
+
+samples/ci/%: samples/api/%.cr
+	mkdir -p  "$@"
+	touch "$@/ng"
+	@crystal "$<" > "$@/log" 2> "$@/err" && rm "$@/ng"
+	[ -s "$@/err" ] || rm "$@/err"
+
+# ANSI color
+RED=\033[31m
+GREEN=\033[32m
+RESET=\033[0m
+
+samples/ci-result:
+	@for x in $(SAMPLES_DIRS); do \
+	  if [ ! -d "$$x" ]; then \
+	    echo -e "   `basename $$x` # Not tested yet"; \
+	  elif [ -f "$$x/ng" ]; then \
+	    echo -e "$(RED)NG `basename $$x`$(RESET) # `head -1 $$x/err`"; \
+	  else \
+	    echo -e "$(GREEN)OK `basename $$x`$(RESET)"; \
+	  fi \
+	done
+
 ######################################################################
 ### generating
 
