@@ -130,7 +130,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   twitter-ads:
     github: maiha/twitter-ads.cr
-    version: 9.0.0
+    version: 10.0.0
 ```
 
 ## Development
@@ -194,23 +194,23 @@ $ crystal spec
   - [ ] User Settings
 - Creatives
   - [x] Account Media
-  - [v8] Image App Download Cards
-  - [v8] Image Conversation Cards
+  - [x] Image App Download Cards
+  - [x] Image Conversation Cards
   - [x] Scheduled Tweets
-  - [v8] Video App Download Cards
-  - [v8] Video Conversation Cards
-  - [v8] Video Website Cards
-  - [v8] Website Cards
+  - [x] Video App Download Cards
+  - [x] Video Conversation Cards
+  - [x] Video Website Cards
+  - [x] Website Cards
   - [x] Preroll Call To Actions
   - [x] Tweets
-  - [v8] Image Direct Message Cards
-  - [v8] Video Direct Message Cards
+  - [x] Image Direct Message Cards
+  - [x] Video Direct Message Cards
   - [x] Media Library
   - [x] Cards Fetch
-  - [v8] Poll Cards
+  - [x] Poll Cards
   - [x] Draft Tweets
   - [x] Tweet Previews
-  - [v8] Tweets
+  - [x] Tweets
 - Measurement
   - [ ] App Event Provider Configurations
   - [ ] App Event Tags
