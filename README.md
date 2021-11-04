@@ -64,7 +64,6 @@ TwitterAds::Client
   def promoted_tweets(account_id : String) : Api::PromotedTweets
   def scheduled_promoted_tweets(account_id : String) : Api::ScheduledPromotedTweets
   def scheduled_tweets(account_id : String) : Api::ScheduledTweets
-  def scoped_timeline(account_id : String) : Api::ScopedTimeline
   def targeting_criteria(account_id : String, line_item_ids : Array(String)) : Api::TargetingCriteria
   def targeting_criteria_app_store_categories(q : String? = nil, store : String? = nil) : Api::TargetingCriteriaAppStoreCategories
   def targeting_criteria_behavior_taxonomies(behavior_taxonomy_ids : String? = nil, parent_behavior_taxonomy_ids : String? = nil) : Api::TargetingCriteriaBehaviorTaxonomies
@@ -233,6 +232,9 @@ $ crystal spec
 
 #### v9
 * [DEPRECATED] `line_item_apps` (use `line_item` instead)
+
+#### v6
+* [REMOVED] `scoped_timeline`
 
 ## Contributing
 
