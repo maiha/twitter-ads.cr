@@ -7,10 +7,9 @@ describe TwitterAds::Api::TargetingCriteriaTvShows do
     it "returns Array(TwitterAds::TargetingCriteriaTvShow)" do
       res = client.targeting_criteria_tv_shows("en-US", q: "news", count: 1)
       i = res.first
-
-      i.id.should eq 10051997516
-      i.name.should eq "Boston 25 News Special: Coming Home"
-      i.genre.should eq "SPECIAL"
+      i.name.should eq "NewsWatch"
+      i.genre.should eq "PAID"
+      i.targeting_value.should eq 10027243420
     end
   end
 end

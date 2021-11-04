@@ -231,10 +231,12 @@ $ crystal spec
 
 #### v7
 * [DEPRECATED] `id` parameter on `targeting_criteria/events`
+* [DEPRECATED] `id` parameter on `targeting_criteria/tv_markets`
 
 #### v6
 * [REMOVED] `scoped_timeline`
 * [REMOVED] `targeting_criteria/behaviors`
+* [CHANGED] `locale` is a required parameter on `targeting_criteria/tv_shows`
 
 ## Contributing
 

@@ -7,7 +7,7 @@ module TwitterAds
   module Proto
     
     struct StatsAccountRequest
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         required :params, StatsAccountParams, 1
@@ -15,7 +15,7 @@ module TwitterAds
     end
     
     struct StatsAccountRequestArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, StatsAccountRequest, 1

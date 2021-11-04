@@ -1,9 +1,9 @@
 syntax = "proto2";
 
 message TargetingCriteriaTvShow {
-  optional int64  id    = 1 ; // 10051997516
-  optional string name  = 2 ; // "Boston 25 News Special: Coming Home"
-  optional string genre = 3 ; // "SPECIAL"
+  optional string name           = 1 ; // "NewsWatch"
+  optional string genre          = 2 ; // "PAID"
+  optional int64 targeting_value = 3 ; // 10027243420,
 }
 
 message TargetingCriteriaTvShowArray {

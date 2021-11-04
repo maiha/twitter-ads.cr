@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct TargetingCriteriaLanguage
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :name, :string, 1
@@ -15,7 +15,7 @@ module TwitterAds
     end
     
     struct TargetingCriteriaLanguageArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, TargetingCriteriaLanguage, 1

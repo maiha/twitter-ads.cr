@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct PrerollCallToAction
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -20,7 +20,7 @@ module TwitterAds
     end
     
     struct PrerollCallToActionArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, PrerollCallToAction, 1

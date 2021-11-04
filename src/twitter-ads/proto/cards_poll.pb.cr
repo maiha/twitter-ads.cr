@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct CardsPoll
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :card_type, :string, 1
@@ -38,7 +38,7 @@ module TwitterAds
     end
     
     struct CardsPollArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, CardsPoll, 1

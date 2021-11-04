@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct TargetingCriteriaEvent
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -19,7 +19,7 @@ module TwitterAds
     end
     
     struct TargetingCriteriaEventArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, TargetingCriteriaEvent, 1

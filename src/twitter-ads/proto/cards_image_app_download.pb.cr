@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct CardsImageAppDownload
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :app_cta, :string, 1
@@ -32,7 +32,7 @@ module TwitterAds
     end
     
     struct CardsImageAppDownloadArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, CardsImageAppDownload, 1

@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct User
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :name, :string, 1
@@ -45,7 +45,7 @@ module TwitterAds
     end
     
     struct UserArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, User, 1

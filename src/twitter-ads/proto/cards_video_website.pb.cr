@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct CardsVideoWebsite
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :card_type, :string, 1
@@ -34,7 +34,7 @@ module TwitterAds
     end
     
     struct CardsVideoWebsiteArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, CardsVideoWebsite, 1

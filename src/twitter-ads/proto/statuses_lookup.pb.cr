@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct StatusesLookup
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :created_at, :string, 1
@@ -33,7 +33,7 @@ module TwitterAds
     end
     
     struct StatusesLookupArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, StatusesLookup, 1

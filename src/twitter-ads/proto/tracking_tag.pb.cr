@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct TrackingTag
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :tracking_partner, :string, 1
@@ -14,7 +14,7 @@ module TwitterAds
     end
     
     struct TrackingTagArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, TrackingTag, 1

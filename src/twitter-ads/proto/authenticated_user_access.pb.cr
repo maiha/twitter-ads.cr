@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct AuthenticatedUserAccess
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :user_id, :int64, 1
@@ -15,7 +15,7 @@ module TwitterAds
     end
     
     struct AuthenticatedUserAccessArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, AuthenticatedUserAccess, 1

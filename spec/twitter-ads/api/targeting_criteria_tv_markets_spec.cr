@@ -8,9 +8,9 @@ describe TwitterAds::Api::TargetingCriteriaTvMarkets do
       res = client.targeting_criteria_tv_markets
       i = res.first
 
-      i.id.should eq "6"
       i.name.should eq "France"
       i.country_code.should eq "FR"
+      i.locale.should eq "fr-FR"
     end
   end
 end

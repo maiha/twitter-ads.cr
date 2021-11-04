@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct FundingInstrument
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -29,7 +29,7 @@ module TwitterAds
     end
     
     struct FundingInstrumentArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, FundingInstrument, 1

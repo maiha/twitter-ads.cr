@@ -1,13 +1,26 @@
 {
   "data": [
     {
-      "name": "Boston 25 News Special: Coming Home",
-      "id": 10051997516,
-      "genre": "SPECIAL"
+      "name": "NewsWatch",
+      "targeting_value": 10027243420,
+      "genre": "PAID",
+      "locales": [
+        {
+          "language": "en",
+          "country": "US"
+        }
+      ]
     }
   ],
-  "next_cursor": "c-4191-sd-PhmKVTr6S5FlLz7FMGA",
+  "next_cursor": "c-22838-zdQDJrTxSvOYfQOhb2IlGQ",
   "request": {
-    "params": {}
+    "params": {
+      "locale": {
+        "countryCode": "US",
+        "languageCode": "en"
+      },
+      "count": 1,
+      "q": "news"
+    }
   }
 }

@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct MediaCreative
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -22,7 +22,7 @@ module TwitterAds
     end
     
     struct MediaCreativeArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, MediaCreative, 1

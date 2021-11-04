@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct UserSetting
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :notification_email, :string, 1
@@ -18,7 +18,7 @@ module TwitterAds
     end
     
     struct UserSettingArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, UserSetting, 1

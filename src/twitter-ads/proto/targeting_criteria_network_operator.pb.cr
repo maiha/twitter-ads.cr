@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct TargetingCriteriaNetworkOperator
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :name, :string, 1
@@ -16,7 +16,7 @@ module TwitterAds
     end
     
     struct TargetingCriteriaNetworkOperatorArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, TargetingCriteriaNetworkOperator, 1

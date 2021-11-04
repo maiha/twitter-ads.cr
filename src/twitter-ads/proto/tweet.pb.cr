@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct Tweet
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :retweeted, :bool, 1
@@ -39,7 +39,7 @@ module TwitterAds
     end
     
     struct TweetArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, Tweet, 1

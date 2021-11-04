@@ -7,7 +7,7 @@ module TwitterAds
   module Proto
     
     struct LineItemPlacement
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :product_type, :string, 1
@@ -16,7 +16,7 @@ module TwitterAds
     end
     
     struct LineItemPlacementArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, LineItemPlacement, 1

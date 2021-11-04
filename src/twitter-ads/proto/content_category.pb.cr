@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct ContentCategory
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -15,7 +15,7 @@ module TwitterAds
     end
     
     struct ContentCategoryArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, ContentCategory, 1

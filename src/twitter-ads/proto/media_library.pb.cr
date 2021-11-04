@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct MediaLibrary
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :media_id, :string, 1
@@ -25,7 +25,7 @@ module TwitterAds
     end
     
     struct MediaLibraryArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, MediaLibrary, 1

@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct StatsLineItem
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         required :date, :string, 1
@@ -40,7 +40,7 @@ module TwitterAds
     end
     
     struct StatsLineItemArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, StatsLineItem, 1

@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct StatsAccountMetrics
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :segment, :string, 1
@@ -37,7 +37,7 @@ module TwitterAds
     end
     
     struct StatsAccountMetricsArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, StatsAccountMetrics, 1

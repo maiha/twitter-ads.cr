@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct ReachEstimate
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :impressions, :string, 1
@@ -18,7 +18,7 @@ module TwitterAds
     end
     
     struct ReachEstimateArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, ReachEstimate, 1

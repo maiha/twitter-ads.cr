@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct StringArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, :string, 1

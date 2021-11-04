@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct LineItem
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -41,7 +41,7 @@ module TwitterAds
     end
     
     struct LineItemArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, LineItem, 1

@@ -5,17 +5,17 @@ module TwitterAds
   module Proto
     
     struct TargetingCriteriaTvShow
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
-        optional :id, :int64, 1
-        optional :name, :string, 2
-        optional :genre, :string, 3
+        optional :name, :string, 1
+        optional :genre, :string, 2
+        optional :targeting_value, :int64, 3
       end
     end
     
     struct TargetingCriteriaTvShowArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, TargetingCriteriaTvShow, 1

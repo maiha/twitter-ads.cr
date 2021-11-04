@@ -5,7 +5,7 @@ module TwitterAds
   module Proto
     
     struct Account
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         optional :id, :string, 1
@@ -24,7 +24,7 @@ module TwitterAds
     end
     
     struct AccountArray
-      include Protobuf::Message
+      include ::Protobuf::Message
       
       contract_of "proto2" do
         repeated :array, Account, 1
