@@ -55,7 +55,6 @@ TwitterAds::Client
   def cards_website(account_id : String) : Api::CardsWebsite
   def draft_tweets(account_id : String) : Api::DraftTweets
   def funding_instruments(account_id : String) : Api::FundingInstruments
-  def line_item_apps(account_id : String) : Api::LineItemApps
   def line_items(account_id : String) : Api::LineItems
   def line_item_placements() : Api::LineItemPlacements
   def media_creatives(account_id : String) : Api::MediaCreatives
@@ -181,7 +180,6 @@ $ crystal spec
   - [x] Funding Instruments
   - [ ] IAB Categories
   - [x] Line Items
-  - [x] Line Item Apps
   - [x] Line Item Placements
   - [x] Media Creatives
   - [x] Promoted Accounts
@@ -236,6 +234,10 @@ $ crystal spec
   - [ ] Conversion Event
 - Twitter API
   - [x] GET statuses/lookup
+
+## Breaking changes
+#### v9
+* [DEPRECATED] `line_item_apps` (use `line_item` instead)
 
 ## Contributing
 
