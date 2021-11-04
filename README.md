@@ -144,15 +144,6 @@ $ crystal spec
 
 ## NOTE
 - media_library: `media_id` returns String (document says `Type: long`)
-- line-items: `tracking_tags` returns object (document says `Type: String`)
-```json
-  "tracking_tags": [
-    {
-      "tracking_partner": "DOUBLE_CLICK",
-      "tracking_tag": "https://ad.doubleclick.net/..."
-    }
-  ]
-```
 - targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
 
 ## Roadmap
@@ -236,6 +227,10 @@ $ crystal spec
   - [x] GET statuses/lookup
 
 ## Breaking changes
+
+#### v10
+* [DEPRECATED] `tracking_tags` parameter on `line_items` (use `tracking_tag` instead)
+
 #### v9
 * [DEPRECATED] `line_item_apps` (use `line_item` instead)
 
