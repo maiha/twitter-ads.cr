@@ -2,10 +2,10 @@ require "../spec_helper"
 
 describe TwitterAds::Client do
   describe "#api_version" do
-    it "returns 8 in default" do
+    it "returns 10 in default" do
       client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
-      client.api_version.should eq("8")
-      client.accounts.req.to_s.should eq("GET /8/accounts?count=200")
+      client.api_version.should eq("10")
+      client.accounts.req.to_s.should eq("GET /10/accounts?count=200")
     end
 
     it "accepts any string for version" do
