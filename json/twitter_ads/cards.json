@@ -1,0 +1,31 @@
+{
+  "name": "deep link",
+  "card_type": "IMAGE_CAROUSEL_APP",
+  "created_at": "2020-10-28T20:47:52Z",
+  "card_uri": "card://1321554298900107264",
+  "id": "1321554298900107264",
+  "updated_at": "2020-10-28T20:47:52Z",
+  "deleted": false,
+  "components": [
+    {
+      "type": "SWIPEABLE_MEDIA",
+      "media_keys": [
+        "3_1073727809120419840",
+        "3_1075096386931052545"
+      ]
+    },
+    {
+      "type": "BUTTON",
+      "label": {
+        "type": "ENUM",
+        "value": "OPEN"
+      },
+      "destination": {
+        "type": "APP",
+        "country_code": "US",
+        "googleplay_app_id": "com.twitter.android",
+        "googleplay_deep_link": "twitter://user?screen_name=apimctestface"
+      }
+    }
+  ]
+}

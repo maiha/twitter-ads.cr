@@ -1,0 +1,205 @@
+{
+  "request": {
+    "params": {
+      "account_id": "18ce54d4x5t"
+    }
+  },
+  "next_cursor": null,
+  "data": [
+    {
+      "name": "IMAGE_WEBSITE card",
+      "components": [
+        {
+          "media_key": "3_908573900237180932",
+          "media_metadata": {
+            "3_908573900237180932": {
+              "type": "IMAGE",
+              "url": "https://pbs.twimg.com/1.png",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "type": "MEDIA"
+        },
+        {
+          "title": "Twitter Developers",
+          "destination": {
+            "url": "https://developer.twitter.com",
+            "type": "WEBSITE"
+          },
+          "type": "DETAILS"
+        }
+      ],
+      "id": "1489088310542660002",
+      "created_at": "2022-02-22T08:35:10Z",
+      "card_uri": "card://1489088310542660002",
+      "updated_at": "2022-02-22T08:35:10Z",
+      "deleted": false,
+      "card_type": "IMAGE_WEBSITE"
+    },
+    {
+      "name": "IMAGE_CAROUSEL_WEBSITE card",
+      "components": [
+        {
+          "media_keys": [
+	    "3_9085739002371809321",
+	    "3_9085739002371809322"
+          ],
+          "media_metadata": {
+	    "3_9085739002371809321": {
+              "type": "IMAGE",
+              "url": "https://pbs.twimg.com/1.png",
+              "width": 800,
+              "height": 800
+            },
+	    "3_9085739002371809322": {
+              "type": "IMAGE",
+              "url": "https://pbs.twimg.com/2.png",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "type": "SWIPEABLE_MEDIA"
+        },
+        {
+          "title": "Twitter Developers",
+          "destination": {
+            "url": "https://developer.twitter.com",
+            "type": "WEBSITE"
+          },
+          "type": "DETAILS"
+        }
+      ],
+      "id": "1489088310542660003",
+      "created_at": "2022-03-10T12:45:25Z",
+      "card_uri": "card://1489088310542660003",
+      "updated_at": "2022-03-10T12:45:25Z",
+      "deleted": false,
+      "card_type": "IMAGE_CAROUSEL_WEBSITE"
+    },
+    {
+      "name": "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE card",
+      "slides": [
+        [
+          {
+            "media_key": "3_908573900237180933",
+            "media_metadata": {
+              "3_908573900237180933": {
+                "type": "IMAGE",
+                "url": "https://pbs.twimg.com/1.png",
+                "width": 800,
+                "height": 800
+              }
+            },
+            "type": "MEDIA"
+          },
+          {
+            "title": "Twitter Developers",
+            "destination": {
+              "url": "https://developer.twitter.com",
+              "type": "WEBSITE"
+            },
+            "type": "DETAILS"
+          }
+        ],
+        [
+          {
+            "media_key": "3_9085739002371809343",
+            "media_metadata": {
+              "3_9085739002371809342": {
+                "type": "IMAGE",
+                "url": "https://pbs.twimg.com/2.png",
+                "width": 800,
+                "height": 800
+              },
+              "3_9085739002371809343": {
+                "type": "IMAGE",
+                "url": "https://pbs.twimg.com/3.png",
+                "width": 800,
+                "height": 800
+              }
+            },
+            "type": "MEDIA"
+          },
+          {
+            "title": "Twitter Developers",
+            "destination": {
+              "url": "https://developer.twitter.com",
+              "type": "WEBSITE"
+            },
+            "type": "DETAILS"
+          }
+        ],
+        [
+          {
+            "media_key": "3_9085739002371809351",
+            "media_metadata": {
+              "3_1501901664189440005": {
+                "type": "IMAGE",
+                "url": "https://pbs.twimg.com/4.png",
+                "width": 800,
+                "height": 800
+              }
+            },
+            "type": "MEDIA"
+          },
+          {
+            "title": "Twitter Developers",
+            "destination": {
+              "url": "https://developer.twitter.com",
+              "type": "WEBSITE"
+            },
+            "type": "DETAILS"
+          }
+        ]
+      ],
+      "id": "1501903537541840900",
+      "created_at": "2022-03-10T12:51:22Z",
+      "card_uri": "card://1501903537541840900",
+      "updated_at": "2022-03-10T12:51:22Z",
+      "deleted": false,
+      "card_type": "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE"
+    },
+    {
+      "name": "IMAGE_APP card",
+      "components": [
+        {
+          "media_key": "3_908573900237180951",
+          "media_metadata": {
+            "3_908573900237180951": {
+              "type": "IMAGE",
+              "url": "https://pbs.twimg.com/1.png",
+              "width": 1024,
+              "height": 1024
+            },
+            "3_908573900237180952": {
+              "type": "IMAGE",
+              "url": "https://pbs.twimg.com/2.png",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "type": "MEDIA"
+        },
+        {
+          "label": {
+            "value": "INSTALL",
+            "type": "ENUM"
+          },
+          "destination": {
+            "country_code": "JP",
+            "ios_app_store_identifier": "123783545",
+            "type": "APP"
+          },
+          "type": "BUTTON"
+        }
+      ],
+      "id": "1501913573118770951",
+      "created_at": "2022-03-10T13:31:14Z",
+      "card_uri": "card://1501913573118770951",
+      "updated_at": "2022-03-10T13:31:14Z",
+      "deleted": false,
+      "card_type": "IMAGE_APP"
+    }
+  ]
+}

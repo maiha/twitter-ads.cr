@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message Cards {
+  optional string name       = 1 ; // "deep link"
+  optional string card_type  = 2 ; // "IMAGE_CAROUSEL_APP"
+  optional string created_at = 3 ; // "2020-10-28T20:47:52Z"
+  optional string card_uri   = 4 ; // "card://1321554298900107264"
+  optional string id         = 5 ; // "1321554298900107264"
+  optional string updated_at = 6 ; // "2020-10-28T20:47:52Z"
+  optional bool   deleted    = 7 ; // false
+  repeated string media_urls = 8 ; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
+  optional string account_id = 9 ; // "18ce544yq30"
+}
+
+message CardsArray {
+  repeated Cards array = 1;
+}

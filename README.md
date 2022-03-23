@@ -43,6 +43,7 @@ TwitterAds::Client
   def account_media(account_id : String) : Api::AccountMedia
   def authenticated_user_access(account_id : String) : AuthenticatedUserAccess
   def campaigns(account_id : String) : Api::Campaigns
+  def cards(account_id : String) : Api::Cards
   def cards_all(account_id : String, card_uris : Array(String)) : Api::CardsAll
   def cards_image_app_download(account_id : String) : Api::CardsImageAppDownload
   def cards_image_conversation(account_id : String) : Api::CardsImageConversation
