@@ -47,7 +47,10 @@ module TwitterAds
       end
 
       {% if RESOURCE[:type] == :collection %}
-        include Enumerable(TwitterAds::{{RESOURCE[:name]}})
+        include Indexable(TwitterAds::{{RESOURCE[:name]}})
+        def unsafe_fetch(index : Int)
+          parser.data[index]
+        end
       {% end %}
 
       class Parser
