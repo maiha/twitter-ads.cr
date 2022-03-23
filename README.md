@@ -16,7 +16,7 @@ client = TwitterAds::Client.new(
   ACCESS_TOKEN,
   ACCESS_TOKEN_SECRET
 )
-client.api_version = "8" # Set this when you need a specific version
+client.api_version = "10" # Set this when you need a specific version
 # client.api_suffix = ".json" # Set this when you need a specific suffix
 
 accounts = client.accounts(count: 200)
@@ -131,7 +131,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   twitter-ads:
     github: maiha/twitter-ads.cr
-    version: 10.0.0
+    version: 10.1.0
 ```
 
 ## Development
@@ -141,6 +141,7 @@ $ crystal spec
 ```
 
 ## NOTE
+- The `cards` API uses the external UNIX command `jq`.
 - media_library: `media_id` returns String (document says `Type: long`)
 - targeting-criteria: `targeting_value` sometimes returns 0 (Integer).
 
