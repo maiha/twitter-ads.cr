@@ -18,4 +18,5 @@ require "./twitter-ads/request"
 require "./twitter-ads/response"
 require "./twitter-ads/api/**"
 
+require "./twitter-ads/jq"
 require "./twitter-ads/client"

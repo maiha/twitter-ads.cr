@@ -29,6 +29,9 @@ module TwitterAds
     var logger : Logger = Logger.new(nil)
     var dryrun : Bool = false
 
+    # JQ
+    var jq : Jq = JqCommand.new
+
     include Api::Executable
 
     def initialize(@consumer_key, @consumer_secret, @access_token, @access_token_secret, url : String? = nil, @logger : Logger? = nil)
