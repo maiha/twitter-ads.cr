@@ -15,8 +15,10 @@ module TwitterAds
         optional :id, :string, 5
         optional :updated_at, :string, 6
         optional :deleted, :bool, 7
-        repeated :media_urls, :string, 8
-        optional :account_id, :string, 9
+        optional :account_id, :string, 8
+        repeated :titles, :string, 9
+        repeated :media_urls, :string, 10
+        repeated :dest_urls, :string, 11
       end
     end
     

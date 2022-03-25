@@ -122,9 +122,9 @@
             "type": "MEDIA"
           },
           {
-            "title": "Twitter Developers",
+            "title": "Twitter",
             "destination": {
-              "url": "https://developer.twitter.com",
+              "url": "https://twitter.com",
               "type": "WEBSITE"
             },
             "type": "DETAILS"

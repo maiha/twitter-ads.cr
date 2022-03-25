@@ -8,8 +8,12 @@ message Cards {
   optional string id         = 5 ; // "1321554298900107264"
   optional string updated_at = 6 ; // "2020-10-28T20:47:52Z"
   optional bool   deleted    = 7 ; // false
-  repeated string media_urls = 8 ; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
-  optional string account_id = 9 ; // "18ce544yq30"
+
+  optional string account_id = 8 ; // "18ce544yq30"
+
+  repeated string titles     = 9 ; // ["Twitter Developers", "Twitter"]
+  repeated string media_urls = 10; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
+  repeated string dest_urls  = 11; // ["https://developer.twitter.com", "https://twitter.com"]
 }
 
 message CardsArray {

@@ -1,6 +1,8 @@
 class TwitterAds::Cards
   var account_id : String
+  var titles     : Array(String) = Array(String).new
   var media_urls : Array(String) = Array(String).new
+  var dest_urls  : Array(String) = Array(String).new
 
   JSON.mapping({
     name:       String?       , # "deep link"
@@ -22,7 +24,9 @@ class TwitterAds::Cards
       id: id,
       updated_at: updated_at,
       deleted: deleted,
+      titles: titles,
       media_urls: media_urls,
+      dest_urls: dest_urls,
 
       account_id: account_id,
     )
