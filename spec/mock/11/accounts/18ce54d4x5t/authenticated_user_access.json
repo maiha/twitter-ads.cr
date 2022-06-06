@@ -1,6 +1,6 @@
 {
   "data": {
-    "user_id": 2417045708,
+    "user_id": "2417045708",
     "permissions": [
       "ACCOUNT_ADMIN",
       "TWEET_COMPOSER"

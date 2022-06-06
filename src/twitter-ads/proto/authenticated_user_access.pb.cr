@@ -8,7 +8,7 @@ module TwitterAds
       include ::Protobuf::Message
       
       contract_of "proto2" do
-        optional :user_id, :int64, 1
+        optional :user_id, :string, 1
         repeated :permissions, :string, 2
         optional :account_id, :string, 3
       end
