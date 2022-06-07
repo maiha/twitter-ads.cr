@@ -21,7 +21,7 @@ module TwitterAds
         optional :product_type, :string, 11
         optional :end_time, :string, 12
         optional :duration_in_days, :int64, 13
-        optional :total_budget_amount_local_micro, :string, 14
+        optional :total_budget_amount_local_micro, :int64, 14
         optional :objective, :string, 15
         optional :id, :string, 16
         optional :entity_status, :string, 17

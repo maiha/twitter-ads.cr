@@ -14,7 +14,7 @@ message LineItem {
   optional string product_type                    = 11 ; // "PROMOTED_TWEETS"
   optional string end_time                        = 12 ; // nil
   optional int64  duration_in_days                = 13 ; // 1
-  optional string total_budget_amount_local_micro = 14 ; // nil
+  optional int64  total_budget_amount_local_micro = 14 ; // 37500000
   optional string objective                       = 15 ; // "ENGAGEMENTS"
   optional string id                              = 16 ; // "8v7jo"
   optional string entity_status                   = 17 ; // "ACTIVE"

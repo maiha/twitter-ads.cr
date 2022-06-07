@@ -17,7 +17,7 @@ class TwitterAds::LineItem
     product_type:                    String?       , # "PROMOTED_TWEETS"
     end_time:                        String?       , # nil
     duration_in_days:                Int64?        , # 1
-    total_budget_amount_local_micro: String?       , # nil
+    total_budget_amount_local_micro: Int64?        , # 37500000
     objective:                       String?       , # "ENGAGEMENTS"
     id:                              String        , # "8v7jo"
     entity_status:                   String?       , # "ACTIVE"
