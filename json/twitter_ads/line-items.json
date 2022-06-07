@@ -1,0 +1,30 @@
+{
+  "bid_strategy": "MAX",
+  "advertiser_user_id": "756201191646691328",
+  "name": "Untitled",
+  "placements": [
+    "ALL_ON_TWITTER"
+  ],
+  "start_time": null,
+  "bid_amount_local_micro": 100000,
+  "advertiser_domain": null,
+  "target_cpa_local_micro": null,
+  "primary_web_event_tag": null,
+  "pay_by": "ENGAGEMENT",
+  "product_type": "PROMOTED_TWEETS",
+  "end_time": null,
+  "duration_in_days": 1,
+  "total_budget_amount_local_micro": null,
+  "objective": "ENGAGEMENTS",
+  "id": "8v7jo",
+  "entity_status": "ACTIVE",
+  "goal": "ENGAGEMENT",
+  "frequency_cap": 5,
+  "categories": [],
+  "currency": "USD",
+  "created_at": "2017-05-27T08:04:00Z",
+  "updated_at": "2017-05-27T08:06:25Z",
+  "campaign_id": "8gdx6",
+  "creative_source": "MANUAL",
+  "deleted": false
+}

@@ -8,35 +8,33 @@ module TwitterAds
       include ::Protobuf::Message
       
       contract_of "proto2" do
-        optional :id, :string, 1
-        optional :name, :string, 2
-        optional :bid_type, :string, 3
-        optional :product_type, :string, 4
-        optional :advertiser_user_id, :int64, 5
-        optional :campaign_id, :string, 6
+        optional :bid_strategy, :string, 1
+        optional :advertiser_user_id, :string, 2
+        optional :name, :string, 3
+        repeated :placements, :string, 4
+        optional :start_time, :string, 5
+        optional :bid_amount_local_micro, :int64, 6
         optional :advertiser_domain, :string, 7
-        optional :automatically_select_bid, :bool, 8
-        optional :bid_amount_local_micro, :int64, 9
-        optional :bid_unit, :string, 10
-        repeated :categories, :string, 11
-        optional :creative_source, :string, 12
-        optional :currency, :string, 13
-        optional :entity_status, :string, 14
-        optional :include_sentiment, :string, 15
-        optional :objective, :string, 16
-        optional :optimization, :string, 17
-        repeated :placements, :string, 18
-        optional :primary_web_event_tag, :string, 19
-        optional :target_cpa_local_micro, :string, 20
-        optional :total_budget_amount_local_micro, :int64, 21
-        repeated :tracking_tags, :string, 22
-        optional :charge_by, :string, 23
-        optional :start_time, :string, 24
-        optional :end_time, :string, 25
-        optional :created_at, :string, 26
-        optional :updated_at, :string, 27
-        optional :deleted, :bool, 28
-        optional :account_id, :string, 29
+        optional :target_cpa_local_micro, :string, 8
+        optional :primary_web_event_tag, :string, 9
+        optional :pay_by, :string, 10
+        optional :product_type, :string, 11
+        optional :end_time, :string, 12
+        optional :duration_in_days, :int64, 13
+        optional :total_budget_amount_local_micro, :string, 14
+        optional :objective, :string, 15
+        optional :id, :string, 16
+        optional :entity_status, :string, 17
+        optional :goal, :string, 18
+        optional :frequency_cap, :int64, 19
+        repeated :categories, :string, 20
+        optional :currency, :string, 21
+        optional :created_at, :string, 22
+        optional :updated_at, :string, 23
+        optional :campaign_id, :string, 24
+        optional :creative_source, :string, 25
+        optional :deleted, :bool, 26
+        optional :account_id, :string, 27
       end
     end
     
