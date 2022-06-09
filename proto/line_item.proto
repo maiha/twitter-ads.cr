@@ -1,39 +1,36 @@
 syntax = "proto2";
 
 message LineItem {
-  optional string id                              =  1; // "8v7jo"
-  optional string name                            =  2; // "Untitled"
-  optional string bid_type                        =  3; // "MAX"
-  optional string product_type                    =  4; // "PROMOTED_TWEETS"
-  optional int64  advertiser_user_id              =  5; // 756201191646691300
-  optional string campaign_id                     =  6; // "8gdx6"
-  optional string advertiser_domain               =  7; // nil
-  optional bool   automatically_select_bid        =  8; // false
-  optional int64  bid_amount_local_micro          =  9; // 100000
-  optional string bid_unit                        = 10; // "ENGAGEMENT"
-  repeated string categories                      = 11; // []
-  optional string creative_source                 = 12; // "MANUAL"
-  optional string currency                        = 13; // "USD"
-  optional string entity_status                   = 14; // "ACTIVE"
-  optional string include_sentiment               = 15; // "POSITIVE_ONLY"
-  optional string objective                       = 16; // "TWEET_ENGAGEMENTS"
-  optional string optimization                    = 17; // "DEFAULT"
-  repeated string placements                      = 18; // ["ALL_ON_TWITTER"]
-  optional string primary_web_event_tag           = 19; // nil
-  optional string target_cpa_local_micro          = 20; // nil
-  optional int64  total_budget_amount_local_micro = 21; // nil
-  repeated string tracking_tags                   = 22; // []
-  optional string charge_by                       = 23; // "ENGAGEMENT"
-  optional string start_time                      = 24; // nil
-  optional string end_time                        = 25; // nil
-  optional string created_at                      = 26; // "2017-05-27T08:04:00Z"
-  optional string updated_at                      = 27; // "2017-05-27T08:06:25Z"
-  optional bool   deleted                         = 28; // false
-
-  optional string account_id                      = 29; // "18ce544yq30"
+  optional string bid_strategy                    = 1  ; // "MAX"
+  optional string advertiser_user_id              = 2  ; // "756201191646691328"
+  optional string name                            = 3  ; // "Untitled"
+  repeated string placements                      = 4  ; // ["ALL_ON_TWITTER"]
+  optional string start_time                      = 5  ; // nil
+  optional int64  bid_amount_local_micro          = 6  ; // 100000
+  optional string advertiser_domain               = 7  ; // nil
+  optional string target_cpa_local_micro          = 8  ; // nil
+  optional string primary_web_event_tag           = 9  ; // nil
+  optional string pay_by                          = 10 ; // "ENGAGEMENT"
+  optional string product_type                    = 11 ; // "PROMOTED_TWEETS"
+  optional string end_time                        = 12 ; // nil
+  optional int64  duration_in_days                = 13 ; // 1
+  optional int64  total_budget_amount_local_micro = 14 ; // 37500000
+  optional string objective                       = 15 ; // "ENGAGEMENTS"
+  optional string id                              = 16 ; // "8v7jo"
+  optional string entity_status                   = 17 ; // "ACTIVE"
+  optional string goal                            = 18 ; // "ENGAGEMENT"
+  optional int64  frequency_cap                   = 19 ; // 5
+  repeated string categories                      = 20 ; // []
+  optional string currency                        = 21 ; // "USD"
+  optional string created_at                      = 22 ; // "2017-05-27T08:04:00Z"
+  optional string updated_at                      = 23 ; // "2017-05-27T08:06:25Z"
+  optional string campaign_id                     = 24 ; // "8gdx6"
+  optional string creative_source                 = 25 ; // "MANUAL"
+  optional bool   deleted                         = 26 ; // false
+  
+  optional string account_id                      = 27; // "18ce544yq30"
 }
 
 message LineItemArray {
-  repeated LineItem array =  1;
+  repeated LineItem array = 1;
 }
-

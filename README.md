@@ -225,6 +225,17 @@ $ crystal spec
 
 ## Breaking changes
 
+#### v11
+* [CHANGED] `user_id` in `authenticated_user_access` changed from int64 to string
+* [CHANGED] `id` in `draft_tweets` changed from int64 to string
+* [CHANGED] `advertiser_user_id` in `line_item`  changed from int64 to string
+* [DEPRECATED] `cards_image_app_download`
+* [DEPRECATED] `cards_image_direct_message`
+* [DEPRECATED] `cards_video_app_download`
+* [DEPRECATED] `cards_video_direct_message`
+* [DEPRECATED] `cards_video_website`
+* [DEPRECATED] `cards_website`
+
 #### v10
 * [DEPRECATED] `tracking_tags` parameter on `line_items` (use `tracking_tag` instead)
 

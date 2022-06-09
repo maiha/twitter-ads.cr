@@ -8,17 +8,16 @@ module TwitterAds
       include ::Protobuf::Message
       
       contract_of "proto2" do
-        optional :id, :int64, 1
-        optional :user_id, :string, 2
-        optional :card_uri, :string, 3
-        optional :text, :string, 4
-        repeated :media_ids, :string, 5
-        repeated :media_keys, :string, 6
-        optional :nullcast, :bool, 7
-        optional :id_str, :string, 8
-        optional :created_at, :string, 9
-        optional :updated_at, :string, 10
-        optional :account_id, :string, 11
+        optional :name, :string, 1
+        optional :text, :string, 2
+        optional :user_id, :string, 3
+        optional :id, :string, 4
+        optional :nullcast, :bool, 5
+        optional :created_at, :string, 6
+        optional :card_uri, :string, 7
+        optional :updated_at, :string, 8
+        repeated :media_keys, :string, 9
+        optional :account_id, :string, 10
       end
     end
     

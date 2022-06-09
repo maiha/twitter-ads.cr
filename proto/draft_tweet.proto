@@ -1,21 +1,19 @@
 syntax = "proto2";
 
 message DraftTweet {
-  optional int64  id         =  1; // 994791681219231700
-  optional string user_id    =  2; // "756201191646691328"
-  optional string card_uri   =  3; // nil
-  optional string text       =  4; // "hello, world"
-  repeated string media_ids  =  5; // []
-  repeated string media_keys =  6; // []
-  optional bool   nullcast   =  7; // true
-  optional string id_str     =  8; // "994791681219231744"
-  optional string created_at =  9; // "2018-05-11T04:09:53Z"
-  optional string updated_at = 10; // "2018-05-11T04:09:53Z"
+  optional string name       = 1 ; // nil
+  optional string text       = 2 ; // "hello, world"
+  optional string user_id    = 3 ; // "756201191646691328"
+  optional string id         = 4 ; // "994791681219231744"
+  optional bool   nullcast   = 5 ; // true
+  optional string created_at = 6 ; // "2018-05-11T04:09:53Z"
+  optional string card_uri   = 7 ; // ""
+  optional string updated_at = 8 ; // "2018-05-11T04:09:53Z"
+  repeated string media_keys = 9 ; // []
 
-  optional string account_id = 11; // "18ce544yq30"
+  optional string account_id = 10; // "18ce544yq30"
 }
 
 message DraftTweetArray {
-  repeated DraftTweet array =  1; 
+  repeated DraftTweet array = 1;
 }
-

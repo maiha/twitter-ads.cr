@@ -6,11 +6,10 @@
   },
   "data": [
     {
-      "id_str": "994791681219231744",
+      "name": null,
       "text": "hello, world",
       "user_id": "756201191646691328",
-      "id": 994791681219231744,
-      "media_ids": [],
+      "id": "994791681219231744",
       "nullcast": true,
       "created_at": "2018-05-11T04:09:53Z",
       "card_uri": null,
