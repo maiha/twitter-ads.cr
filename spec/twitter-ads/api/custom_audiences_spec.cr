@@ -20,7 +20,7 @@ describe TwitterAds::Api::CustomAudiences do
 
     it "accepts with_deleted, with_draft options" do
       # check only syntax
-      client.line_items("18ce54d4x5t", with_deleted: true, with_draft: true)
+      client.custom_audiences("18ce54d4x5t", with_deleted: true)
     end
   end
 end
