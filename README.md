@@ -54,7 +54,7 @@ TwitterAds::Client
   def cards_video_direct_message(account_id : String) : Api::CardsVideoDirectMessage
   def cards_video_website(account_id : String) : Api::CardsVideoWebsite
   def cards_website(account_id : String) : Api::CardsWebsite
-  def custom-audiences(account_id : String) : Api::CustomAudiences
+  def custom_audiences(account_id : String) : Api::CustomAudiences
   def draft_tweets(account_id : String) : Api::DraftTweets
   def funding_instruments(account_id : String) : Api::FundingInstruments
   def line_items(account_id : String) : Api::LineItems

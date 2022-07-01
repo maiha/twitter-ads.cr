@@ -1,4 +1,4 @@
-## Generated from custom-audiences.proto
+## Generated from custom_audiences.proto
 require "protobuf"
 
 module TwitterAds
