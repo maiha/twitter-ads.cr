@@ -19,6 +19,6 @@ message CustomAudience {
   optional string account_id             = 15; // "18ce544yq30"
 }
 
-message CustomAudiencesArray {
-  repeated CustomAudiences array = 1;
+message CustomAudienceArray {
+  repeated CustomAudience array = 1;
 }
