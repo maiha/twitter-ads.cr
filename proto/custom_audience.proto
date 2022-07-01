@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-message CustomAudiences {
+message CustomAudience {
   optional bool   targetable             = 1  ; // true
   optional string name                   = 2  ; // "twurl-using-subshell-for-file"
   repeated string targetable_types       = 3  ; // ["CRM", "EXCLUDED_CRM"]
