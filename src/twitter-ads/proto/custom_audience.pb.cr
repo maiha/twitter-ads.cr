@@ -1,10 +1,10 @@
-## Generated from custom_audiences.proto
+## Generated from custom_audience.proto
 require "protobuf"
 
 module TwitterAds
   module Proto
     
-    struct CustomAudiences
+    struct CustomAudience
       include ::Protobuf::Message
       
       contract_of "proto2" do
@@ -26,11 +26,11 @@ module TwitterAds
       end
     end
     
-    struct CustomAudiencesArray
+    struct CustomAudienceArray
       include ::Protobuf::Message
       
       contract_of "proto2" do
-        repeated :array, CustomAudiences, 1
+        repeated :array, CustomAudience, 1
       end
     end
     end
