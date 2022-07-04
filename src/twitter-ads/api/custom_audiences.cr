@@ -2,7 +2,7 @@
 
 module TwitterAds::Api
   class CustomAudiences < TwitterAds::Response
-    resource_collection CustomAudiences
+    resource_collection CustomAudience
 
     belongs_to account_id : String
   end

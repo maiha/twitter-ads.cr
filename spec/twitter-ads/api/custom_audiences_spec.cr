@@ -4,7 +4,7 @@ describe TwitterAds::Api::CustomAudiences do
   client = Mock::Client.new("CK", "CS", "AT", "AS")
 
   describe "#custom_audiences" do
-    it "returns Array(TwitterAds::CustomAudiences)" do
+    it "returns Array(TwitterAds::CustomAudience)" do
       custom_audiences = client.custom_audiences("18ce54d4x5t")
       custom_audiences.size.should eq 1
       

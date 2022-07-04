@@ -1,4 +1,4 @@
-class TwitterAds::CustomAudiences
+class TwitterAds::CustomAudience
   var account_id : String
   
   JSON.mapping({
@@ -19,7 +19,7 @@ class TwitterAds::CustomAudiences
   })
 
   def to_pb
-    TwitterAds::Proto::CustomAudiences.new(
+    TwitterAds::Proto::CustomAudience.new(
       targetable: targetable,
       name: name,
       targetable_types: targetable_types,
