@@ -1,4 +1,5 @@
 require "oauth"
+require "oauth2"
 require "logger"
 require "json"
 require "yaml"

@@ -100,6 +100,14 @@ TwitterAds::RateLimit
 
 See [src/twitter-ads/api/](./src/twitter-ads/api/) for more details.
 
+## OAuth2
+
+```crystal
+client = TwitterAds::Client.new("CK", "CS", "AT", "AS", "BT")  # add "Bearer token" for 5th arg.
+client.oauth2_standard = true  # use OAuth2 for api.twitter.com
+client.oauth2_ads      = true  # use OAuth2 for ads-api.twitter.com
+```
+
 ## Models
 
 [./src/twitter-ads/models](./src/twitter-ads/models/)

@@ -1,20 +1,6 @@
 require "../spec_helper"
 
 describe TwitterAds::Client do
-  describe "#api_version" do
-    it "returns 11 in default" do
-      client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
-      client.api_version.should eq("11")
-      client.accounts.req.to_s.should eq("GET /11/accounts?count=200")
-    end
-
-    it "accepts any string for version" do
-      client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
-      client.api_version = "7"
-      client.accounts.req.to_s.should eq("GET /7/accounts?count=200")
-    end
-  end
-
   describe "#authorized?" do
     it "returns true when all credential values exist" do
       client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
@@ -93,6 +79,60 @@ describe TwitterAds::Client do
         expect_raises(TwitterAds::Dryrun, %r{http://localhost/}) do
           client.switch_domain = true
           client.accounts(count: 1)
+        end
+      end
+    end
+  end
+
+  describe "uses OAuth1/2 automatically by endpoints" do
+    context "(OAuth 1.0a)" do
+      it "calls api.twitter.com with OAuth 1.0a when the endpoint starts with /2" do
+        client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
+        client.dryrun = true
+
+        dryrun = expect_raises(TwitterAds::Dryrun){ client.get("/2/tweets/search/recent") }
+        dryrun.uri.host.should eq("api.twitter.com")
+        dryrun.req.headers["Authorization"].should match(/oauth_version="1.0"/)
+      end
+
+      it "calls ads-api.twitter.com with OAuth 1.0a when the endpoint starts with /11" do
+        client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
+        client.dryrun = true
+
+        dryrun = expect_raises(TwitterAds::Dryrun){ client.get("/11/accounts") }
+        dryrun.uri.host.should eq("ads-api.twitter.com")
+        dryrun.req.headers["Authorization"].should match(/oauth_version="1.0"/)
+      end
+    end
+
+    context "(OAuth 2)" do
+      it "calls api.twitter.com with OAuth 2 when the endpoint starts with /2 and oauth2_standard is set" do
+        client = TwitterAds::Client.new("CK", "CS", "AT", "AS", "BT")
+        client.oauth2_standard = true
+        client.dryrun = true
+
+        dryrun = expect_raises(TwitterAds::Dryrun){ client.get("/2/tweets/search/recent") }
+        dryrun.uri.host.should eq("api.twitter.com")
+        dryrun.req.headers["Authorization"].should eq("Bearer BT")
+      end
+
+      it "calls ads-api.twitter.com with OAuth 2 when the endpoint starts with /11 and oauth2_ads is set" do
+        client = TwitterAds::Client.new("CK", "CS", "AT", "AS", "BT")
+        client.oauth2_ads = true
+        client.dryrun = true
+
+        dryrun = expect_raises(TwitterAds::Dryrun){ client.get("/11/accounts") }
+        dryrun.uri.host.should eq("ads-api.twitter.com")
+        dryrun.req.headers["Authorization"].should eq("Bearer BT")
+      end
+
+      it "raises an error when the endpoint starts with /2 and no bearer token is set" do
+        client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
+        client.oauth2_standard = true
+        client.dryrun = true
+
+        expect_raises(Exception, /OAuth2 is requested, but Bearer token is not set./) do
+          client.get("/2/tweets/search/recent")
         end
       end
     end

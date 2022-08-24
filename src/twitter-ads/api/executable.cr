@@ -1,13 +1,20 @@
 module TwitterAds::Api
   module Executable
-    protected def new_http(uri : URI) : HTTP::Client
-      consumer = OAuth::Consumer.new(uri.host.to_s, consumer_key, consumer_secret)
-      token = OAuth::AccessToken.new(access_token, access_token_secret)
+    protected def new_http(uri : URI, path : String) : HTTP::Client
       http = HTTP::Client.new(uri)
       http.dns_timeout     = dns_timeout
       http.connect_timeout = connect_timeout
       http.read_timeout    = read_timeout
-      consumer.authenticate(http, token)
+
+      if (is_standard_api?(path) && oauth2_standard) || oauth2_ads
+        raise "OAuth2 is not supported yet."
+      else
+        # OAuth1
+        consumer = OAuth::Consumer.new(uri.host.to_s, consumer_key, consumer_secret)
+        token = OAuth::AccessToken.new(access_token, access_token_secret)
+        consumer.authenticate(http, token)
+      end
+
       return http
     end
 
@@ -48,14 +55,16 @@ module TwitterAds::Api
       logger.debug "HTTP request: #{req.full_url}"
       logger.debug "HTTP headers: #{req.http.headers.to_h}"
 
-      http = new_http(req.runtime_uri)
+      http = new_http(req.runtime_uri, req.resource)
 
       if dryrun
-        err = Dryrun.new
-        err.uri  = req.runtime_uri
-        err.http = http
-        err.req  = req.http
-        raise err
+        http.before_request do |request|
+          err = Dryrun.new
+          err.uri  = req.runtime_uri
+          err.http = http
+          err.req  = request
+          raise err
+        end
       end
 
       req.requested_at = Pretty.now
@@ -75,7 +84,7 @@ module TwitterAds::Api
     # It would be nice if the both domains are automatically switched.
     # `switch_domain` option enables it.
     private def calculate_current_uri(uri : URI, req : Request, switch_domain : Bool)
-      if switch_domain && guess_standard_api?(req.resource)
+      if switch_domain && is_standard_api?(req.resource)
         # Switch uri only if the current value is "ads-api.twitter.com",
         # since we don't want to change uri under mocking environments.
         if uri.to_s == Client::ADS_DEFAULT_DOMAIN
@@ -86,7 +95,7 @@ module TwitterAds::Api
       return uri
     end
 
-    private def guess_standard_api?(path : String) : Bool
+    private def is_standard_api?(path : String) : Bool
       return true if path.starts_with?("/1/")
       return true if path.starts_with?("/1.")
       return true if path.starts_with?("/2/")
