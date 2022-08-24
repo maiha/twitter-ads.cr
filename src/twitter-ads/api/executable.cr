@@ -75,7 +75,7 @@ module TwitterAds::Api
     # It would be nice if the both domains are automatically switched.
     # `switch_domain` option enables it.
     private def calculate_current_uri(uri : URI, req : Request, switch_domain : Bool)
-      if switch_domain && req.resource.starts_with?("/1.1/")
+      if switch_domain && guess_standard_api?(req.resource)
         # Switch uri only if the current value is "ads-api.twitter.com",
         # since we don't want to change uri under mocking environments.
         if uri.to_s == Client::ADS_DEFAULT_DOMAIN
@@ -84,6 +84,15 @@ module TwitterAds::Api
       end
 
       return uri
+    end
+
+    private def guess_standard_api?(path : String) : Bool
+      return true if path.starts_with?("/1/")
+      return true if path.starts_with?("/1.")
+      return true if path.starts_with?("/2/")
+      return true if path.starts_with?("/3/")
+      return true if path.starts_with?("/4/")
+      return false
     end
   end
 end

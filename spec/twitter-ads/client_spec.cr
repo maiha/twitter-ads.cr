@@ -47,6 +47,20 @@ describe TwitterAds::Client do
           client.accounts(count: 1)
         end
       end
+
+      it "connects to api.twitter.com when get(/2/ .. /4/)" do
+        expect_raises(TwitterAds::Dryrun, %r{https://api.twitter.com/}) do
+          client.get("/2/tweets/search/recent")
+        end
+
+        expect_raises(TwitterAds::Dryrun, %r{https://api.twitter.com/}) do
+          client.get("/3/tweets/search/recent")
+        end
+
+        expect_raises(TwitterAds::Dryrun, %r{https://api.twitter.com/}) do
+          client.get("/4/tweets/search/recent")
+        end
+      end
     end
 
     context "(false)" do
