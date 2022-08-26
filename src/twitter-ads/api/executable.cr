@@ -8,12 +8,9 @@ module TwitterAds::Api
 
       if (is_standard_api?(path) && oauth2_standard) || oauth2_ads
         # OAuth2
-        begin
-          token = OAuth2::AccessToken::Bearer.new(bearer_token, nil)
-          token.authenticate(http)
-        rescue e
-          raise "/OAuth2 is requested, but Bearer token is not set./ #{e}"
-        end
+        bearer_token? || raise "OAuth2 is requested, but Bearer token is not set."
+        token = OAuth2::AccessToken::Bearer.new(bearer_token, nil)
+        token.authenticate(http)
       else
         # OAuth1
         consumer = OAuth::Consumer.new(uri.host.to_s, consumer_key, consumer_secret)
