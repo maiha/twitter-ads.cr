@@ -7,7 +7,13 @@ module TwitterAds::Api
       http.read_timeout    = read_timeout
 
       if (is_standard_api?(path) && oauth2_standard) || oauth2_ads
-        raise "OAuth2 is not supported yet."
+        # OAuth2
+        begin
+          token = OAuth2::AccessToken::Bearer.new(bearer_token, nil)
+          token.authenticate(http)
+        rescue e
+          raise "/OAuth2 is requested, but Bearer token is not set./ #{e}"
+        end
       else
         # OAuth1
         consumer = OAuth::Consumer.new(uri.host.to_s, consumer_key, consumer_secret)
