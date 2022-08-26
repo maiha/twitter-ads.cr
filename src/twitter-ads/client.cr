@@ -17,6 +17,7 @@ module TwitterAds
     var consumer_secret     : String
     var access_token        : String
     var access_token_secret : String
+    var bearer_token        : String
 
     # HTTP
     var uri : URI = URI.parse(ADS_DEFAULT_DOMAIN)
@@ -24,7 +25,9 @@ module TwitterAds
     var dns_timeout     : Float64 = 3.0
     var connect_timeout : Float64 = 5.0
     var read_timeout    : Float64 = 300.0
-    var switch_domain   : Bool = true # switch from "ads" to "api" when "/1.1"
+    var switch_domain   : Bool = true  # switch from "ads" to "api" when "/1.1"
+    var oauth2_standard : Bool = false # use OAuth2 for standard api
+    var oauth2_ads      : Bool = false # use OAuth2 for ads api
     
     var logger : Logger = Logger.new(nil)
     var dryrun : Bool = false
@@ -34,7 +37,7 @@ module TwitterAds
 
     include Api::Executable
 
-    def initialize(@consumer_key, @consumer_secret, @access_token, @access_token_secret, url : String? = nil, @logger : Logger? = nil)
+    def initialize(@consumer_key, @consumer_secret, @access_token, @access_token_secret, @bearer_token = nil, url : String? = nil, @logger : Logger? = nil)
       self.url = url.not_nil! if url
     end
 
