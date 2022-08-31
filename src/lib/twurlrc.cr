@@ -7,7 +7,8 @@ class Twurlrc
     consumer_key : String,
     consumer_secret : String,
     token : String,
-    secret : String
+    secret : String,
+    bearer : String
 
   class Parser
     YAML.mapping({
@@ -29,7 +30,8 @@ class Twurlrc
             hash["consumer_key"]?.to_s,
             hash["consumer_secret"]?.to_s,
             hash["token"]?.to_s,
-            hash["secret"]?.to_s
+            hash["secret"]?.to_s,
+            hash["bearer"]?.to_s
           )
           rc.all_credentials[key] = credential
         end

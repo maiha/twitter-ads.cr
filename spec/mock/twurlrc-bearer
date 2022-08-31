@@ -1,0 +1,27 @@
+---
+profiles:
+  user1:
+    key1:
+      username: user1
+      consumer_key: key1
+      consumer_secret: user1-key1-cs
+      token: user1-key1-at
+      secret: user1-key1-as
+  user2:
+    key1:
+      username: user2
+      consumer_key: key1
+      consumer_secret: user2-key1-cs
+      token: user2-key1-at
+      secret: user2-key1-as
+      bearer: user2-key1-bt
+    key2:
+      username: user2
+      consumer_key: key2
+      consumer_secret: user2-key2-cs
+      token: user2-key2-at
+      secret: user2-key2-as
+configuration:
+  default_profile:
+  - user2
+  - key1

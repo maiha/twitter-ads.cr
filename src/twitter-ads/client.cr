@@ -76,6 +76,6 @@ module TwitterAds
   def Client.from_twurlrc(path = "~/.twurlrc") : Client
     rc = Twurlrc.load_file(path)
     c = rc.default? || raise "no default_profile in '#{path}'"
-    Client.new(c.consumer_key, c.consumer_secret, c.token, c.secret)
+    Client.new(c.consumer_key, c.consumer_secret, c.token, c.secret, c.bearer.presence)
   end
 end
