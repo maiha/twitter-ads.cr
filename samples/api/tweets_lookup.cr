@@ -9,5 +9,5 @@ end
 
 client = TwitterAds::Client.from_twurlrc
 client.tweets_lookup(tweet_ids).each do |c|
-  puts "+ TweetsLookup(%s) # %s" % [c.id_str.inspect, c.text.inspect]
+  puts "+ TweetsLookup(%s) # %s" % [c.id.inspect, c.text.inspect]
 end

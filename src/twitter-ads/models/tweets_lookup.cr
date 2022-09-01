@@ -1,24 +1,27 @@
 class TwitterAds::TweetsLookup
   JSON.mapping({
-    author_id:       String? , # "2244994945"
-    conversation_id: String? , # "1228393702244134912"
-    created_at:      String? , # "2020-02-14T19:00:55.000Z"
-    lang:            String? , # "en"
-    id:              String  , # "1228393702244134912"
-    reply_settings:  String? , # "everyone"
-    source:          String? , # "Twitter Web App"
-    text:            String? , # "What did the developer write in their Valentine’s card?\n  \nwhile(true) {\n    I = Love(You);  \n}"
+    possibly_sensitive: Bool?   , # false
+    author_id:          String? , # "2244994945"
+    text:               String? , # "Our mission remains just as important as ever: to deliver an open platform that serves the public conversation. We’re continuing to innovate on the Twitter API v2 and invest in our developer community 🧵\n\nhttps://t.co/Rug1l46sUc"
+    reply_settings:     String? , # "everyone"
+    conversation_id:    String? , # "1519781379172495360"
+    created_at:         String? , # "2022-04-28T20:51:31.000Z"
+    id:                 String  , # "1519781379172495360"
+    lang:               String? , # "en"
+    source:             String? , # "TweetDeck Web App"
   })
+
   def to_pb
     TwitterAds::Proto::TweetsLookup.new(
+      possibly_sensitive: possibly_sensitive,
       author_id: author_id,
+      text: text,
+      reply_settings: reply_settings,
       conversation_id: conversation_id,
       created_at: created_at,
-      lang: lang,
       id: id,
-      reply_settings: reply_settings,
+      lang: lang,
       source: source,
-      text: text,
     )
   end
 end

@@ -1,10 +1,131 @@
 {
-      "author_id": "2244994945",
-      "conversation_id": "1228393702244134912",
-      "created_at": "2020-02-14T19:00:55.000Z",
-      "lang": "en",
-      "id": "1228393702244134912",
-      "reply_settings": "everyone",
-      "source": "Twitter Web App",
-      "text": "What did the developer write in their Valentine’s card?\n  \nwhile(true) {\n    I = Love(You);  \n}"
+  "entities": {
+    "annotations": [
+      {
+        "start": 148,
+        "end": 158,
+        "probability": 0.4409,
+        "type": "Product",
+        "normalized_text": "Twitter API"
+      }
+    ],
+    "urls": [
+      {
+        "start": 204,
+        "end": 227,
+        "url": "https://t.co/Rug1l46sUc",
+        "expanded_url": "https://sample.com",
+        "display_url": "blog.twitter.com/developer/en_u…",
+        "status": 200,
+        "unwound_url": "https://developer.twitter.com"
+      }
+    ]
+  },
+  "context_annotations": [
+    {
+      "domain": {
+        "id": "131",
+        "name": "Unified Twitter Taxonomy",
+        "description": "A taxonomy view into the Semantic Core knowledge graph"
+      },
+      "entity": {
+        "id": "848920371311001600",
+        "name": "Technology",
+        "description": "Technology and computing"
+      }
+    },
+    {
+      "domain": {
+        "id": "131",
+        "name": "Unified Twitter Taxonomy",
+        "description": "A taxonomy view into the Semantic Core knowledge graph"
+      },
+      "entity": {
+        "id": "1196446161223028736",
+        "name": "Social media"
+      }
+    },
+    {
+      "domain": {
+        "id": "165",
+        "name": "Technology",
+        "description": "for individual and types of technology, e.g., food technology, 3D printing"
+      },
+      "entity": {
+        "id": "848920371311001600",
+        "name": "Technology",
+        "description": "Technology and computing"
+      }
+    },
+    {
+      "domain": {
+        "id": "165",
+        "name": "Technology",
+        "description": "for individual and types of technology, e.g., food technology, 3D printing"
+      },
+      "entity": {
+        "id": "1196446161223028736",
+        "name": "Social media"
+      }
+    },
+    {
+      "domain": {
+        "id": "30",
+        "name": "Entities [Entity Service]",
+        "description": "Entity Service top level domain, every item that is in Entity Service should be in this domain"
+      },
+      "entity": {
+        "id": "781974596752842752",
+        "name": "Services"
+      }
+    },
+    {
+      "domain": {
+        "id": "47",
+        "name": "Brand",
+        "description": "Brands and Companies"
+      },
+      "entity": {
+        "id": "10045225402",
+        "name": "Twitter"
+      }
+    },
+    {
+      "domain": {
+        "id": "131",
+        "name": "Unified Twitter Taxonomy",
+        "description": "A taxonomy view into the Semantic Core knowledge graph"
+      },
+      "entity": {
+        "id": "10045225402",
+        "name": "Twitter"
+      }
+    },
+    {
+      "domain": {
+        "id": "165",
+        "name": "Technology",
+        "description": "for individual and types of technology, e.g., food technology, 3D printing"
+      },
+      "entity": {
+        "id": "1196446161223028736",
+        "name": "Social media"
+      }
     }
+  ],
+  "possibly_sensitive": false,
+  "author_id": "2244994945",
+  "text": "Our mission remains just as important as ever...",
+  "reply_settings": "everyone",
+  "conversation_id": "1519781379172495360",
+  "created_at": "2022-04-28T20:51:31.000Z",
+  "id": "1519781379172495360",
+  "lang": "en",
+  "source": "TweetDeck Web App",
+  "public_metrics": {
+    "retweet_count": 42,
+    "reply_count": 6,
+    "like_count": 119,
+    "quote_count": 7
+  }
+}

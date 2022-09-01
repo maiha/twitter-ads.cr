@@ -1,14 +1,15 @@
 syntax = "proto2";
 
 message TweetsLookup {
-  optional string author_id       = 1 ; // "2244994945"
-  optional string conversation_id = 2 ; // "1228393702244134912"
-  optional string created_at      = 3 ; // "2020-02-14T19:00:55.000Z"
-  optional string lang            = 4 ; // "en"
-  optional string id              = 5 ; // "1228393702244134912"
-  optional string reply_settings  = 6 ; // "everyone"
-  optional string source          = 7 ; // "Twitter Web App"
-  optional string text            = 8 ; // "What did the developer write in their Valentine’s card?\n  \nwhile(true) {\n    I = Love(You);  \n}"
+  optional bool   possibly_sensitive  = 1  ; // false
+  optional string author_id           = 2  ; // "2244994945"
+  optional string text                = 3  ; // "Our mission remains just as important as ever: to deliver an open platform that serves the public conversation. We’re continuing to innovate on the Twitter API v2 and invest in our developer community 🧵\n\nhttps://t.co/Rug1l46sUc"
+  optional string reply_settings      = 4  ; // "everyone"
+  optional string conversation_id     = 5  ; // "1519781379172495360"
+  optional string created_at          = 6  ; // "2022-04-28T20:51:31.000Z"
+  optional string id                  = 7  ; // "1519781379172495360"
+  optional string lang                = 8  ; // "en"
+  optional string source              = 9  ; // "TweetDeck Web App"
 }
 
 message TweetsLookupArray {
