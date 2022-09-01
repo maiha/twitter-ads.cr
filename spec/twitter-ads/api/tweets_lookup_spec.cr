@@ -5,7 +5,12 @@ describe TwitterAds::Api::TweetsLookup do
 
   describe "#tweets_lookup" do
     it "returns TwitterAds::TweetsLookup" do
-      res = client.tweets_lookup(id: ["1519781379172495360"])
+      tweets_lookup = client.tweets_lookup(id: ["1519781379172495360"])
+      pp! tweets_lookup
+      tweets_lookup.size.should eq 1
+
+      tweets_lookup = tweets_lookup.first
+      tweets_lookup.id.should eq "1519781379172495360"
     end
   end
 end
