@@ -49,7 +49,11 @@ module TwitterAds
       {% if RESOURCE[:type] == :collection %}
         include Indexable(TwitterAds::{{RESOURCE[:name]}})
         def unsafe_fetch(index : Int)
-          parser.data[index]
+          (parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new)[index]
+        end
+
+        def errors : Array(Hash(String, String))
+          parser.errors || Array(Hash(String, String)).new
         end
       {% end %}
 
@@ -57,7 +61,8 @@ module TwitterAds
         JSON.mapping({
           next_cursor: String?,
           {% if RESOURCE[:type] == :collection %}
-            data: Array(TwitterAds::{{RESOURCE[:name]}}),
+            data: Array(TwitterAds::{{RESOURCE[:name]}})?,
+            errors: Array(Hash(String, String))?,
           {% end %}
           {% if RESOURCE[:type] == :single %}
             data: TwitterAds::{{RESOURCE[:name]}},
@@ -75,7 +80,7 @@ module TwitterAds
 
       {% if RESOURCE[:type] == :collection %}
         def each
-          parser.data.each do |i|
+          (parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new).each do |i|
             {% for ast in BELONGS_TO %}
               i.{{ast.var}} = {{ast.var}}
             {% end %}

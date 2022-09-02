@@ -27,5 +27,21 @@ describe TwitterAds::Api::TweetsLookup do
       tweets_lookup.id.should eq "1519781379172495360"
       tweets_lookup.reply_settings.should eq "everyone"
     end
+
+    it "works with responses where 'data' section does not exist" do
+      client.force_mock_file = "tweets-without-data.json"
+      tweets_lookup = client.tweets_lookup(
+        id: ids,
+        expansions: expansions, 
+        tweet_fields: tweet_fields,
+        media_fields: media_fields,
+        place_fields: place_fields,
+        poll_fields: poll_fields,
+        user_fields: user_fields,
+      )
+      tweets_lookup.size.should eq 0
+      tweets_lookup.errors.size.should eq 2
+      tweets_lookup.errors.map(&.["value"]?).should eq ["1352420716931649", "1329348696106967"]
+    end
   end
 end
