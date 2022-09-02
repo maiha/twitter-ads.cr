@@ -10,6 +10,6 @@ end
 tweet_fields = "reply_settings"
 
 client = TwitterAds::Client.from_twurlrc
-client.tweets_lookup(id: tweet_ids, tweet_fields: tweet_fields).each do |c|
+client.tweets_lookup(id: tweet_ids, tweet_fields: tweet_fields).each do |t|
   puts "+ TweetsLookup(%s) # %s" % [c.id.inspect, c.text.inspect]
 end
