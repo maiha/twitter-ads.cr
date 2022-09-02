@@ -1,6 +1,43 @@
 {
   "data": [
     {
+      "text": "Our mission remains just as important as ever: to deliver an open platform that serves the public conversation. We’re continuing to innovate on the Twitter API v2 and invest in our developer community 🧵\n\nhttps://t.co/Rug1l46sUc",
+      "author_id": "2244994945",
+      "reply_settings": "everyone",
+      "public_metrics": {
+        "retweet_count": 42,
+        "reply_count": 6,
+        "like_count": 119,
+        "quote_count": 7
+      },
+      "created_at": "2022-04-28T20:51:31.000Z",
+      "lang": "en",
+      "entities": {
+        "annotations": [
+          {
+            "start": 148,
+            "end": 158,
+            "probability": 0.4383,
+            "type": "Product",
+            "normalized_text": "Twitter API"
+          }
+        ],
+        "urls": [
+          {
+            "start": 204,
+            "end": 227,
+            "url": "https://t.co/Rug1l46sUc",
+            "expanded_url": "https://blog.twitter.com/developer/en_us/topics/community/2022/innovating-on-the-twitter-api-v2-and-investing-in-our-community",
+            "display_url": "blog.twitter.com/developer/en_u…",
+            "status": 200,
+            "unwound_url": "https://developer.twitter.com/en/blog/product-news/2022/innovating-on-the-twitter-api-v2-and-investing-in-our-community"
+          }
+        ]
+      },
+      "source": "TweetDeck Web App",
+      "conversation_id": "1519781379172495360",
+      "possibly_sensitive": false,
+      "id": "1519781379172495360",
       "context_annotations": [
         {
           "domain": {
@@ -92,65 +129,223 @@
             "name": "Social media"
           }
         }
-      ],
+      ]
+    },
+    {
+      "text": "Testing, testing...\n\nA new way to have a convo with exactly who you want. We’re starting with a small % globally, so keep your 👀 out to see it in action. https://t.co/pV53mvjAVT",
+      "author_id": "783214",
       "reply_settings": "everyone",
-      "possibly_sensitive": false,
-      "source": "TweetDeck Web App",
+      "public_metrics": {
+        "retweet_count": 17179,
+        "reply_count": 12032,
+        "like_count": 61589,
+        "quote_count": 35791
+      },
+      "created_at": "2020-05-20T16:31:15.000Z",
+      "lang": "en",
+      "attachments": {
+        "media_keys": [
+          "13_1263145212760805376"
+        ]
+      },
+      "source": "Sprinklr",
+      "conversation_id": "1263145271946551300",
       "entities": {
+        "urls": [
+          {
+            "start": 154,
+            "end": 177,
+            "url": "https://t.co/pV53mvjAVT",
+            "expanded_url": "https://twitter.com/Twitter/status/1263145271946551300/video/1",
+            "display_url": "pic.twitter.com/pV53mvjAVT",
+            "media_key": "13_1263145212760805376"
+          }
+        ]
+      },
+      "possibly_sensitive": false,
+      "id": "1263145271946551300",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "30",
+            "name": "Entities [Entity Service]",
+            "description": "Entity Service top level domain, every item that is in Entity Service should be in this domain"
+          },
+          "entity": {
+            "id": "781974596752842752",
+            "name": "Services"
+          }
+        },
+        {
+          "domain": {
+            "id": "47",
+            "name": "Brand",
+            "description": "Brands and Companies"
+          },
+          "entity": {
+            "id": "10045225402",
+            "name": "Twitter"
+          }
+        },
+        {
+          "domain": {
+            "id": "131",
+            "name": "Unified Twitter Taxonomy",
+            "description": "A taxonomy view into the Semantic Core knowledge graph"
+          },
+          "entity": {
+            "id": "10045225402",
+            "name": "Twitter"
+          }
+        },
+        {
+          "domain": {
+            "id": "131",
+            "name": "Unified Twitter Taxonomy",
+            "description": "A taxonomy view into the Semantic Core knowledge graph"
+          },
+          "entity": {
+            "id": "847868745150119936",
+            "name": "Family & relationships",
+            "description": "Hobbies and interests"
+          }
+        },
+        {
+          "domain": {
+            "id": "131",
+            "name": "Unified Twitter Taxonomy",
+            "description": "A taxonomy view into the Semantic Core knowledge graph"
+          },
+          "entity": {
+            "id": "1196446161223028736",
+            "name": "Social media"
+          }
+        }
+      ]
+    },
+    {
+      "text": "C#",
+      "author_id": "2244994945",
+      "reply_settings": "everyone",
+      "attachments": {
+        "poll_ids": [
+          "1199786642468413448"
+        ]
+      },
+      "public_metrics": {
+        "retweet_count": 26,
+        "reply_count": 22,
+        "like_count": 47,
+        "quote_count": 9
+      },
+      "created_at": "2019-11-27T20:26:41.000Z",
+      "lang": "qst",
+      "source": "Twitter Web App",
+      "conversation_id": "1199786642791452673",
+      "possibly_sensitive": false,
+      "id": "1199786642791452673"
+    },
+    {
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            -73.99960455,
+            40.74168819
+          ]
+        },
+        "place_id": "01a9a39529b27f36"
+      },
+      "text": "We’re sharing a live demo of the new Twitter Developer Labs program, led by a member of our DevRel team, @jessicagarson #TapIntoTwitter https://t.co/ghv7f4dW5M",
+      "entities": {
+        "mentions": [
+          {
+            "start": 105,
+            "end": 119,
+            "username": "jessicagarson",
+            "id": "15772978"
+          }
+        ],
         "annotations": [
           {
-            "start": 148,
-            "end": 158,
-            "probability": 0.4383,
+            "start": 37,
+            "end": 58,
+            "probability": 0.3929,
             "type": "Product",
-            "normalized_text": "Twitter API"
+            "normalized_text": "Twitter Developer Labs"
           }
         ],
         "urls": [
           {
-            "start": 204,
-            "end": 227,
-            "url": "https://t.co/Rug1l46sUc",
-            "expanded_url": "https://blog.twitter.com/developer/en_us/topics/community/2022/innovating-on-the-twitter-api-v2-and-investing-in-our-community",
-            "display_url": "blog.twitter.com/developer/en_u…",
-            "status": 200,
-            "unwound_url": "https://developer.twitter.com/en/blog/product-news/2022/innovating-on-the-twitter-api-v2-and-investing-in-our-community"
+            "start": 136,
+            "end": 159,
+            "url": "https://t.co/ghv7f4dW5M",
+            "expanded_url": "https://twitter.com/TwitterDev/status/1136048014974423040/photo/1",
+            "display_url": "pic.twitter.com/ghv7f4dW5M",
+            "media_key": "3_1136048009270239232"
+          }
+        ],
+        "hashtags": [
+          {
+            "start": 120,
+            "end": 135,
+            "tag": "TapIntoTwitter"
           }
         ]
       },
-      "conversation_id": "1519781379172495360",
-      "id": "1519781379172495360",
-      "created_at": "2022-04-28T20:51:31.000Z",
-      "lang": "en",
       "author_id": "2244994945",
+      "reply_settings": "everyone",
       "public_metrics": {
-        "retweet_count": 42,
-        "reply_count": 6,
-        "like_count": 119,
-        "quote_count": 7
+        "retweet_count": 18,
+        "reply_count": 4,
+        "like_count": 54,
+        "quote_count": 1
       },
-      "text": "Our mission remains just as important as ever: to deliver an open platform that serves the public conversation. We’re continuing to innovate on the Twitter API v2 and invest in our developer community 🧵\n\nhttps://t.co/Rug1l46sUc"
+      "created_at": "2019-06-04T23:12:08.000Z",
+      "lang": "en",
+      "attachments": {
+        "media_keys": [
+          "3_1136048009270239232"
+        ]
+      },
+      "source": "Twitter for iPhone",
+      "conversation_id": "1136048014974423040",
+      "possibly_sensitive": false,
+      "id": "1136048014974423040",
+      "context_annotations": [
+        {
+          "domain": {
+            "id": "30",
+            "name": "Entities [Entity Service]",
+            "description": "Entity Service top level domain, every item that is in Entity Service should be in this domain"
+          },
+          "entity": {
+            "id": "781974596752842752",
+            "name": "Services"
+          }
+        },
+        {
+          "domain": {
+            "id": "47",
+            "name": "Brand",
+            "description": "Brands and Companies"
+          },
+          "entity": {
+            "id": "10045225402",
+            "name": "Twitter"
+          }
+        }
+      ]
     }
   ],
   "includes": {
     "users": [
       {
-        "name": "Twitter Dev",
         "verified": true,
-        "url": "https://t.co/9wI31m3ELF",
+        "name": "Twitter Dev",
         "protected": false,
-        "id": "2244994945",
-        "description": "The voice of the #TwitterDev team and your official source for updates, news, and events, related to the #TwitterAPI.",
         "created_at": "2013-12-14T04:35:55.000Z",
-        "location": "127.0.0.1",
-        "profile_image_url": "https://pbs.twimg.com/profile_images/1445764922474827784/W2zEPN7U_normal.jpg",
         "username": "TwitterDev",
-        "public_metrics": {
-          "followers_count": 542562,
-          "following_count": 2008,
-          "tweet_count": 3984,
-          "listed_count": 2020
-        },
         "entities": {
           "url": {
             "urls": [
@@ -178,7 +373,175 @@
             ]
           }
         },
-        "pinned_tweet_id": "1561805413103853570"
+        "location": "127.0.0.1",
+        "pinned_tweet_id": "1561805413103853570",
+        "description": "The voice of the #TwitterDev team and your official source for updates, news, and events, related to the #TwitterAPI.",
+        "public_metrics": {
+          "followers_count": 542555,
+          "following_count": 2008,
+          "tweet_count": 3988,
+          "listed_count": 2018
+        },
+        "url": "https://t.co/9wI31m3ELF",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1445764922474827784/W2zEPN7U_normal.jpg",
+        "id": "2244994945"
+      },
+      {
+        "verified": true,
+        "name": "Twitter",
+        "protected": false,
+        "created_at": "2007-02-20T14:35:54.000Z",
+        "username": "Twitter",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/DAtOo6uuHk",
+                "expanded_url": "https://about.twitter.com/",
+                "display_url": "about.twitter.com"
+              }
+            ]
+          }
+        },
+        "location": "everywhere",
+        "description": "What's happening?!",
+        "public_metrics": {
+          "followers_count": 62696667,
+          "following_count": 6,
+          "tweet_count": 15036,
+          "listed_count": 87503
+        },
+        "url": "https://t.co/DAtOo6uuHk",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1488548719062654976/u6qfBBkF_normal.jpg",
+        "id": "783214"
+      },
+      {
+        "verified": false,
+        "name": "Jessica Garson",
+        "protected": false,
+        "created_at": "2008-08-08T02:16:23.000Z",
+        "username": "jessicagarson",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "start": 0,
+                "end": 23,
+                "url": "https://t.co/1ksTTe3yZj",
+                "expanded_url": "http://github.com/JessicaGarson",
+                "display_url": "github.com/JessicaGarson"
+              }
+            ]
+          },
+          "description": {
+            "mentions": [
+              {
+                "start": 26,
+                "end": 34,
+                "username": "Twitter"
+              },
+              {
+                "start": 40,
+                "end": 52,
+                "username": "livecodenyc"
+              }
+            ]
+          }
+        },
+        "location": "Brooklyn, NY",
+        "description": "Senior Developer Advocate @Twitter. 💻 😱🎤@livecodenyc. Python programmer. Noted thought leader on vegan snacks. Makes music as Messica Arson.",
+        "public_metrics": {
+          "followers_count": 4582,
+          "following_count": 3058,
+          "tweet_count": 7954,
+          "listed_count": 154
+        },
+        "url": "https://t.co/1ksTTe3yZj",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1407858685536256008/0Nv7ea1i_normal.jpg",
+        "id": "15772978"
+      }
+    ],
+    "media": [
+      {
+        "preview_image_url": "https://pbs.twimg.com/media/EYeX7akWsAIP1_1.jpg",
+        "duration_ms": 46947,
+        "variants": [
+          {
+            "bit_rate": 288000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1263145212760805376/vid/480x270/x1Swzr5hWYoDuc9W.mp4?tag=13"
+          },
+          {
+            "bit_rate": 2176000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1263145212760805376/vid/1280x720/9jous8HM0_duxL0w.mp4?tag=13"
+          },
+          {
+            "bit_rate": 832000,
+            "content_type": "video/mp4",
+            "url": "https://video.twimg.com/amplify_video/1263145212760805376/vid/640x360/6D0eDUt15fxZURhp.mp4?tag=13"
+          },
+          {
+            "content_type": "application/x-mpegURL",
+            "url": "https://video.twimg.com/amplify_video/1263145212760805376/pl/BOJ_H6nVyQXTmEGQ.m3u8?tag=13"
+          }
+        ],
+        "media_key": "13_1263145212760805376",
+        "width": 1920,
+        "height": 1080,
+        "public_metrics": {
+          "view_count": 7599701
+        },
+        "type": "video"
+      },
+      {
+        "url": "https://pbs.twimg.com/media/D8QNpThXoAASjAq.jpg",
+        "media_key": "3_1136048009270239232",
+        "width": 1152,
+        "height": 2048,
+        "type": "photo"
+      }
+    ],
+    "polls": [
+      {
+        "options": [
+          {
+            "position": 1,
+            "label": "“C Sharp”",
+            "votes": 795
+          },
+          {
+            "position": 2,
+            "label": "“C Hashtag”",
+            "votes": 156
+          }
+        ],
+        "duration_minutes": 1440,
+        "voting_status": "closed",
+        "id": "1199786642468413448",
+        "end_datetime": "2019-11-28T20:26:41.000Z"
+      }
+    ],
+    "places": [
+      {
+        "id": "01a9a39529b27f36",
+        "name": "Manhattan",
+        "country": "United States",
+        "geo": {
+          "type": "Feature",
+          "bbox": [
+            -74.026675,
+            40.683935,
+            -73.910408,
+            40.877483
+          ],
+          "properties": {}
+        },
+        "full_name": "Manhattan, NY",
+        "place_type": "city",
+        "country_code": "US"
       }
     ]
   }
