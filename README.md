@@ -140,7 +140,7 @@ Add this to your application's `shard.yml`:
 dependencies:
   twitter-ads:
     github: maiha/twitter-ads.cr
-    version: 11.4.0
+    version: 11.5.0
 ```
 
 ## Development
