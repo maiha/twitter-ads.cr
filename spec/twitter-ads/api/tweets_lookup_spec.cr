@@ -23,6 +23,8 @@ describe TwitterAds::Api::TweetsLookup do
         user_fields: user_fields,
       )
       tweets_lookup.size.should eq 4
+      tweets_lookup.errors.size.should eq 0
+
       tweets_lookup = tweets_lookup.first
       tweets_lookup.id.should eq "1519781379172495360"
       tweets_lookup.reply_settings.should eq "everyone"
@@ -41,7 +43,11 @@ describe TwitterAds::Api::TweetsLookup do
       )
       tweets_lookup.size.should eq 0
       tweets_lookup.errors.size.should eq 2
-      tweets_lookup.errors.map(&.["value"]?).should eq ["1352420716931649", "1329348696106967"]
+
+      tweets_lookup.errors[0].title.should eq "Not Found Error"
+      tweets_lookup.errors[0].resource_id.should eq "1352420716931649"
+      tweets_lookup.errors[1].title.should eq "Authorization Error"
+      tweets_lookup.errors[1].resource_id.should eq "1329348696106967"
     end
   end
 end

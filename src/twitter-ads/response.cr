@@ -25,7 +25,7 @@ module TwitterAds
     ### support `belongs_to` macro
 
     macro inherited
-      RESOURCE   = {:type => :single, :name => nil, :extra_mappings => nil}
+      RESOURCE   = {:type => :single, :name => nil, :error => nil, :extra_mappings => nil}
       BELONGS_TO = [] of ASTNode
 
       macro finished
@@ -52,9 +52,11 @@ module TwitterAds
           (parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new)[index]
         end
 
-        def errors : Array(Hash(String, String))
-          parser.errors || Array(Hash(String, String)).new
-        end
+        {% if RESOURCE[:error] %}
+          def errors : Array(TwitterAds::{{RESOURCE[:error]}})
+            parser.errors || Array(TwitterAds::{{RESOURCE[:error]}}).new
+          end
+        {% end %}
       {% end %}
 
       class Parser
@@ -62,7 +64,9 @@ module TwitterAds
           next_cursor: String?,
           {% if RESOURCE[:type] == :collection %}
             data: Array(TwitterAds::{{RESOURCE[:name]}})?,
-            errors: Array(Hash(String, String))?,
+            {% if RESOURCE[:error] %}
+              errors: Array(TwitterAds::{{RESOURCE[:error]}})?,
+            {% end %}
           {% end %}
           {% if RESOURCE[:type] == :single %}
             data: TwitterAds::{{RESOURCE[:name]}},
@@ -115,6 +119,11 @@ module TwitterAds
     macro resource_collection(name)
       {% RESOURCE[:type] = :collection %}
       {% RESOURCE[:name] = name %}
+    end
+
+    # resource_errors TweetsLookupError
+    macro resource_error(name)
+      {% RESOURCE[:error] = name %}
     end
 
     # additional mappings for response parser

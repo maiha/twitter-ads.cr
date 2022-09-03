@@ -1,7 +1,7 @@
 module TwitterAds::Api
   class TweetsLookup < TwitterAds::Response
     resource_collection TweetsLookup
-
+    resource_error      TweetsLookupError
   end
 end
 

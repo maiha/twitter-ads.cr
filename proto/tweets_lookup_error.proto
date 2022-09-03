@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+message TweetsLookupError {
+  optional string resource_id   = 1 ; // "1329348696106967"
+  optional string parameter     = 2 ; // "ids"
+  optional string resource_type = 3 ; // "tweet"
+  optional string section       = 4 ; // "data"
+  optional string title         = 5 ; // "Authorization Error"
+  optional string value         = 6 ; // "1329348696106967"
+  optional string detail        = 7 ; // "Sorry, you are not authorized to see the Tweet with ids: [1329348696106967]."
+  optional string type          = 8 ; // "https://api.twitter.com/2/problems/not-authorized-for-resource"
+}
+
+message TweetsLookupErrorArray {
+  repeated TweetsLookupError array = 1;
+}
