@@ -4,14 +4,14 @@ SHELL=/bin/bash
 ######################################################################
 ### compiling
 
-# for mounting permissions in docker-compose
+# for mounting permissions in docker compose
 export UID = $(shell id -u)
 export GID = $(shell id -g)
 
 COMPILE_FLAGS=-Dstatic
 BUILD_TARGET=
 
-ON_DOCKER=docker-compose run --rm crystal
+ON_DOCKER=docker compose run --rm crystal
 
 ######################################################################
 ### testing
