@@ -19,6 +19,12 @@ module TwitterAds
         repeated :titles, :string, 9
         repeated :media_urls, :string, 10
         repeated :dest_urls, :string, 11
+        optional :button_label, :string, 12
+        optional :button_app_country, :string, 13
+        optional :button_app_ios_id, :string, 14
+        optional :button_app_ios_link, :string, 15
+        optional :button_app_google_id, :string, 16
+        optional :button_app_google_link, :string, 17
       end
     end
     

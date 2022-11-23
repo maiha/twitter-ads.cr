@@ -1,8 +1,16 @@
 class TwitterAds::Cards
   var account_id : String
+
   var titles     : Array(String) = Array(String).new
   var media_urls : Array(String) = Array(String).new
   var dest_urls  : Array(String) = Array(String).new
+
+  var button_label           : String = ""
+  var button_app_country           : String = ""
+  var button_app_ios_id      : String = ""
+  var button_app_ios_link    : String = ""
+  var button_app_google_id   : String = ""
+  var button_app_google_link : String = ""
 
   JSON.mapping({
     name:       String?       , # "deep link"
@@ -27,7 +35,13 @@ class TwitterAds::Cards
       titles: titles,
       media_urls: media_urls,
       dest_urls: dest_urls,
-
+      button_label: button_label,
+      button_app_country: button_app_country,
+      button_app_ios_id: button_app_ios_id,
+      button_app_ios_link: button_app_ios_link,
+      button_app_google_id: button_app_google_id,
+      button_app_google_link: button_app_google_link,
+      
       account_id: account_id,
     )
   end

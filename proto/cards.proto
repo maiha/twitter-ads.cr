@@ -1,3 +1,5 @@
+// [WARNING] This file is maintained manually because of irregular fields such as `titles` and `platform_xxx`.
+
 syntax = "proto2";
 
 message Cards {
@@ -14,6 +16,13 @@ message Cards {
   repeated string titles     = 9 ; // ["Twitter Developers", "Twitter"]
   repeated string media_urls = 10; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
   repeated string dest_urls  = 11; // ["https://developer.twitter.com", "https://twitter.com"]
+
+  optional string button_label           = 12;
+  optional string button_app_country     = 13;
+  optional string button_app_ios_id      = 14;
+  optional string button_app_ios_link    = 15;
+  optional string button_app_google_id   = 16;
+  optional string button_app_google_link = 17;
 }
 
 message CardsArray {
