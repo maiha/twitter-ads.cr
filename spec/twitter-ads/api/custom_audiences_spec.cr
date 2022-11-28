@@ -2,13 +2,13 @@ require "../../spec_helper"
 
 describe TwitterAds::Api::CustomAudiences do
   client = Mock::Client.new("CK", "CS", "AT", "AS")
+  api = client.custom_audiences("18ce54d4x5t")
 
   describe "#custom_audiences" do
     it "returns Array(TwitterAds::CustomAudience)" do
-      custom_audiences = client.custom_audiences("18ce54d4x5t")
-      custom_audiences.size.should eq 1
+      api.size.should eq 1
       
-      custom_audience = custom_audiences.first
+      custom_audience = api.first
       custom_audience.id.should eq "1nmth"
       custom_audience.name.should eq "twurl-using-subshell-for-file"
       custom_audience.targetable.should eq true
@@ -21,6 +21,10 @@ describe TwitterAds::Api::CustomAudiences do
     it "accepts with_deleted, with_draft options" do
       # check only syntax
       client.custom_audiences("18ce54d4x5t", with_deleted: true)
+    end
+
+    it "can be converted to pb." do
+      api.each &.to_pb
     end
   end
 end

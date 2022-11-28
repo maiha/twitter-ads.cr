@@ -7,7 +7,11 @@ class TwitterAds::LineItemPlacement
   def to_pb
     TwitterAds::Proto::LineItemPlacement.new(
       product_type: product_type,
-      placements: placements,
+      placements: to_array_string_array(placements),
     )
+  end
+
+  private def to_array_string_array(src : Array(Array(String))) : Array(Proto::StringArray)
+    src.map{|a| Proto::StringArray.new(a)}
   end
 end

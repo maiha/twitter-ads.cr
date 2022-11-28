@@ -11,21 +11,22 @@ describe TwitterAds::Api::TweetsLookup do
   poll_fields = "duration_minutes,end_datetime,id,options,voting_status"
   user_fields = "created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld"
 
+  api = client.tweets_lookup(
+    id: ids,
+    expansions: expansions, 
+    tweet_fields: tweet_fields,
+    media_fields: media_fields,
+    place_fields: place_fields,
+    poll_fields: poll_fields,
+    user_fields: user_fields,
+  )
+
   describe "#tweets_lookup" do
     it "returns TwitterAds::TweetsLookup" do
-      tweets_lookup = client.tweets_lookup(
-        id: ids,
-        expansions: expansions, 
-        tweet_fields: tweet_fields,
-        media_fields: media_fields,
-        place_fields: place_fields,
-        poll_fields: poll_fields,
-        user_fields: user_fields,
-      )
-      tweets_lookup.size.should eq 4
-      tweets_lookup.errors.size.should eq 0
+      api.size.should eq 4
+      api.errors.size.should eq 0
 
-      tweets_lookup = tweets_lookup.first
+      tweets_lookup = api.first
       tweets_lookup.id.should eq "1519781379172495360"
       tweets_lookup.reply_settings.should eq "everyone"
     end
@@ -48,6 +49,10 @@ describe TwitterAds::Api::TweetsLookup do
       tweets_lookup.errors[0].resource_id.should eq "1352420716931649"
       tweets_lookup.errors[1].title.should eq "Authorization Error"
       tweets_lookup.errors[1].resource_id.should eq "1329348696106967"
+    end
+
+    it "can be converted to pb." do
+      api.each &.to_pb
     end
   end
 end

@@ -2,20 +2,21 @@ require "../../spec_helper"
 
 describe TwitterAds::Api::Cards do
   client = Mock::Client.new("CK", "CS", "AT", "AS")
+  api = client.cards("18ce54d4x5t")
 
   describe "#cards" do
     it "returns Array(TwitterAds::Cards)" do
-      cards = client.cards("18ce54d4x5t")
-      cards.size.should eq 5
-      cards.map(&.name).should eq [
-                          "IMAGE_WEBSITE card",
-                          "IMAGE_CAROUSEL_WEBSITE card",
-                          "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE card",
-                          "IMAGE_APP card",
-                          "IMAGE_CAROUSEL_APP card"
-                        ]
+      api.account_id.should eq "18ce54d4x5t"
+      api.size.should eq 5
+      api.map(&.name).should eq [
+                        "IMAGE_WEBSITE card",
+                        "IMAGE_CAROUSEL_WEBSITE card",
+                        "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE card",
+                        "IMAGE_APP card",
+                        "IMAGE_CAROUSEL_APP card"
+                      ]
 
-      card = cards[0]
+      card = api[0]
       card.card_type.should eq "IMAGE_WEBSITE"
       card.titles.should eq ["Twitter Developers"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png"]
@@ -27,7 +28,7 @@ describe TwitterAds::Api::Cards do
       card.button_app_google_id.should eq ""
       card.button_app_google_link.should eq ""
       
-      card = cards[1]
+      card = api[1]
       card.card_type.should eq "IMAGE_CAROUSEL_WEBSITE"
       card.titles.should eq ["Twitter Developers"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png"]
@@ -39,7 +40,7 @@ describe TwitterAds::Api::Cards do
       card.button_app_google_id.should eq ""
       card.button_app_google_link.should eq ""
 
-      card = cards[2]
+      card = api[2]
       card.card_type.should eq "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE"
       card.titles.should eq ["Twitter Developers", "Twitter"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png", "https://pbs.twimg.com/3.png", "https://pbs.twimg.com/4.png"]
@@ -51,7 +52,7 @@ describe TwitterAds::Api::Cards do
       card.button_app_google_id.should eq ""
       card.button_app_google_link.should eq ""
 
-      card = cards[3]
+      card = api[3]
       card.card_type.should eq "IMAGE_APP"
       card.titles.should eq %w()
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png"]
@@ -63,7 +64,7 @@ describe TwitterAds::Api::Cards do
       card.button_app_google_id.should eq ""
       card.button_app_google_link.should eq ""
 
-      card = cards[4]
+      card = api[4]
       card.card_type.should eq "IMAGE_CAROUSEL_APP"
       card.titles.should eq %w()
       card.media_urls.should eq %w()
@@ -73,9 +74,11 @@ describe TwitterAds::Api::Cards do
       card.button_app_ios_id.should eq ""
       card.button_app_ios_link.should eq ""
       card.button_app_google_id.should eq "com.twitter.android"
-      card.button_app_google_link.should eq "twitter://user?screen_name=apimctestface"
-      
-      cards.account_id.should eq "18ce54d4x5t"
+      card.button_app_google_link.should eq "twitter://user?screen_name=apimctestface"      
+    end
+
+    it "can be converted to pb." do
+      api.each &.to_pb
     end
   end
 end
