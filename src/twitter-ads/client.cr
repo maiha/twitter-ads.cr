@@ -2,7 +2,7 @@ require "./dryrun"
 
 module TwitterAds
   class Client
-    API_DEFAULT_VERSION = "11"
+    API_DEFAULT_VERSION = "12"
 
     API_DEFAULT_DOMAIN = "https://api.twitter.com"
     ADS_DEFAULT_DOMAIN = "https://ads-api.twitter.com"

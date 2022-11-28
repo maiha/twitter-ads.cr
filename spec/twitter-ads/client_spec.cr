@@ -1,6 +1,13 @@
 require "../spec_helper"
 
 describe TwitterAds::Client do
+  describe "#api_version" do
+    it "uses 12 for default version" do
+      client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
+      client.api_version.should eq "12"
+    end
+  end
+
   describe "#authorized?" do
     it "returns true when all credential values exist" do
       client = TwitterAds::Client.new("CK", "CS", "AT", "AS")
