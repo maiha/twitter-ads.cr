@@ -9,9 +9,9 @@ describe TwitterAds::Api::MediaLibrary do
       api.size.should eq 1
 
       media_library = api.first
-      media_library.media_id.should eq "908573900237180928"
-      media_library.media_type.should eq "IMAGE"
-      media_library.file_name.should eq "coffee https://t.co/4tcPU9XUon"
+      media_library.media_key.should eq "13_909110614026444802"
+      media_library.media_type.should eq "VIDEO"
+      media_library.file_name.should eq "buildings https://t.co/xFdzrHM5QG"
       media_library.account_id.should eq "18ce54d4x5t"
     end
 

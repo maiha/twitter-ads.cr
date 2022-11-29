@@ -1,23 +1,26 @@
 syntax = "proto2";
 
 message MediaLibrary {
-  optional string media_id       =  1; // "908573900237180900"
-  optional string media_type     =  2; // "IMAGE"
-  optional string media_status   =  3; // "TRANSCODE_COMPLETED"
-  optional string media_category =  4; // "TWEET_IMAGE"
-  optional string media_key      =  5; // "3_908573900237180928"
-  optional string name           =  6; // nil
-  optional string file_name      =  7; // "coffee https://t.co/4tcPU9XUon"
-  optional string media_url      =  8; // "https://pbs.twimg.com/media/DJvnJf_UEAAXnzC.jpg"
-  optional bool   tweeted        =  9; // true
-  optional string created_at     = 10; // "2017-09-15T06:11:12Z"
-  optional string updated_at     = 11; // "2017-11-16T06:00:01Z"
-  optional bool   deleted        = 12; // false
+  optional bool   tweeted          = 1  ; // true
+  optional int64  duration         = 2  ; // 39973
+  optional string name             = 3  ; // nil
+  optional string file_name        = 4  ; // "buildings https://t.co/xFdzrHM5QG"
+  optional string description      = 5  ; // nil
+  optional string media_url        = 6  ; // "https://video.twimg.com/amplify_video/909110614026444802/vid/1280x720/mfahmfkKVjjk1nGm.mp4"
+  optional string poster_media_url = 7  ; // "https://pbs.twimg.com/amplify_video_thumb/909110614026444802/img/QZUNoaiCia0UFNrw.jpg"
+  optional string poster_media_key = 8  ; // "3_909110614026444802"
+  optional string media_key        = 9  ; // "13_909110614026444802"
+  optional string created_at       = 10 ; // "2017-09-16T17:43:55Z"
+  optional string media_status     = 11 ; // "TRANSCODE_COMPLETED"
+  optional string title            = 12 ; // "buildings"
+  optional string media_type       = 13 ; // "VIDEO"
+  optional string aspect_ratio     = 14 ; // "16:9"
+  optional string updated_at       = 15 ; // "2017-09-27T13:04:00Z"
+  optional bool   deleted          = 16 ; // false
 
-  optional string account_id     = 13; // "18ce544yq30"
+  optional string account_id       = 17 ; // "18ce544yq30"
 }
 
 message MediaLibraryArray {
-  repeated MediaLibrary array =  1; 
+  repeated MediaLibrary array = 1;
 }
-
