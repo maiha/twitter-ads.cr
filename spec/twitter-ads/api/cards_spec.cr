@@ -19,6 +19,7 @@ describe TwitterAds::Api::Cards do
       card = api[0]
       card.card_type.should eq "IMAGE_WEBSITE"
       card.titles.should eq ["Twitter Developers"]
+      card.media_keys.should eq ["3_908573900237180932"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png"]
       card.dest_urls.should eq ["https://developer.twitter.com"]
       card.button_label.should eq ""
@@ -31,6 +32,7 @@ describe TwitterAds::Api::Cards do
       card = api[1]
       card.card_type.should eq "IMAGE_CAROUSEL_WEBSITE"
       card.titles.should eq ["Twitter Developers"]
+      card.media_keys.should eq ["3_9085739002371809321", "3_9085739002371809322"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png"]
       card.dest_urls.should eq ["https://developer.twitter.com"]
       card.button_label.should eq ""
@@ -43,6 +45,7 @@ describe TwitterAds::Api::Cards do
       card = api[2]
       card.card_type.should eq "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE"
       card.titles.should eq ["Twitter Developers", "Twitter"]
+      card.media_keys.should eq ["3_908573900237180933", "3_9085739002371809343", "3_9085739002371809351"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png", "https://pbs.twimg.com/3.png", "https://pbs.twimg.com/4.png"]
       card.dest_urls.should eq  ["https://developer.twitter.com", "https://twitter.com"]
       card.button_label.should eq ""
@@ -55,6 +58,7 @@ describe TwitterAds::Api::Cards do
       card = api[3]
       card.card_type.should eq "IMAGE_APP"
       card.titles.should eq %w()
+      card.media_keys.should eq ["3_908573900237180951", "3_908573900237180952"]
       card.media_urls.should eq ["https://pbs.twimg.com/1.png", "https://pbs.twimg.com/2.png"]
       card.dest_urls.should eq %w()
       card.button_label.should eq "INSTALL"
@@ -67,6 +71,7 @@ describe TwitterAds::Api::Cards do
       card = api[4]
       card.card_type.should eq "IMAGE_CAROUSEL_APP"
       card.titles.should eq %w()
+      card.media_keys.should eq ["3_1073727809120419840", "3_1075096386931052545"]
       card.media_urls.should eq %w()
       card.dest_urls.should eq %w()
       card.button_label.should eq "OPEN"

@@ -17,14 +17,15 @@ module TwitterAds
         optional :deleted, :bool, 7
         optional :account_id, :string, 8
         repeated :titles, :string, 9
-        repeated :media_urls, :string, 10
-        repeated :dest_urls, :string, 11
-        optional :button_label, :string, 12
-        optional :button_app_country, :string, 13
-        optional :button_app_ios_id, :string, 14
-        optional :button_app_ios_link, :string, 15
-        optional :button_app_google_id, :string, 16
-        optional :button_app_google_link, :string, 17
+        repeated :media_keys, :string, 10
+        repeated :media_urls, :string, 11
+        repeated :dest_urls, :string, 12
+        optional :button_label, :string, 13
+        optional :button_app_country, :string, 14
+        optional :button_app_ios_id, :string, 15
+        optional :button_app_ios_link, :string, 16
+        optional :button_app_google_id, :string, 17
+        optional :button_app_google_link, :string, 18
       end
     end
     

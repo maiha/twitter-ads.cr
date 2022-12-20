@@ -25,6 +25,25 @@ module TwitterAds::Api
       "VIDEO_WEBSITE"                            => ".components[].title",
     }
 
+    JQ_MEDIA_KEYS = {
+      "IMAGE_APP"                                => ".components[].media_metadata | keys[]",
+      "IMAGE_CAROUSEL_APP"                       => ".components[].media_metadata | keys[]",
+      "IMAGE_CAROUSEL_WEBSITE"                   => ".components[].media_metadata | keys[]",
+      "IMAGE_MULTI_DEST_CAROUSEL_APP"            => ".components[].media_metadata | keys[]",
+      "IMAGE_MULTI_DEST_CAROUSEL_WEBSITE"        => ".slides[] | values[] | .media_key",
+      "IMAGE_WEBSITE"                            => ".components[].media_metadata | keys[]",
+      "MIXED_MEDIA_MULTI_DEST_CAROUSEL_APP"      => ".slides[] | values[] | .media_key",
+      "MIXED_MEDIA_MULTI_DEST_CAROUSEL_WEBSITE"  => ".slides[] | values[] | .media_key",
+      "MIXED_MEDIA_SINGLE_DEST_CAROUSEL_APP"     => ".components[].media_metadata | keys[]",
+      "MIXED_MEDIA_SINGLE_DEST_CAROUSEL_WEBSITE" => ".components[].media_metadata | keys[]",
+      "VIDEO_APP"                                => ".components[].media_metadata | keys[]",
+      "VIDEO_CAROUSEL_APP"                       => ".components[].media_metadata | keys[]",
+      "VIDEO_CAROUSEL_WEBSITE"                   => ".components[].media_metadata | keys[]",
+      "VIDEO_MULTI_DEST_CAROUSEL_APP"            => ".slides[] | values[] | .media_key",
+      "VIDEO_MULTI_DEST_CAROUSEL_WEBSITE"        => ".slides[] | values[] | .media_key",
+      "VIDEO_WEBSITE"                            => ".components[].media_metadata | keys[]",
+    }
+
     JQ_MEDIA_URLS = {
       "IMAGE_APP"                                => ".components[].media_metadata | values[].url",
       "IMAGE_CAROUSEL_APP"                       => ".components[].media_metadata | values[].url",
@@ -180,6 +199,7 @@ module TwitterAds::Api
     def complete!(jq : Jq)
       each_with_index do |card, i|
         card.titles     = jq_array(jq, i, card, JQ_TITLES)
+        card.media_keys = jq_array(jq, i, card, JQ_MEDIA_KEYS)
         card.media_urls = jq_array(jq, i, card, JQ_MEDIA_URLS)
         card.dest_urls  = jq_array(jq, i, card, JQ_DEST_URLS)
 

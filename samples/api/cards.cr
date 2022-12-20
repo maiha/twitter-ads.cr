@@ -11,6 +11,9 @@ client = TwitterAds::Client.from_twurlrc
 puts "Account(%s)" % [account_id.inspect]
 client.cards(account_id).each do |c|
   puts "+ Cards(%s) # %s" % [c.name.inspect, c.card_type.inspect]
+  c.media_keys.each do |key|
+    puts "    #{key}"
+  end
   c.media_urls.each do |url|
     puts "    #{url}"
   end

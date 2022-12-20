@@ -1,7 +1,10 @@
+# [WARNING] This file is maintained manually because of irregular fields such as `titles` and `button_xxx`.
+
 class TwitterAds::Cards
   var account_id : String
 
   var titles     : Array(String) = Array(String).new
+  var media_keys : Array(String) = Array(String).new
   var media_urls : Array(String) = Array(String).new
   var dest_urls  : Array(String) = Array(String).new
 
@@ -33,6 +36,7 @@ class TwitterAds::Cards
       updated_at: updated_at,
       deleted: deleted,
       titles: titles,
+      media_keys: media_keys,
       media_urls: media_urls,
       dest_urls: dest_urls,
       button_label: button_label,
