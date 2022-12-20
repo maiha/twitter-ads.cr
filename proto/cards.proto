@@ -14,15 +14,16 @@ message Cards {
   optional string account_id = 8 ; // "18ce544yq30"
 
   repeated string titles     = 9 ; // ["Twitter Developers", "Twitter"]
-  repeated string media_urls = 10; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
-  repeated string dest_urls  = 11; // ["https://developer.twitter.com", "https://twitter.com"]
+  repeated string media_keys = 10; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
+  repeated string media_urls = 11; // ["https://pbs.twimg.com/media/1.png", "https://pbs.twimg.com/media/2.png"]
+  repeated string dest_urls  = 12; // ["https://developer.twitter.com", "https://twitter.com"]
 
-  optional string button_label           = 12;
-  optional string button_app_country     = 13;
-  optional string button_app_ios_id      = 14;
-  optional string button_app_ios_link    = 15;
-  optional string button_app_google_id   = 16;
-  optional string button_app_google_link = 17;
+  optional string button_label           = 13;
+  optional string button_app_country     = 14;
+  optional string button_app_ios_id      = 15;
+  optional string button_app_ios_link    = 16;
+  optional string button_app_google_id   = 17;
+  optional string button_app_google_link = 18;
 }
 
 message CardsArray {
