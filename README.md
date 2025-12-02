@@ -1,8 +1,8 @@
-# twitter-ads.cr [![Build Status](https://travis-ci.org/maiha/twitter-ads.cr.svg?branch=master)](https://travis-ci.org/maiha/twitter-ads.cr)
+# twitter-ads.cr [![CI](https://github.com/maiha/twitter-ads.cr/actions/workflows/spec.yml/badge.svg)](https://github.com/maiha/twitter-ads.cr/actions/workflows/spec.yml)
 
 Twitter Ads API SDK for [Crystal](http://crystal-lang.org/).
 
-- crystal: 0.33.0
+- crystal: 0.33.0 ... 1.18.2
 
 ## Usage
 

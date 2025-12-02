@@ -48,8 +48,23 @@ module TwitterAds
 
       {% if RESOURCE[:type] == :collection %}
         include Indexable(TwitterAds::{{RESOURCE[:name]}})
+
+        var bound_data : Array(TwitterAds::{{RESOURCE[:name]}}) = begin
+          ary = parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new
+          ary.each do |i|
+            {% for ast in BELONGS_TO %}
+              i.{{ast.var}} = {{ast.var}}
+            {% end %}
+          end
+          ary
+        end
+
+        def size
+          bound_data.size
+        end
+
         def unsafe_fetch(index : Int)
-          (parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new)[index]
+          bound_data.unsafe_fetch(index)
         end
 
         {% if RESOURCE[:error] %}
@@ -84,10 +99,7 @@ module TwitterAds
 
       {% if RESOURCE[:type] == :collection %}
         def each
-          (parser.data || Array(TwitterAds::{{RESOURCE[:name]}}).new).each do |i|
-            {% for ast in BELONGS_TO %}
-              i.{{ast.var}} = {{ast.var}}
-            {% end %}
+          bound_data.each do |i|
             yield(i)
           end
         end
