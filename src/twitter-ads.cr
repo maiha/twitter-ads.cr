@@ -3,6 +3,8 @@ require "oauth2"
 require "logger"
 require "json"
 require "yaml"
+require "json_mapping"
+require "yaml_mapping"
 
 require "var"
 require "pretty"

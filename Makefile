@@ -1,17 +1,7 @@
 SHELL=/bin/bash
 .SHELLFLAGS = -o pipefail -c
 
-######################################################################
-### compiling
-
-# for mounting permissions in docker compose
-export UID = $(shell id -u)
-export GID = $(shell id -g)
-
 COMPILE_FLAGS=-Dstatic
-BUILD_TARGET=
-
-ON_DOCKER=docker compose run --rm crystal
 
 ######################################################################
 ### testing
@@ -24,7 +14,7 @@ test: spec
 
 .PHONY: spec
 spec:
-	@$(ON_DOCKER) crystal spec $(COMPILE_FLAGS) -v --fail-fast
+	crystal spec $(COMPILE_FLAGS) -v --fail-fast
 
 .PHONY: check_version_mismatch
 check_version_mismatch: README.md shard.yml
