@@ -12,7 +12,8 @@ dependencies:
   logger:
     github: crystal-lang/logger.cr
   json_mapping:
-    github: crystal-lang/json_mapping.cr
+    github: maiha/json_mapping.cr
+    version: 0.1.2
   yaml_mapping:
     github: crystal-lang/yaml_mapping.cr
 
