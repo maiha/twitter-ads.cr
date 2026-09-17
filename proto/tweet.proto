@@ -36,6 +36,12 @@ message Tweet {
   // user
   optional string user_name                 = 27  ; // "Twitter API"
   optional string user_screen_name          = 28  ; // "TwitterAPI"
+
+  optional string name                      = 29 ; // nil
+  optional string conversation_settings     = 30 ; // "EVERYONE"
+  optional bool   scopes_followers          = 31 ; // false
+  repeated int64  display_text_range        = 32 ; // [0, 9]
+  repeated int64  contributors              = 33 ; // [2417045708]
 }
 
 message TweetArray {
