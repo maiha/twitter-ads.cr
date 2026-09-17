@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+dev — devcontainer 操作ヘルパー (host 側で実行)
+
+使い方:
+  ./dev <command> [args...]
+
+コマンド:
+  up                  devcontainer を (再)作成して起動する (既存 container は破棄して作り直す)
+  down                この workspace の devcontainer を停止・削除する (container を消す)
+  sh, shell           devcontainer 内で対話 bash shell を開く
+  exec <cmd...>       devcontainer 内で任意コマンドを実行する (例: ./dev exec make compile)
+  claude              devcontainer 内で claude CLI を起動する
+  help, -h, --help    このヘルプを表示する
+EOF
+}
+
+case "${1:-}" in
+  "" | help | -h | --help)
+    usage
+    ;;
+
+  up)
+    # CONSTRAINT: ~/.devcontainer.bashrc は devcontainer.json の bind mount 元 (無いと docker が directory として作る)
+    [ -f ~/.devcontainer.bashrc ] || touch ~/.devcontainer.bashrc
+    devcontainer up --workspace-folder . --remove-existing-container
+    ;;
+
+  down)
+    docker ps -aq --filter "label=devcontainer.local_folder=$(realpath $(pwd))" | xargs -r docker rm -f
+    ;;
+
+  sh | shell)
+    devcontainer exec --workspace-folder . bash
+    ;;
+
+  exec)
+    shift
+    devcontainer exec --workspace-folder . "$@"
+    ;;
+
+  claude)
+    devcontainer exec --workspace-folder . claude
+    ;;
+
+  *)
+    echo "dev: unknown command: $1" >&2
+    echo >&2
+    usage >&2
+    exit 2
+    ;;
+esac
