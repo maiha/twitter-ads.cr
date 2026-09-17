@@ -1,6 +1,12 @@
 class TwitterAds::Tweet
   var account_id : String
 
+  class Scopes
+    JSON.mapping({
+      followers: Bool? , # false
+    })
+  end
+
   JSON.mapping({
     retweeted:                 Bool?   , # false
     source:                    String? , # "<a href=\"https://ads-api.twitter.com\" rel=\"nofollow\">Twitter for Advertisers (legacy)</a>"
@@ -26,6 +32,11 @@ class TwitterAds::Tweet
     in_reply_to_user_id_str:   String? , # nil
     tweet_id:                  String? , # "1166476031668015104"
     user:                      User?   , # {"id" => 756201191646691300, "id_str" => "756201191646691328"}
+    name:                      String? , # nil
+    conversation_settings:     String? , # "EVERYONE"
+    scopes:                    Scopes? , # {"followers" => false}
+    display_text_range:        Array(Int64)? , # [0, 9]
+    contributors:              Array(Int64)? , # [2417045708]
   })
 
   def user_id : Int64?
@@ -38,6 +49,10 @@ class TwitterAds::Tweet
 
   def user_screen_name : String?
     user.try(&.screen_name)
+  end
+
+  def scopes_followers : Bool?
+    scopes.try(&.followers)
   end
 
   def to_pb
@@ -69,6 +84,11 @@ class TwitterAds::Tweet
       account_id: account_id?,
       user_name: user_name,
       user_screen_name: user_screen_name,
+      name: name,
+      conversation_settings: conversation_settings,
+      scopes_followers: scopes_followers,
+      display_text_range: display_text_range,
+      contributors: contributors,
     )
   end
 end

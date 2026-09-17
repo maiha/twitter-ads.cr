@@ -35,6 +35,11 @@ module TwitterAds
         optional :account_id, :string, 26
         optional :user_name, :string, 27
         optional :user_screen_name, :string, 28
+        optional :name, :string, 29
+        optional :conversation_settings, :string, 30
+        optional :scopes_followers, :bool, 31
+        repeated :display_text_range, :int64, 32
+        repeated :contributors, :int64, 33
       end
     end
     
