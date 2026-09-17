@@ -21,8 +21,7 @@ jobs:
     strategy:
       matrix:
         crystal:
-          - 1.18.2
-          - 0.33.0
+          - 1.20.3
 
     steps:
     - uses: actions/checkout@v4
